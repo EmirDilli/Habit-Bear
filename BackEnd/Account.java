@@ -17,10 +17,7 @@ public class Account {
     private Bear myBear;
     
     private Calendar date = Calendar.getInstance();// will be updated shortly
-    private int absent;// will be updated shortly
-    private int currentStep;// will be updated shortly
-    private final int absentLimit = 3;// will be updated shortly
-    private Calendar date0 = Calendar.getInstance();// will be updated shortly
+
 
 
     private Habits[] myHabits;
@@ -234,29 +231,7 @@ public class Account {
         currentStep++;
     }
 
-    public void controlAbsence(boolean boo) {
-        
-        if (boo) {
-           updateCurrentStreak();
-           currentStep++; 
-        }
-        updateMaxStreak();
-
-        if (currentStep-absent/absentLimit < 0) {
-            setDate(date0);
-            currentStep = 0;
-        }
-
-
-        if (absent >= absentLimit) {
-
-            if (absent%absentLimit == 0) {
-                currentStep--;
-            }
-            currentStreak = 0;
-        }
-
-    }
+   
 
 
      
