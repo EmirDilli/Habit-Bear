@@ -14,7 +14,7 @@ public class Mountain {
         for (int i = 0; i < mountainNo; i++) {
             result = result - (2*i + 1);
         }
-        return result;
+        return result+1;
     }
 
 }
