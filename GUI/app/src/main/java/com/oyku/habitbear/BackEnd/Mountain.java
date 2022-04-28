@@ -1,3 +1,5 @@
+package com.oyku.habitbear.BackEnd;
+
 public class Mountain {
     private int mountainNo; // k 
     protected int stepNo; //2k+1 

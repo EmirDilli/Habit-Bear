@@ -1,4 +1,7 @@
-import java.awt.Color;
+package com.oyku.habitbear.BackEnd;
+
+import android.graphics.Color;
+
 public class Clothes {
 
     private int price;

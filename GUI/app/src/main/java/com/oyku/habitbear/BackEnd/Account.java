@@ -1,20 +1,20 @@
+package com.oyku.habitbear.BackEnd;
+
 import java.util.Calendar;
-import java.awt.Color;
+
 import java.time.LocalDate;
 
 
 public class Account {
-    
 
     // Properties
 
     private static int idCount;
 
     private int id;
-    private int name;
+    private String name;
     private int currentStreak;
     private int maxStreak;
-    private Bear myBear;
     
     private Calendar date = Calendar.getInstance();// will be updated shortly
 
@@ -31,17 +31,15 @@ public class Account {
     public Account(){
         // get name from database
 
-        // get idCount from database (last Account's id)
+        // get idCount from database (last com.oyku.habitbear.Account's id)
         id = idCount + 1; 
         // get current and max streak from database
 
-        myBear = new Bear();
 
-
-        setDate(date);
+        /*setDate(date);
         
         currentStep = 0;
-        absent = 0;
+        absent = 0;*/
 
         
 
@@ -51,14 +49,14 @@ public class Account {
         myHabits[2] =new Habits("Quit Smoking");
         myHabits[3] =new Habits("Read Books");
         myHabits[4] =new Habits("Medicine");
-        myHabits[5] =new Habits("Custom"); 
+        myHabits[5] =new Habits("Custom");
         for (Habits habits : myHabits) {
             habits.set(this);
         } 
          
         coins = 0;
         allClothes = new Clothes[3][4];
-        importClothes();
+       // importClothes();
         myClothes = new Clothes[3];  //[ Shirts, Pants, Accessories]
 
     }
@@ -126,14 +124,14 @@ public class Account {
         coins = coins - 5;
     }
 
-    private void importClothes(){
+   /* private void importClothes(){
         // Shirts
         allClothes[0][0] = new Clothes(10, 0, Color.RED);
         // Pants
         allClothes[1][0] = new Clothes(10, 1, Color.BLUE);
         // Accessories
         allClothes[2][0] = new Clothes(10, 2, Color.BLACK);
-    }
+    }*/
 
     ///// parameters are the numbers of the clothes in  allClothes, u can update your bear's looks
     public void selectClothes(int shirt, int pant, int other){  
@@ -158,33 +156,28 @@ public class Account {
         this.id = id;
     }
 
-    public int getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(int name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public Bear getMyBear() {
-        return myBear;
-    }
 
-    public void setMyBear(Bear myBear) {
-        this.myBear = myBear;
-    }
 
 
     // DATE METHODS
 
-    private void setDate(Calendar x) {
-        LocalDate today = LocalDate.now();
+   /* private void setDate(Calendar x) {
+        LocalDate today = new LocalDate.now();
 
-        x.set(Calendar.YEAR , today.getYear());
+        x.set(Calendar.YEAR ,
+                today.getYear());
         x.set(Calendar.MONTH , today.getMonthValue());
         x.set(Calendar.DAY_OF_MONTH , today.getDayOfMonth());
     }
-
+*/
 
     public int getDayOfMonth() {
         return date.get(Calendar.DAY_OF_MONTH);
@@ -225,10 +218,10 @@ public class Account {
 
 
 
-    // Mountain
+    // com.oyku.habitbear.Mountain
 
     public void addSteps(){
-        currentStep++;
+       // currentStep++;
     }
 
    
