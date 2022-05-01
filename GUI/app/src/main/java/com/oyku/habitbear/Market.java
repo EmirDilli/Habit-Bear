@@ -12,14 +12,41 @@ import java.awt.*;
 public class Market extends AppCompatActivity implements View.OnClickListener{
     int coins;
     Clothes clothes;
-    Account account = new Account();
+    int clotheType;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.market);
         ImageView back = findViewById(R.id.backMarket);
         back.setOnClickListener(this::onClick);
-        clothes.
+
+
+
+        //Click Listener Purchase Clothe Button
+        if(!clothes.isPurchased()) {
+            if (clothes.hasMoney()) {
+                clothes.getAccount().loseCoins();
+                for (int i = 0; i < clothes.getAccount().getMyClothes()[clotheType].length; i++) {
+                    if(clothes.getAccount().getMyClothes()[clotheType][i].equals(null)){
+                        clothes.getAccount().getMyClothes()[clotheType][i] = clothes;
+                        break;
+                    }
+                }
+
+
+            }
+            else {
+                //text editor
+                String warning = "Not Enough Coins";
+            }
+        }
+        else{
+            //text editor
+            String alreadyPurchaesed = "You already has the clothe";
+        }
+
+
     }
 
     @Override

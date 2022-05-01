@@ -22,7 +22,7 @@ public class Account {
 
     private Habits[] myHabits;
     protected int coins;
-    private Clothes[] myClothes;
+    private Clothes[][] myClothes;
     private Clothes[][] allClothes;
 
 
@@ -57,7 +57,7 @@ public class Account {
         coins = 0;
         allClothes = new Clothes[3][4];
        // importClothes();
-        myClothes = new Clothes[3];  //[ Shirts, Pants, Accessories]
+        myClothes = new Clothes[3][4];  //[ Shirts, Pants, Accessories]
 
     }
 
@@ -121,7 +121,7 @@ public class Account {
 
 
     public void loseCoins(){   ////////////// WHY DO WE LOSE COINS THO?
-        coins = coins - 5;
+        coins = coins - 10;
     }
 
    /* private void importClothes(){
@@ -134,10 +134,8 @@ public class Account {
     }*/
 
     ///// parameters are the numbers of the clothes in  allClothes, u can update your bear's looks
-    public void selectClothes(int shirt, int pant, int other){  
-        myClothes[0] = allClothes[0][shirt];
-        myClothes[1] = allClothes[1][pant];
-        myClothes[2] = allClothes[2][other];
+    public Clothes selectClothes(int type,int selectClothe ){
+        return myClothes[type][selectClothe];
     }
 
 
@@ -147,7 +145,9 @@ public class Account {
 
 
     // GETTERS & SETTERS
-
+    public Clothes[][] getMyClothes(){
+        return myClothes;
+    }
     public int getId() {
         return id;
     }
@@ -168,8 +168,9 @@ public class Account {
 
 
     // DATE METHODS
+/*
+   private void setDate(Calendar x) {
 
-   /* private void setDate(Calendar x) {
         LocalDate today = new LocalDate.now();
 
         x.set(Calendar.YEAR ,
@@ -177,7 +178,9 @@ public class Account {
         x.set(Calendar.MONTH , today.getMonthValue());
         x.set(Calendar.DAY_OF_MONTH , today.getDayOfMonth());
     }
-*/
+
+
+
 
     public int getDayOfMonth() {
         return date.get(Calendar.DAY_OF_MONTH);
@@ -190,8 +193,7 @@ public class Account {
     public int getYear() {
         return date.get(Calendar.YEAR);
     }
-
-
+    */
 
     // STREAKS
 

@@ -22,6 +22,7 @@ public class Clothes {
     public void set(Account aUser){
         this.user = aUser;
     }
+    public Account getAccount(){return this.user;}
 
     public String getName(){
         
