@@ -12,10 +12,9 @@ public class Clothes {
 
 
     
-    public Clothes(int price, int type, Color color) {
+    public Clothes(int price, int type) {
         this.price = price;
         this.type = type;
-        this.color = color;
         purchased = false;
     }
 

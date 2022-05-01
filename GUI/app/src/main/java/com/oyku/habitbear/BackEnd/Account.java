@@ -1,11 +1,21 @@
 package com.oyku.habitbear.BackEnd;
 
+import android.widget.ImageView;
+import androidx.appcompat.app.AppCompatActivity;
 import java.util.Calendar;
+import com.oyku.habitbear.R;
+import android.view.View;
+
+import android.content.Intent;
+import android.graphics.Color;
+import android.os.Bundle;
+
+import android.widget.Button;
 
 import java.time.LocalDate;
 
 
-public class Account {
+public class Account extends AppCompatActivity{
 
     // Properties
 
@@ -15,6 +25,7 @@ public class Account {
     private String name;
     private int currentStreak;
     private int maxStreak;
+    public static ImageView cl;
     
     private Calendar date = Calendar.getInstance();// will be updated shortly
 
@@ -124,14 +135,16 @@ public class Account {
         coins = coins - 10;
     }
 
-   /* private void importClothes(){
+    private void importClothes(){
         // Shirts
-        allClothes[0][0] = new Clothes(10, 0, Color.RED);
+        allClothes[0][0] = new Clothes(10, 0);
+        cl = (ImageView) findViewById(R.id.clothe1);
+        cl.setTag(allClothes[0][0]);
         // Pants
-        allClothes[1][0] = new Clothes(10, 1, Color.BLUE);
+        allClothes[1][0] = new Clothes(10, 1);
         // Accessories
-        allClothes[2][0] = new Clothes(10, 2, Color.BLACK);
-    }*/
+        allClothes[2][0] = new Clothes(10, 2);
+    }
 
     ///// parameters are the numbers of the clothes in  allClothes, u can update your bear's looks
     public Clothes selectClothes(int type,int selectClothe ){

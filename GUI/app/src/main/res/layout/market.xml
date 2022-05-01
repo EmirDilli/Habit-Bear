@@ -37,4 +37,10 @@
         android:src="@mipmap/ic_coin"
         android:adjustViewBounds="true"/>
 
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_clothe1"
+        android:layout_centerInParent="true"
+        android:id="@+id/clothe1"/>
 </RelativeLayout>
