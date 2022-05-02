@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/calendar.xml" value="0.25858154296875" />
+        <entry key="app/src/main/res/layout/habits.xml" value="0.22447916666666667" />
+        <entry key="app/src/main/res/layout/mountain.xml" value="0.24414672851562502" />
       </map>
     </option>
   </component>
