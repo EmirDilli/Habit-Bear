@@ -38,25 +38,33 @@
         android:adjustViewBounds="true"/>
 
     <ImageView
+        android:id="@+id/c1"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@mipmap/c1"
-        android:id="@+id/c1"
-        android:layout_marginTop="300dp"/>
+        android:layout_marginTop="300dp"
+        android:src="@mipmap/c1" />
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@mipmap/c2"
         android:id="@+id/c2"
-        android:layout_marginTop="300dp"
-        android:layout_toRightOf="@+id/c1"/>
-    <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@mipmap/c3"
-        android:id="@+id/c3"
         android:layout_marginTop="300dp"
-        android:layout_toRightOf="@+id/c2"/>
+        android:layout_toRightOf="@+id/c1"
+        android:src="@mipmap/c2" />
+
+    <ImageView
+        android:id="@+id/c3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="300dp"
+        android:layout_toRightOf="@+id/c2"
+        android:src="@mipmap/c3" />
+
+    <ImageView
+        android:id="@+id/blol"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="200dp"
+        android:src="@mipmap/ic_bear_plain" />
 
 </RelativeLayout>

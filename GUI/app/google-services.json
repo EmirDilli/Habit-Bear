@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "42631960367",
+    "firebase_url": "https://habit-bear-default-rtdb.firebaseio.com",
+    "project_id": "habit-bear",
+    "storage_bucket": "habit-bear.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42631960367:android:389fd106326ac8875973da",
+        "android_client_info": {
+          "package_name": "com.oyku.habitbear"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "42631960367-hm6f8tqukpbs1csd21a227jggji5d93m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD6v7g4YMylY5xoZT0bHP_e0R0BDfrZEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "42631960367-hm6f8tqukpbs1csd21a227jggji5d93m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

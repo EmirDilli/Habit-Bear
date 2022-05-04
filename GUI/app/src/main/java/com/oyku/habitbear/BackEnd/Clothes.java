@@ -1,11 +1,8 @@
 package com.oyku.habitbear.BackEnd;
 
-import android.graphics.Color;
-
 public class Clothes {
 
     private int price;
-    private Account user;
     private int color;
     private int type;
     private boolean purchased;
@@ -17,12 +14,6 @@ public class Clothes {
         this.color = color;
         purchased = false;
     }
-
-    public void set(Account aUser){
-        this.user = aUser;
-    }
-
-    public Account getAccount(){return this.user;}
 
     public String getName(){
         
@@ -37,12 +28,13 @@ public class Clothes {
         }
     }
 
-    public boolean hasMoney(){
+    public boolean canBeBought(Account user){
         if (user.coins >= price) {
             return true;
         }
         return false;
     }
+
 
     public boolean isPurchased() {
         return purchased;
@@ -59,6 +51,8 @@ public class Clothes {
     public void setPrice(int price) {
         this.price = price;
     }
+
+    public int getType() {return type;}
 
     public int getColor() {
         return color;

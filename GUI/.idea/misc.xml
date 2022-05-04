@@ -3,12 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< Updated upstream
         <entry key="app/src/main/res/layout/calendar.xml" value="0.25858154296875" />
         <entry key="app/src/main/res/layout/habits.xml" value="0.22447916666666667" />
         <entry key="app/src/main/res/layout/mountain.xml" value="0.24414672851562502" />
+=======
+        <entry key="..\:/Users/oyku/Desktop/Habit-Bear/GUI/app/src/main/res/layout/habits.xml" value="0.1037037037037037" />
+        <entry key="..\:/Users/oyku/Desktop/Habit-Bear/GUI/app/src/main/res/layout/homepage.xml" value="0.25" />
+        <entry key="..\:/Users/oyku/Desktop/Habit-Bear/GUI/app/src/main/res/layout/inventory.xml" value="0.25" />
+        <entry key="..\:/Users/oyku/Desktop/Habit-Bear/GUI/app/src/main/res/layout/market.xml" value="0.25" />
+        <entry key="..\:/Users/oyku/Desktop/Habit-Bear/GUI/app/src/main/res/layout/register.xml" value="0.4" />
+>>>>>>> Stashed changes
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+<<<<<<< Updated upstream
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+=======
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+>>>>>>> Stashed changes
 </project>

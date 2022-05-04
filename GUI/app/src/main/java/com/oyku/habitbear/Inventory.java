@@ -1,8 +1,6 @@
 package com.oyku.habitbear;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.Color;
 import android.os.Bundle;
 
 import com.oyku.habitbear.BackEnd.*;
@@ -19,7 +17,7 @@ public class Inventory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inventory);
 
-        //clickListener to wear clothe when its selected
+        //clickListener to wear clothing when its selected
             clothes = account.getMyClothes()[type][whichClotheInType];
     }
 }

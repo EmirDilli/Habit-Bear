@@ -1,26 +1,23 @@
 package com.oyku.habitbear.BackEnd;
 
 import android.widget.ImageView;
-import androidx.appcompat.app.AppCompatActivity;
 import java.util.Calendar;
-import com.oyku.habitbear.R;
+import com.oyku.habitbear.*;
+import java.util.ArrayList;
 
-
-public class Account extends AppCompatActivity{
+public class Account{
 
     // Properties
-    private static int idCount;
+    private static int idCount = 0;
     private int id;
     private String name;
     private int currentStreak;
     private int maxStreak;
-    public static ImageView cl;
     private Calendar date = Calendar.getInstance();// will be updated shortly
-
     private Habits[] myHabits;
     protected int coins;
     private Clothes[][] myClothes;
-    private Clothes[][] allClothes;
+    public Clothes[][] allClothes;
 
 
     public Account(){
@@ -29,7 +26,6 @@ public class Account extends AppCompatActivity{
         // get idCount from database (last com.oyku.habitbear.Account's id)
         id = idCount + 1;
         // get current and max streak from database
-
 
         /*setDate(date);
         
@@ -49,10 +45,9 @@ public class Account extends AppCompatActivity{
             habits.set(this);
         }
 
-        coins = 0;
-        allClothes = new Clothes[3][3];
-       // importClothes();
-        myClothes = new Clothes[3][3];  //[ Shirts, Pants, Accessories]
+        coins = 100;
+        allClothes = new Clothes[1][1];
+        myClothes = new Clothes[3][3]; //[ Shirts, Pants, Accessories]
 
     }
 
@@ -79,7 +74,10 @@ public class Account extends AppCompatActivity{
         }
     }
 
-
+    public int getCoins()
+    {
+        return coins;
+    }
 
     public void addHabit(String str){
         if (!myHabits[5].isEnabled()) {
@@ -119,17 +117,18 @@ public class Account extends AppCompatActivity{
         coins = coins - 10;
     }
 
-    private void importClothes(){
+    public void importClothes(){
+
         // Shirts
         allClothes[0][0] = new Clothes(10, 0, 0);
         setClothingImage(0, 0);
-        allClothes[0][1] = new Clothes(10, 0, 1);
+        /*allClothes[0][1] = new Clothes(10, 0, 1);
         setClothingImage(0, 1);
         allClothes[0][2] = new Clothes(10, 0, 2);
-        setClothingImage(0, 2);
+        setClothingImage(0, 2);*/
 
         // Pants
-        allClothes[1][0] = new Clothes(10, 1, 0);
+       /* allClothes[1][0] = new Clothes(10, 1, 0);
         setClothingImage(1, 0);
         allClothes[1][1] = new Clothes(10, 1, 1);
         setClothingImage(1, 1);
@@ -142,12 +141,70 @@ public class Account extends AppCompatActivity{
         allClothes[2][1] = new Clothes(10, 2, 1);
         setClothingImage(2, 1);
         allClothes[2][2] = new Clothes(10, 2, 2);
-        setClothingImage(2, 2);
+        setClothingImage(2, 2);*/
+    }
+
+    public void setClothingImage(int type, int abc) {
+        //the clothing piece that's going to be set
+        if(type == 0)
+        {
+            if(abc == 0)
+            {//red imagela ilişkilendirilecek
+                User.c1.setTag(allClothes[0][0]);
+            }
+        }
+            /*else if(color == 1)
+            {//green
+                clothing = (ImageView) findViewById(R.id.c2);
+                clothing.setTag(allClothes[type][color]);
+            }
+            else if(color == 2)
+            {//blue
+                clothing = (ImageView) findViewById(R.id.c3);
+                clothing.setTag(allClothes[type][color]);
+            }
+        }*/
+        /*else if(type == 1)
+        {
+            if(color == 0)
+            {//red imagela ilişkilendirilecek
+                clothing = (ImageView) findViewById(R.id.clothe1);
+                clothing.setTag(allClothes[type][color]);
+            }
+            else if(color == 1)
+            {//green
+                clothing = (ImageView) findViewById(R.id.clothe1);
+                clothing.setTag(allClothes[type][color]);
+            }
+            else if(color == 2)
+            {//blue
+                clothing = (ImageView) findViewById(R.id.clothe1);
+                clothing.setTag(allClothes[type][color]);
+            }
+        }
+        else if(type == 2)
+        {
+            if(color == 0)
+            {//red imagela ilişkilendirilecek
+                clothing = (ImageView) findViewById(R.id.clothe1);
+                clothing.setTag(allClothes[type][color]);
+            }
+            else if(color == 1)
+            {//green
+                clothing = (ImageView) findViewById(R.id.clothe1);
+                clothing.setTag(allClothes[type][color]);
+            }
+            else if(color == 2)
+            {//blue
+                clothing = (ImageView) findViewById(R.id.clothe1);
+                clothing.setTag(allClothes[type][color]);
+            }
+        }*/
     }
 
     ///// parameters are the numbers of the clothes in  allClothes, u can update your bear's looks
-    public Clothes selectClothes(int type,int selectClothe ){
-        return myClothes[type][selectClothe];
+    public Clothes selectClothes(int type,int selectClothing){
+        return myClothes[type][selectClothing];
     }
 
 
@@ -231,62 +288,4 @@ public class Account extends AppCompatActivity{
        // currentStep++;
     }
 
-    public void setClothingImage(int type, int color) {
-        //the clothing piece that's going to be set
-        ImageView clothing;
-        if(type == 0)
-        {
-            if(color == 0)
-            {//red imagela ilişkilendirilecek
-                clothing = (ImageView) findViewById(R.id.clothe1);
-                clothing.setTag(allClothes[type][color]);
-            }
-            else if(color == 1)
-            {//green
-                clothing = (ImageView) findViewById(R.id.clothe1);
-                clothing.setTag(allClothes[type][color]);
-            }
-            else if(color == 2)
-            {//blue
-                clothing = (ImageView) findViewById(R.id.clothe1);
-                clothing.setTag(allClothes[type][color]);
-            }
-        }
-        /*else if(type == 1)
-        {
-            if(color == 0)
-            {//red imagela ilişkilendirilecek
-                clothing = (ImageView) findViewById(R.id.clothe1);
-                clothing.setTag(allClothes[type][color]);
-            }
-            else if(color == 1)
-            {//green
-                clothing = (ImageView) findViewById(R.id.clothe1);
-                clothing.setTag(allClothes[type][color]);
-            }
-            else if(color == 2)
-            {//blue
-                clothing = (ImageView) findViewById(R.id.clothe1);
-                clothing.setTag(allClothes[type][color]);
-            }
-        }
-        else if(type == 2)
-        {
-            if(color == 0)
-            {//red imagela ilişkilendirilecek
-                clothing = (ImageView) findViewById(R.id.clothe1);
-                clothing.setTag(allClothes[type][color]);
-            }
-            else if(color == 1)
-            {//green
-                clothing = (ImageView) findViewById(R.id.clothe1);
-                clothing.setTag(allClothes[type][color]);
-            }
-            else if(color == 2)
-            {//blue
-                clothing = (ImageView) findViewById(R.id.clothe1);
-                clothing.setTag(allClothes[type][color]);
-            }
-        }*/
-}
 }

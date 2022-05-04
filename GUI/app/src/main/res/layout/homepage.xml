@@ -79,6 +79,19 @@
         />
 
     <TextView
+        android:id="@+id/currentStreakCount"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/currentStreak"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:fontFamily="@font/changa_one"
+        android:text=""
+        android:textColor="#020a99"
+        android:textSize="20dp" />
+
+    <TextView
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:id="@+id/highestStreak"
@@ -89,6 +102,19 @@
         android:adjustViewBounds="true"
         android:fontFamily="@font/changa_one"
         android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/highestStreakCount"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/highestStreak"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:fontFamily="@font/changa_one"
+        android:text=""
+        android:textColor="#020a99"
+        android:textSize="20dp" />
 
     <ImageView
         android:id="@+id/habitBearIcon"
@@ -113,23 +139,39 @@
         android:id="@+id/coin"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_below="@id/highestStreak"
+        android:layout_below="@id/highestStreakCount"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:src="@mipmap/ic_coin"
         android:adjustViewBounds="true"/>
 
     <TextView
+        android:id="@+id/coinCount"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/highestStreakCount"
+        android:layout_alignBaseline="@+id/coin"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/coin"
+        android:adjustViewBounds="true"
+        android:fontFamily="@font/changa_one"
+        android:text=""
+        android:textColor="#020a99"
+        android:textSize="20dp" />
+
+
+    <TextView
         android:id="@+id/bearName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
         android:fontFamily="@font/changa_one"
         android:text="Bear Name"
         android:textColor="@color/white"
-        android:textSize="40dp"
-        android:adjustViewBounds="true"/>
+        android:textSize="40dp" />
 
 
 
