@@ -122,10 +122,10 @@ public class Account{
         // Shirts
         allClothes[0][0] = new Clothes(10, 0, 0);
         setClothingImage(0, 0);
-        /*allClothes[0][1] = new Clothes(10, 0, 1);
+        allClothes[0][1] = new Clothes(10, 0, 1);
         setClothingImage(0, 1);
         allClothes[0][2] = new Clothes(10, 0, 2);
-        setClothingImage(0, 2);*/
+        setClothingImage(0, 2);
 
         // Pants
        /* allClothes[1][0] = new Clothes(10, 1, 0);
@@ -144,63 +144,35 @@ public class Account{
         setClothingImage(2, 2);*/
     }
 
-    public void setClothingImage(int type, int abc) {
+    public void setClothingImage(int type, int color) {
         //the clothing piece that's going to be set
-        if(type == 0)
-        {
-            if(abc == 0)
-            {//red imagela ilişkilendirilecek
+        if (type == 0) {
+            if (color == 0) {//red imagela ilişkilendirilecek
                 User.c1.setTag(allClothes[0][0]);
+            } else if (color == 1) {//green
+                User.c2.setTag(allClothes[0][1]);
+            } else if (color == 2) {//blue
+                User.c3.setTag(allClothes[0][2]);
+            }
+        } else if (type == 1) {
+            if (color == 0) {//red imagela ilişkilendirilecek
+                User.c4.setTag(allClothes[1][0]);
+            } else if (color == 1) {//green
+                User.c5.setTag(allClothes[1][1]);
+            } else if (color == 2) {//blue
+                User.c6.setTag(allClothes[1][2]);
+            }
+        } else if (type == 2) {
+            if (color == 0) {//red imagela ilişkilendirilecek
+                User.c7.setTag(allClothes[2][0]);
+            } else if (color == 1) {//green
+                User.c8.setTag(allClothes[2][1]);
+            } else if (color == 2) {//blue
+                User.c9.setTag(allClothes[2][2]);
             }
         }
-            /*else if(color == 1)
-            {//green
-                clothing = (ImageView) findViewById(R.id.c2);
-                clothing.setTag(allClothes[type][color]);
-            }
-            else if(color == 2)
-            {//blue
-                clothing = (ImageView) findViewById(R.id.c3);
-                clothing.setTag(allClothes[type][color]);
-            }
-        }*/
-        /*else if(type == 1)
-        {
-            if(color == 0)
-            {//red imagela ilişkilendirilecek
-                clothing = (ImageView) findViewById(R.id.clothe1);
-                clothing.setTag(allClothes[type][color]);
-            }
-            else if(color == 1)
-            {//green
-                clothing = (ImageView) findViewById(R.id.clothe1);
-                clothing.setTag(allClothes[type][color]);
-            }
-            else if(color == 2)
-            {//blue
-                clothing = (ImageView) findViewById(R.id.clothe1);
-                clothing.setTag(allClothes[type][color]);
-            }
-        }
-        else if(type == 2)
-        {
-            if(color == 0)
-            {//red imagela ilişkilendirilecek
-                clothing = (ImageView) findViewById(R.id.clothe1);
-                clothing.setTag(allClothes[type][color]);
-            }
-            else if(color == 1)
-            {//green
-                clothing = (ImageView) findViewById(R.id.clothe1);
-                clothing.setTag(allClothes[type][color]);
-            }
-            else if(color == 2)
-            {//blue
-                clothing = (ImageView) findViewById(R.id.clothe1);
-                clothing.setTag(allClothes[type][color]);
-            }
-        }*/
     }
+
 
     ///// parameters are the numbers of the clothes in  allClothes, u can update your bear's looks
     public Clothes selectClothes(int type,int selectClothing){

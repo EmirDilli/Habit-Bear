@@ -13,7 +13,7 @@ public class Market extends AppCompatActivity implements View.OnClickListener {
     Clothes[][] clothes = User.user.allClothes;
     int clotheType;
     ImageView back;
-    //public ImageView c1;
+
     ImageView bea;
 
 
@@ -23,14 +23,28 @@ public class Market extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.market);
         back = findViewById(R.id.backMarket);
         back.setOnClickListener(this::onClick);
+
+        //connecting images
         User.c1 = findViewById(R.id.c1);
+        User.c2 = findViewById(R.id.c2);
+        User.c3 = findViewById(R.id.c3);
+        User.c4 = findViewById(R.id.c4);
+        User.c5 = findViewById(R.id.c5);
+        User.c6 = findViewById(R.id.c6);
+        User.c7 = findViewById(R.id.c7);
+        User.c8 = findViewById(R.id.c8);
+
+
+
+
+
+
+
         User.c1.setOnClickListener(this::onClick);
+        User.c2.setOnClickListener(this::onClick);
+        User.c3.setOnClickListener(this::onClick);
         User.user.importClothes();
-        /*c2 = findViewById(R.id.c2);
-        c2.setOnClickListener(this::onClick);
-        c3 = findViewById(R.id.c1);
-        c3.setOnClickListener(this::onClick);*/
-        bea = (ImageView) findViewById(R.id.blol);
+
 
     }
 
@@ -45,7 +59,7 @@ public class Market extends AppCompatActivity implements View.OnClickListener {
                         User.user.getMyClothes()[clothes.getType()][i] = clothes;
                         User.user.getMyClothes()[clothes.getType()][i].setPurchased(true);
                         User.user.loseCoins();
-                        //image.setColorFilter(Color.rgb(110,110,110));
+                        User.c8.setVisibility(View.VISIBLE);
                         break;
                     }
                 }
