@@ -7,9 +7,8 @@
     tools:context=".Inventory"
     android:background="#98D4FB">
 
-
     <TextView
-        android:id="@+id/settingsHeader"
+        android:id="@+id/inventoryHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="40dp"
@@ -26,6 +25,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:id="@+id/backInventory"/>
+<<<<<<< Updated upstream
     <ImageView
         android:id="@+id/c1"
         android:layout_width="100dp"
@@ -95,5 +95,29 @@
         android:layout_toRightOf="@+id/c7"
         android:src="@mipmap/c8"
         android:visibility="invisible"/>
+=======
+
+    <TableLayout
+        android:layout_below="@+id/backInventory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        <TableRow
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/backInventory" />
+
+        <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/backInventory"/>
+
+    </TableRow>
+</TableLayout>
+
+
+>>>>>>> Stashed changes
 
 </RelativeLayout>

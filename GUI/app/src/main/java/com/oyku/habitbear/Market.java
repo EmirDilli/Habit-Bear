@@ -3,6 +3,7 @@ package com.oyku.habitbear;
 import androidx.appcompat.app.AppCompatActivity;
 import com.oyku.habitbear.BackEnd.*;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -13,8 +14,12 @@ public class Market extends AppCompatActivity implements View.OnClickListener {
     Clothes[][] clothes = User.user.allClothes;
     int clotheType;
     ImageView back;
+<<<<<<< Updated upstream
 
     ImageView bea;
+=======
+    public ImageView bearsTshirt, bea;
+>>>>>>> Stashed changes
 
 
     @Override
@@ -44,7 +49,16 @@ public class Market extends AppCompatActivity implements View.OnClickListener {
         User.c2.setOnClickListener(this::onClick);
         User.c3.setOnClickListener(this::onClick);
         User.user.importClothes();
+<<<<<<< Updated upstream
 
+=======
+        /*User.c2 = findViewById(R.id.c2);
+        User.c2.setOnClickListener(this::onClick);
+        c3 = findViewById(R.id.c1);
+        c3.setOnClickListener(this::onClick);*/
+        bearsTshirt = (ImageView) findViewById(R.id.bearsTshirt);
+        bea = (ImageView) findViewById(R.id.bearsTshirtc2);
+>>>>>>> Stashed changes
 
     }
 
@@ -59,7 +73,10 @@ public class Market extends AppCompatActivity implements View.OnClickListener {
                         User.user.getMyClothes()[clothes.getType()][i] = clothes;
                         User.user.getMyClothes()[clothes.getType()][i].setPurchased(true);
                         User.user.loseCoins();
+<<<<<<< Updated upstream
                         User.c8.setVisibility(View.VISIBLE);
+=======
+>>>>>>> Stashed changes
                         break;
                     }
                 }
@@ -88,7 +105,14 @@ public class Market extends AppCompatActivity implements View.OnClickListener {
         else if(view.getId() == User.c1.getId())
         {
             purchaseClothes((Clothes) User.c1.getTag());
+            bearsTshirt.setVisibility(View.VISIBLE);
         }
+        /*else if(view.getId() == User.c2.getId())
+        {
+            purchaseClothes((Clothes) User.c2.getTag());
+            bea.setVisibility(View.VISIBLE);
+        }*/
+
 
     }
 
