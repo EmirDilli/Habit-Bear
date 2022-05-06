@@ -87,7 +87,6 @@
         android:layout_marginTop="5dp"
         android:adjustViewBounds="true"
         android:fontFamily="@font/changa_one"
-        android:text=""
         android:textColor="#020a99"
         android:textSize="20dp" />
 
@@ -112,7 +111,6 @@
         android:layout_marginTop="5dp"
         android:adjustViewBounds="true"
         android:fontFamily="@font/changa_one"
-        android:text=""
         android:textColor="#020a99"
         android:textSize="20dp" />
 
@@ -156,7 +154,6 @@
         android:layout_toRightOf="@+id/coin"
         android:adjustViewBounds="true"
         android:fontFamily="@font/changa_one"
-        android:text=""
         android:textColor="#020a99"
         android:textSize="20dp" />
 

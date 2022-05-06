@@ -20,7 +20,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener{
 
     Button habitsButton, marketButton, calendarButton, inventoryButton;
     ImageView settings;
-    TextView bearNameText, highestStreak, currentStreak, coins;
+    TextView bearNameText, highestStreakCount, currentStreakCount, coins;
     String bearsName;
 
     @Override
@@ -38,6 +38,12 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener{
         settings = findViewById(R.id.settings);
         settings.setOnClickListener(this:: onClick);
         bearNameText = (TextView) findViewById(R.id.bearName);
+        /*currentStreakCount = (TextView) findViewById(R.id.currentStreakCount);
+        currentStreakCount.setText(User.user.getCurrentStreak());
+        highestStreakCount = (TextView) findViewById(R.id.highestStreakCount);
+        highestStreakCount.setText(User.user.getMaxStreak());
+        coins = (TextView) findViewById(R.id.coinCount);
+        coins.setText(User.user.getCoins());*/
         //bearNameText.setText(User.user.getName());
         /*highestStreak = (TextView) findViewById(R.id.highestStreakCount);
         highestStreak.setText(User.user.getMaxStreak());

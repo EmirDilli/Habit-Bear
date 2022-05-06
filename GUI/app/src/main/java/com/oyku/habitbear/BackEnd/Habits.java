@@ -46,10 +46,6 @@ public class Habits {
         
     }
 
-    
-    public void set(Account aUser){
-        this.user = aUser;
-    }
 
     public boolean isEnabled() {
         return isEnabled;

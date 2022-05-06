@@ -5,12 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Market"
-<<<<<<< Updated upstream
-    android:background="#A6BCF1">
-=======
-    android:background="@mipmap/ic_bearbackground"
-    >
->>>>>>> Stashed changes
+    android:background="#f0f6fa">
+
 
 
     <TextView
@@ -58,45 +54,29 @@
         android:id="@+id/c1"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="300dp"
         android:layout_below="@+id/bearsTshirt"
         android:src="@mipmap/c1" />
 
-    <ImageView
-        android:id="@+id/bearsTshirt"
-        android:layout_width="230dp"
-        android:layout_height="360dp"
-        android:layout_marginLeft="95dp"
-        android:layout_marginTop="225dp"
-        android:visibility="invisible"
-        android:src="@mipmap/c1" />
-
-    <ImageView
-        android:id="@+id/bearsTshirtc2"
-        android:layout_width="230dp"
-        android:layout_height="360dp"
-        android:layout_marginLeft="95dp"
-        android:layout_marginTop="225dp"
-        android:src="@mipmap/c2"
-        android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/c2"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_below="@+id/bearsTshirt"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="300dp"
         android:layout_toRightOf="@+id/c1"
         android:src="@mipmap/c2" />
 
     <ImageView
         android:id="@+id/c3"
         android:layout_width="100dp"
-        android:layout_below="@+id/bearsTshirt"
         android:layout_height="100dp"
-<<<<<<< Updated upstream
+        android:layout_below="@+id/bearsTshirt"
         android:layout_marginLeft="1dp"
         android:layout_marginTop="300dp"
-=======
->>>>>>> Stashed changes
         android:layout_toRightOf="@+id/c2"
         android:src="@mipmap/c3" />
     <ImageView
@@ -122,7 +102,6 @@
         android:layout_toRightOf="@+id/c5"
         android:src="@mipmap/c6" />
 
-<<<<<<< Updated upstream
     <ImageView
         android:id="@+id/c7"
         android:layout_width="100dp"
@@ -141,7 +120,4 @@
 
 
 
-
-=======
->>>>>>> Stashed changes
 </RelativeLayout>

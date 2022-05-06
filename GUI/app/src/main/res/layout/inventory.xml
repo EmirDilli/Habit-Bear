@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Inventory"
-    android:background="#98D4FB">
+    android:background="#f0f6fa">
 
     <TextView
         android:id="@+id/inventoryHeader"
@@ -25,14 +25,27 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:id="@+id/backInventory"/>
-<<<<<<< Updated upstream
+
+    <ImageView
+        android:id="@+id/bear"
+        android:layout_width="200dp"
+        android:layout_height="274dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ayi3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <ImageView
         android:id="@+id/c1"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="300dp"
         android:src="@mipmap/c1"
-        android:visibility="invisible"/>
+        android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/c2"
@@ -95,29 +108,84 @@
         android:layout_toRightOf="@+id/c7"
         android:src="@mipmap/c8"
         android:visibility="invisible"/>
-=======
-
-    <TableLayout
-        android:layout_below="@+id/backInventory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        <TableRow
 
     <ImageView
+        android:id="@+id/c1"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_below="@+id/backInventory" />
+        android:layout_below="@+id/bearsTshirt"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="300dp"
+        android:src="@mipmap/c1"
+        android:visibility="invisible" />
 
-        <ImageView
+
+    <ImageView
+        android:id="@+id/c2"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_below="@id/backInventory"/>
+        android:layout_below="@+id/bearsTshirt"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="300dp"
+        android:layout_toRightOf="@+id/c1"
+        android:src="@mipmap/c2"
+        android:visibility="invisible"/>
 
-    </TableRow>
-</TableLayout>
+    <ImageView
+        android:id="@+id/c3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/bearsTshirt"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="300dp"
+        android:layout_toRightOf="@+id/c2"
+        android:src="@mipmap/c3"
+        android:visibility="invisible"/>
 
+    <ImageView
+        android:id="@+id/c4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="400dp"
+        android:src="@mipmap/c4"
+        android:visibility="invisible"/>
 
->>>>>>> Stashed changes
+    <ImageView
+        android:id="@+id/c5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="400dp"
+        android:layout_toRightOf="@+id/c4"
+        android:src="@mipmap/c5"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/c6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="400dp"
+        android:layout_toRightOf="@+id/c5"
+        android:src="@mipmap/c6"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/c7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="500dp"
+        android:src="@mipmap/c7"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/c8"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="500dp"
+        android:layout_toRightOf="@+id/c7"
+        android:src="@mipmap/c8"
+        android:visibility="invisible"/>
 
 </RelativeLayout>

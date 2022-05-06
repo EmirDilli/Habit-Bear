@@ -14,12 +14,8 @@ public class Market extends AppCompatActivity implements View.OnClickListener {
     Clothes[][] clothes = User.user.allClothes;
     int clotheType;
     ImageView back;
-<<<<<<< Updated upstream
-
-    ImageView bea;
-=======
     public ImageView bearsTshirt, bea;
->>>>>>> Stashed changes
+
 
 
     @Override
@@ -48,17 +44,15 @@ public class Market extends AppCompatActivity implements View.OnClickListener {
         User.c1.setOnClickListener(this::onClick);
         User.c2.setOnClickListener(this::onClick);
         User.c3.setOnClickListener(this::onClick);
-        User.user.importClothes();
-<<<<<<< Updated upstream
+        User.c4.setOnClickListener(this::onClick);
+        User.c5.setOnClickListener(this::onClick);
+        User.c6.setOnClickListener(this::onClick);
+        User.c7.setOnClickListener(this::onClick);
+        User.c8.setOnClickListener(this::onClick);
 
-=======
-        /*User.c2 = findViewById(R.id.c2);
-        User.c2.setOnClickListener(this::onClick);
-        c3 = findViewById(R.id.c1);
-        c3.setOnClickListener(this::onClick);*/
-        bearsTshirt = (ImageView) findViewById(R.id.bearsTshirt);
-        bea = (ImageView) findViewById(R.id.bearsTshirtc2);
->>>>>>> Stashed changes
+        User.user.importClothes();
+
+
 
     }
 
@@ -68,22 +62,17 @@ public class Market extends AppCompatActivity implements View.OnClickListener {
 
         if (!clothes.isPurchased()) {
             if (clothes.canBeBought(User.user)) {
-                for (int i = 0; i < User.user.getMyClothes()[clothes.getType()].length; i++) {
-                    if (User.user.getMyClothes()[clothes.getType()][i] == null) {
-                        User.user.getMyClothes()[clothes.getType()][i] = clothes;
-                        User.user.getMyClothes()[clothes.getType()][i].setPurchased(true);
-                        User.user.loseCoins();
-<<<<<<< Updated upstream
-                        User.c8.setVisibility(View.VISIBLE);
-=======
->>>>>>> Stashed changes
-                        break;
-                    }
-                }
-            } else {
-                Toast.makeText(this, "You don't have enough coins", Toast.LENGTH_LONG).show();
+
+                User.user.getMyClothes()[clothes.getType()][clothes.getColor()] = clothes;
+                User.user.getMyClothes()[clothes.getType()][clothes.getColor()].setPurchased(true);
+                User.user.loseCoins();
+                Toast.makeText(this, "Purchase successful", Toast.LENGTH_LONG).show();
             }
-        } else {
+         else {
+            Toast.makeText(this, "You don't have enough coins", Toast.LENGTH_LONG).show();
+        }
+    }
+        else {
             Toast.makeText(this, "You already have that clothing", Toast.LENGTH_LONG).show();
         }
     }
@@ -97,21 +86,39 @@ public class Market extends AppCompatActivity implements View.OnClickListener {
             Intent intent = new Intent(this, Homepage.class);
             startActivity(intent);
         }
-        /*else if(view.getId() == c1.getId())
-        {
-            clothes = (Clothes) c1.getTag();
-            bea.setImageResource(R.mipmap.c1);
-        }*/
         else if(view.getId() == User.c1.getId())
         {
             purchaseClothes((Clothes) User.c1.getTag());
-            bearsTshirt.setVisibility(View.VISIBLE);
         }
-        /*else if(view.getId() == User.c2.getId())
+        else if(view.getId() == User.c2.getId())
         {
             purchaseClothes((Clothes) User.c2.getTag());
-            bea.setVisibility(View.VISIBLE);
-        }*/
+        }
+        else if(view.getId() == User.c3.getId())
+        {
+            purchaseClothes((Clothes) User.c3.getTag());
+        }
+        else if(view.getId() == User.c4.getId())
+        {
+            purchaseClothes((Clothes) User.c4.getTag());
+        }
+        else if(view.getId() == User.c5.getId())
+        {
+            purchaseClothes((Clothes) User.c5.getTag());
+        }
+        else if(view.getId() == User.c6.getId())
+        {
+            purchaseClothes((Clothes) User.c6.getTag());
+        }
+        else if(view.getId() == User.c7.getId())
+        {
+            purchaseClothes((Clothes) User.c7.getTag());
+        }
+        else if(view.getId() == User.c8.getId())
+        {
+            purchaseClothes((Clothes) User.c8.getTag());
+        }
+
 
 
     }

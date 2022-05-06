@@ -1,9 +1,15 @@
 package com.oyku.habitbear.BackEnd;
 
-import android.widget.ImageView;
+
+import androidx.annotation.NonNull;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import java.util.Calendar;
-import com.oyku.habitbear.*;
-import java.util.ArrayList;
+
 
 public class Account{
 
@@ -41,12 +47,9 @@ public class Account{
         myHabits[3] =new Habits("Read Books");
         myHabits[4] =new Habits("Medicine");
         myHabits[5] =new Habits("Custom");
-        for (Habits habits : myHabits) {
-            habits.set(this);
-        }
 
         coins = 100;
-        allClothes = new Clothes[1][1];
+        allClothes = new Clothes[3][3];
         myClothes = new Clothes[3][3]; //[ Shirts, Pants, Accessories]
 
     }
@@ -128,7 +131,7 @@ public class Account{
         setClothingImage(0, 2);
 
         // Pants
-       /* allClothes[1][0] = new Clothes(10, 1, 0);
+        allClothes[1][0] = new Clothes(10, 1, 0);
         setClothingImage(1, 0);
         allClothes[1][1] = new Clothes(10, 1, 1);
         setClothingImage(1, 1);
@@ -140,8 +143,6 @@ public class Account{
         setClothingImage(2, 0);
         allClothes[2][1] = new Clothes(10, 2, 1);
         setClothingImage(2, 1);
-        allClothes[2][2] = new Clothes(10, 2, 2);
-        setClothingImage(2, 2);*/
     }
 
     public void setClothingImage(int type, int color) {
@@ -167,8 +168,6 @@ public class Account{
                 User.c7.setTag(allClothes[2][0]);
             } else if (color == 1) {//green
                 User.c8.setTag(allClothes[2][1]);
-            } else if (color == 2) {//blue
-                User.c9.setTag(allClothes[2][2]);
             }
         }
     }
@@ -258,6 +257,24 @@ public class Account{
 
     public void addSteps(){
        // currentStep++;
+    }
+
+    public void addNewDataToDatabase(){
+        AccountAccess ma = new AccountAccess(this);
+
+        DatabaseReference dr = FirebaseDatabase.getInstance().getReference("User");
+        DatabaseReference key = FirebaseDatabase.getInstance().getReference("ID_Keys");
+
+        key.child("User").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                int count = Integer.parseInt(task.getResult().getValue(String.class));
+                key.child("User").setValue(String.valueOf(count+1));
+                ma.id = count + 1;
+                dr.child(String.valueOf(ma.id)).setValue(ma);
+            }
+        });
+
     }
 
 }

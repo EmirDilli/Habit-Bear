@@ -26,7 +26,6 @@ public class Register extends AppCompatActivity{ //implements View.OnClickListen
         super.onResume();
         SharedPreferences sharedpreferences = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE);
         if (!sharedpreferences.getBoolean(prevStarted, false)) {
-
             //User.user.setId(tevfikten kullanıcı sayısı + 1);
             SharedPreferences.Editor editor = sharedpreferences.edit();
             editor.putBoolean(prevStarted, Boolean.TRUE);
@@ -50,6 +49,7 @@ public class Register extends AppCompatActivity{ //implements View.OnClickListen
                 initial = new Intent(Register.this, Homepage.class);
                 bearName = editText.getText().toString();
                 User.user.setName(bearName);
+                User.user.addNewDataToDatabase();
                 /*DatabaseReference er = FirebaseDatabase.getInstance().getReference("Tevfik");
                 er.child("1").setValue(User.user.getName());*/
                 startActivity(initial);
