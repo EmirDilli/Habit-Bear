@@ -10,6 +10,9 @@ public class Mountain {
         stepNo = 2*mountainNo+1;
     }
 
+    public Mountain(){}
+
+
     // returns step of user
     public int mountainProgress(int streak){  
         int result = streak;
@@ -19,4 +22,11 @@ public class Mountain {
         return result+1;
     }
 
+    public int getMountainNo(){return this.mountainNo;}
+    public void getData(MountainAccess ma){
+
+        this.mountainNo = ma.mountainNo;
+        this.stepNo = ma.stepNo;
+
+    }
 }

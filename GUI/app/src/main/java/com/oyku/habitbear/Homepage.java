@@ -18,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Homepage extends AppCompatActivity implements View.OnClickListener{
 
-    Button habitsButton, marketButton, calendarButton, inventoryButton;
+    Button habitsButton, marketButton, calendarButton, inventoryButton, lol;
     ImageView settings;
     TextView bearNameText, highestStreakCount, currentStreakCount, coins;
     String bearsName;
@@ -26,6 +26,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        User.user.getDataFromDatabase(3);
         setContentView(R.layout.homepage);
         habitsButton = findViewById(R.id.habits);
         habitsButton.setOnClickListener(this::onClick);
@@ -37,20 +38,14 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener{
         inventoryButton.setOnClickListener(this::onClick);
         settings = findViewById(R.id.settings);
         settings.setOnClickListener(this:: onClick);
+        lol = findViewById(R.id.lol);
+        lol.setOnClickListener(this::onClick);
         bearNameText = (TextView) findViewById(R.id.bearName);
-        /*currentStreakCount = (TextView) findViewById(R.id.currentStreakCount);
-        currentStreakCount.setText(User.user.getCurrentStreak());
+        bearNameText.setText(User.user.getName());
+        currentStreakCount = (TextView) findViewById(R.id.currentStreakCount);
         highestStreakCount = (TextView) findViewById(R.id.highestStreakCount);
-        highestStreakCount.setText(User.user.getMaxStreak());
         coins = (TextView) findViewById(R.id.coinCount);
-        coins.setText(User.user.getCoins());*/
-        //bearNameText.setText(User.user.getName());
-        /*highestStreak = (TextView) findViewById(R.id.highestStreakCount);
-        highestStreak.setText(User.user.getMaxStreak());
-        currentStreak = (TextView) findViewById(R.id.currentStreakCount);
-        currentStreak.setText(User.user.getCurrentStreak());
-        coins = (TextView) findViewById(R.id.coinCount);
-        coins.setText(User.user.getCoins());*/
+
 
 
       /*  DatabaseReference er = FirebaseDatabase.getInstance().getReference("Tevfik");
@@ -94,6 +89,14 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener{
         {
             Intent intent = new Intent(this, Settings.class);
             startActivity(intent);
+        }
+        else if(view.getId() == lol.getId())
+        {
+            bearNameText.setText(User.user.getName());
+            currentStreakCount.setText(User.user.getCurrentStreak()+ "");
+            highestStreakCount.setText(User.user.getMaxStreak() + "");
+            coins.setText(User.user.getCoins() + "");
+
         }
     }
 

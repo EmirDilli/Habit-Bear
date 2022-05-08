@@ -36,7 +36,7 @@ public class Register extends AppCompatActivity{ //implements View.OnClickListen
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
         editText = (EditText) findViewById(R.id.enterBearName);
@@ -50,8 +50,6 @@ public class Register extends AppCompatActivity{ //implements View.OnClickListen
                 bearName = editText.getText().toString();
                 User.user.setName(bearName);
                 User.user.addNewDataToDatabase();
-                /*DatabaseReference er = FirebaseDatabase.getInstance().getReference("Tevfik");
-                er.child("1").setValue(User.user.getName());*/
                 startActivity(initial);
             }
         });

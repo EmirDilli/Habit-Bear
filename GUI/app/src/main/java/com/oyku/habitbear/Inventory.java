@@ -22,7 +22,7 @@ public class Inventory extends AppCompatActivity implements View.OnClickListener
     private boolean bluePants = false;
     private boolean moustache = false;
     private boolean glasses = false;
-    ImageView bear;
+    ImageView bear, back;
 
 
     @Override
@@ -46,6 +46,8 @@ public class Inventory extends AppCompatActivity implements View.OnClickListener
         User.p8 = findViewById(R.id.c8);
         User.p8.setOnClickListener(this::onClick);
         bear = findViewById(R.id.bear);
+        back = findViewById(R.id.backInventory);
+        back.setOnClickListener(this::onClick);
 
         for (int i = 0; i < User.user.getMyClothes().length; i++) {
             for (int j = 0; j < User.user.getMyClothes()[0].length; j++) {
@@ -86,6 +88,12 @@ public class Inventory extends AppCompatActivity implements View.OnClickListener
     @Override
     public void onClick(View view) {
 
+        if(view.getId() == back.getId())
+        {
+            Intent intent = new Intent(this, Homepage.class);
+            startActivity(intent);
+        }
+
         if (view.getId() == User.p1.getId()) {
             redTshirt = true;
             greenTshirt = false;
@@ -113,26 +121,23 @@ public class Inventory extends AppCompatActivity implements View.OnClickListener
             redPants = false;
         }
         if (view.getId() == User.p7.getId()) {
-            moustache = true;
-            glasses = false;
-        } else if (view.getId() == User.p8.getId()) {
             moustache = false;
             glasses = true;
-        } else {
-            moustache = false;
+        } else if (view.getId() == User.p8.getId()) {
+            moustache = true;
             glasses = false;
         }
 
         if (redTshirt && redPants && moustache) {
-            bear.setImageResource(R.mipmap.ayiredpantsmus);
+            bear.setImageResource(R.mipmap.redredmus);
         } else if (redTshirt && redPants && glasses) {
-            bear.setImageResource(R.mipmap.ayiglassredpants);
+            bear.setImageResource(R.mipmap.redredglass);
         } else if (redTshirt && greenPants && glasses) {
-            bear.setImageResource(R.mipmap.ayigreenpantsglass);
+            bear.setImageResource(R.mipmap.redgreenglass);
         } else if (redTshirt && greenPants && moustache) {
-            bear.setImageResource(R.mipmap.ayigreenpantsmus);
+            bear.setImageResource(R.mipmap.redgreenmus);
         } else if (redTshirt && bluePants && glasses) {
-            bear.setImageResource(R.mipmap.ayibluepantsglass);
+            bear.setImageResource(R.mipmap.redblueglass);
         } else if (redTshirt && bluePants && moustache) {
             bear.setImageResource(R.mipmap.redbluemus);
         } else if (greenTshirt && redPants && moustache) {
@@ -140,7 +145,7 @@ public class Inventory extends AppCompatActivity implements View.OnClickListener
         } else if (greenTshirt && redPants && glasses) {
             bear.setImageResource(R.mipmap.greenredglass);
         }  else if (greenTshirt && greenPants && moustache) {
-            bear.setImageResource(R.mipmap.ayigreenmus);
+            bear.setImageResource(R.mipmap.greengreenmus);
         } else if (greenTshirt && greenPants && glasses) {
             bear.setImageResource(R.mipmap.greengreenglass);
         } else if (greenTshirt && bluePants && moustache) {
@@ -160,11 +165,11 @@ public class Inventory extends AppCompatActivity implements View.OnClickListener
         } else if (blueTshirt && bluePants && glasses) {
             bear.setImageResource(R.mipmap.blueblueglass);
         }else if (redTshirt && redPants) {
-            bear.setImageResource(R.mipmap.ayiredpants);
+            bear.setImageResource(R.mipmap.redred);
         } else if (redTshirt && greenPants) {
-            bear.setImageResource(R.mipmap.ayigreenpants);
+            bear.setImageResource(R.mipmap.redgreen);
         }else if (redTshirt && bluePants) {
-            bear.setImageResource(R.mipmap.ayibluepants);
+            bear.setImageResource(R.mipmap.redblue);
         }else if (greenTshirt && redPants) {
             bear.setImageResource(R.mipmap.greenred);
         }else if (greenTshirt && greenPants) {
@@ -178,35 +183,53 @@ public class Inventory extends AppCompatActivity implements View.OnClickListener
         } else if (blueTshirt && bluePants) {
             bear.setImageResource(R.mipmap.blueblue);
         }
-
+        else if (redTshirt && moustache) {
+            bear.setImageResource(R.mipmap.redmus);
+        }else if (redTshirt && glasses) {
+            bear.setImageResource(R.mipmap.redglass);
+        }else if (greenTshirt && moustache) {
+            bear.setImageResource(R.mipmap.ayigreenmus);
+        }else if (greenTshirt && glasses) {
+            bear.setImageResource(R.mipmap.ayigreenglass);
+        } else if (blueTshirt && moustache) {
+            bear.setImageResource(R.mipmap.bluemus);
+        } else if (blueTshirt && glasses) {
+            bear.setImageResource(R.mipmap.blueglass);
+        }
+        else if(redPants && moustache)
+        {
+            bear.setImageResource((R.mipmap.ayiredpantsmus));
+        }
+        else if (redPants && glasses) {
+            bear.setImageResource(R.mipmap.ayiglassredpants);
+        } else if (greenPants && moustache) {
+            bear.setImageResource(R.mipmap.ayigreenpantsmus);
+        } else if (greenPants && glasses) {
+            bear.setImageResource(R.mipmap.ayigreenpantsglass);
+        }
+        else if (bluePants && moustache) {
+            bear.setImageResource(R.mipmap.ayi31);
+        } else if (bluePants && glasses) {
+            bear.setImageResource(R.mipmap.ayibluepantsglass);
+        }
+        else if(redTshirt)
+        {
+            bear.setImageResource(R.mipmap.red);
+        }
         else if(greenTshirt)
-        {
-            bear.setImageResource(R.mipmap.ayigreen);
-        }
+        { bear.setImageResource(R.mipmap.ayigreen); }
         else if(blueTshirt)
-        {
-            bear.setImageResource(R.mipmap.ayiblue);
-        }
+        { bear.setImageResource(R.mipmap.ayiblue); }
         else if(redPants)
-        {
-            bear.setImageResource(R.mipmap.ayiredpants);
-        }
+        { bear.setImageResource(R.mipmap.ayiredpants); }
         else if(greenPants)
-        {
-            bear.setImageResource(R.mipmap.ayigreenpants);
-        }
+        { bear.setImageResource(R.mipmap.ayigreenpants); }
         else if(bluePants)
-        {
-            bear.setImageResource(R.mipmap.ayibluepants);
-        }
+        { bear.setImageResource(R.mipmap.ayibluepants); }
         else if(moustache)
-        {
-            bear.setImageResource(R.mipmap.ayimus);
-        }
+        { bear.setImageResource(R.mipmap.ayimus); }
         else if(glasses)
-        {
-            bear.setImageResource(R.mipmap.ayiglass);
-        }
+        { bear.setImageResource(R.mipmap.ayiglass); }
 
 
     }

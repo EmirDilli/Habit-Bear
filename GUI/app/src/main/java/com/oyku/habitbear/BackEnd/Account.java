@@ -8,13 +8,16 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.List;
 
 
 public class Account{
 
     // Properties
-    private static int idCount = 0;
     private int id;
     private String name;
     private int currentStreak;
@@ -30,7 +33,7 @@ public class Account{
         // get name from database
 
         // get idCount from database (last com.oyku.habitbear.Account's id)
-        id = idCount + 1;
+
         // get current and max streak from database
 
         /*setDate(date);
@@ -50,7 +53,7 @@ public class Account{
 
         coins = 100;
         allClothes = new Clothes[3][3];
-        myClothes = new Clothes[3][3]; //[ Shirts, Pants, Accessories]
+        myClothes = new Clothes[3][3];
 
     }
 
@@ -199,6 +202,19 @@ public class Account{
         this.name = name;
     }
 
+    public List<Habits> getHabits(){
+        return Arrays.asList(this.myHabits);
+    }
+
+    public List<List<Clothes>> getClothes(){
+        List<List<Clothes>> result = new ArrayList<>();
+        for (int i = 0; i < this.myClothes.length; i++) {
+            result.add(Arrays.asList(this.myClothes[i]));
+        }
+        return result;
+    }
+
+
 
 
 
@@ -268,13 +284,68 @@ public class Account{
         key.child("User").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
+                //Log.d("MESSAGE","SUCCESFULL");
                 int count = Integer.parseInt(task.getResult().getValue(String.class));
                 key.child("User").setValue(String.valueOf(count+1));
                 ma.id = count + 1;
                 dr.child(String.valueOf(ma.id)).setValue(ma);
             }
         });
+    }
+    public void getData(AccountAccess ma){
+
+        this.id = ma.id;
+        this.name = ma.name;
+        this.currentStreak = ma.currentStreak;
+        this.maxStreak = ma.maxStreak;
+        this.coins = ma.coins;
+
+        myHabits = new Habits[ma.habits.size()];
+
+        for (int i = 0; i < myHabits.length; i++) {
+            myHabits[i] = new Habits();
+            myHabits[i].getData(ma.habits.get(i));
+        }
+
+        myClothes = new Clothes[3][3];
+
+        for (int i = 0; i < myClothes.length; i++) {
+            for (int j = 0; j < myClothes[i].length; j++) {
+                myClothes[i][j] = new Clothes();
+                if(ma.myClothes.get(i).get(j).type == -1) myClothes[i][j] = null;
+                else{
+                    myClothes[i][j].getData(ma.myClothes.get(i).get(j));
+                }
+
+            }
+
+        }
+
+    }
+    public void getDataFromDatabase(int id){
+        DatabaseReference dr = FirebaseDatabase.getInstance().getReference("User");
+
+        dr.child(String.valueOf(id)).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                AccountAccess ac = task.getResult().getValue(AccountAccess.class);
+                getData(ac);
+            }
+        });
+    }
+    public void updateDataToDatabase(){
+        AccountAccess ma = new AccountAccess(this);
+
+        DatabaseReference dr = FirebaseDatabase.getInstance().getReference("User");
+
+        dr.child(String.valueOf(id)).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                dr.child(String.valueOf(id)).setValue(ma);
+            }
+        });
+    }
 
     }
 
-}
+

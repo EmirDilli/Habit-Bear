@@ -3,7 +3,7 @@ package com.oyku.habitbear.BackEnd;
 import android.widget.ImageView;
 
 public class User {
-    public static Account user = null;
+    public static Account user = new Account();
     public static ImageView c1 = null;
     public static ImageView c2= null;
     public static ImageView c3 = null;

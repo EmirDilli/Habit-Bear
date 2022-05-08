@@ -60,12 +60,14 @@ public class Market extends AppCompatActivity implements View.OnClickListener {
 
     public void purchaseClothes(Clothes clothes) {
 
-        if (!clothes.isPurchased()) {
+
+        if (User.user.getMyClothes()[clothes.getType()][clothes.getColor()]== null) {
             if (clothes.canBeBought(User.user)) {
 
                 User.user.getMyClothes()[clothes.getType()][clothes.getColor()] = clothes;
                 User.user.getMyClothes()[clothes.getType()][clothes.getColor()].setPurchased(true);
                 User.user.loseCoins();
+                User.user.updateDataToDatabase();
                 Toast.makeText(this, "Purchase successful", Toast.LENGTH_LONG).show();
             }
          else {

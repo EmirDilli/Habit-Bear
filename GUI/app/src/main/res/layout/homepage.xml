@@ -23,6 +23,17 @@
             android:textSize="20dp"
             />
 
+    <Button
+        android:id="@+id/lol"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:backgroundTint="#de0925"
+        android:text="BUTTON"
+        android:fontFamily="@font/changa_one"
+        android:textSize="20dp"
+        />
         <Button
             android:id="@+id/market"
             android:layout_width="170dp"

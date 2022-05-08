@@ -7,7 +7,7 @@ public class Habits {
     private String name;
     private boolean isEnabled;
     private boolean isDone;
-    private Mountain[] mountain;
+    private Mountain mountain;
     private int currentMount;
     private int streak;
     private Account user;
@@ -17,16 +17,27 @@ public class Habits {
         isDone = false;
         isEnabled = false;
         name = str;
-        mountain = new Mountain[3];
-        mountain[0] = new Mountain(1);
-        mountain[1] = new Mountain(2);
-        mountain[2] = new Mountain(3);
+        mountain = new Mountain(1);
         currentMount = 0; // Get from database
         streak = 1; /// get from database
         editable = false;
-
-
     }
+
+    public Habits(){
+        this.mountain = new Mountain();
+    }
+
+    public Mountain getMountain()
+    {
+        return this.mountain;
+    }
+
+    public boolean isEditable()
+    {
+        return this.editable;
+    }
+
+    public int getStreak(){return this.streak;}
 
     public void setEditable(boolean editable) {
         this.editable = editable;
@@ -68,7 +79,7 @@ public class Habits {
 
     ///hasNextStep()->onLastStep()
     public  boolean onLastStep(){
-        if (mountain[currentMount].stepNo == mountain[currentMount].mountainProgress(streak)) {
+        if (mountain.stepNo == mountain.mountainProgress(streak)) {
             return true;
         }
         return false;
@@ -83,14 +94,24 @@ public class Habits {
 
         if ( onLastStep() ) {
             currentMount++; // Database
-            mountain[currentMount].stepNo = 1;
+            mountain.stepNo = 1;
             prize += extra;
         }
         else{
-            mountain[currentMount].stepNo++;
+            mountain.stepNo++;
         }
 
         user.coins += prize;
+
+    }
+    public void getData(HabitsAccess ma){
+
+        this.name = ma.name;
+        this.isEnabled = ma.isEnabled;
+        this.isDone = ma.isDone;
+        this.mountain.getData(ma.mountain);
+        this.streak = ma.streak;
+        this.editable = ma.editable;
 
     }
 

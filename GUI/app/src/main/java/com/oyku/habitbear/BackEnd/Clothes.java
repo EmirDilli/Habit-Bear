@@ -15,6 +15,8 @@ public class Clothes {
         purchased = false;
     }
 
+    public Clothes(){}
+
     public String getName(){
         
         if (type == 0){
@@ -23,8 +25,12 @@ public class Clothes {
         else if (type == 1){
             return "Pants";
         }
-        else {
+        else if (type == 2){
             return "Accessory";
+        }
+        else
+        {
+            return "Null";
         }
     }
 
@@ -62,4 +68,12 @@ public class Clothes {
         this.color = color;
     }
 
+    public void getData(ClothesAccess ma){
+
+        this.type = ma.type;
+        this.price = ma.price;
+        this.color = ma.color;
+        this.purchased = ma.purchased;
+
+    }
 }
