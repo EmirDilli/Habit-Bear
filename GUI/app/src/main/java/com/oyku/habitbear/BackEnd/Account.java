@@ -9,6 +9,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -22,7 +23,7 @@ public class Account{
     private String name;
     private int currentStreak;
     private int maxStreak;
-    private Calendar date = Calendar.getInstance();// will be updated shortly
+    private Calendar date;// will be updated shortly
     private Habits[] myHabits;
     protected int coins;
     private Clothes[][] myClothes;
@@ -40,6 +41,7 @@ public class Account{
         
         currentStep = 0;
         absent = 0;*/
+        date = Calendar.getInstance();
 
 
 
@@ -218,33 +220,8 @@ public class Account{
 
 
 
-    // DATE METHODS
-/*
-   private void setDate(Calendar x) {
-
-        LocalDate today = new LocalDate.now();
-
-        x.set(Calendar.YEAR ,
-                today.getYear());
-        x.set(Calendar.MONTH , today.getMonthValue());
-        x.set(Calendar.DAY_OF_MONTH , today.getDayOfMonth());
-    }
 
 
-
-
-    public int getDayOfMonth() {
-        return date.get(Calendar.DAY_OF_MONTH);
-    }
-
-    public int getMonthNum() {
-        return date.get(Calendar.MONTH);
-    }
-
-    public int getYear() {
-        return date.get(Calendar.YEAR);
-    }
-    */
 
     // STREAKS
 

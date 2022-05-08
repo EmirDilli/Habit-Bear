@@ -1,5 +1,6 @@
 package com.oyku.habitbear.BackEnd;
 
+import android.widget.CheckBox;
 import android.widget.ImageView;
 
 public class User {
@@ -20,6 +21,21 @@ public class User {
     public static ImageView p6 = null;
     public static ImageView p7 = null;
     public static ImageView p8 = null;
+
+    public static CheckBox ch1;
+    public static CheckBox ch2;
+    public static CheckBox ch3;
+    public static CheckBox ch4;
+    public static CheckBox ch5;
+    public static CheckBox ch6;
+    public static ImageView h1;
+    public static ImageView h2;
+    public static ImageView h3;
+    public static ImageView h4;
+    public static ImageView h5;
+    public static ImageView h6;
+
+
 
 
 }

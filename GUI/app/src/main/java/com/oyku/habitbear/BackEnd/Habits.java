@@ -87,7 +87,7 @@ public class Habits {
 
     // Sets is done + step
     public void updateToday() {
-        this.isDone = true;
+
          
         int prize = 1;
         int extra = 2;
