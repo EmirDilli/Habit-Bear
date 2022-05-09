@@ -41,7 +41,7 @@ public class Account{
         
         currentStep = 0;
         absent = 0;*/
-        date = Calendar.getInstance();
+
 
 
 
@@ -206,6 +206,9 @@ public class Account{
 
     public List<Habits> getHabits(){
         return Arrays.asList(this.myHabits);
+    }
+    public Habits[] getHabitsArray(){
+        return (this.myHabits);
     }
 
     public List<List<Clothes>> getClothes(){

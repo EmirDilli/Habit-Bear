@@ -10,6 +10,7 @@ public class Habits {
     private Mountain mountain;
     private int currentMount;
     private int streak;
+    private int highesStreak;
     private Account user;
     private boolean editable;
     
@@ -19,7 +20,7 @@ public class Habits {
         name = str;
         mountain = new Mountain(1);
         currentMount = 0; // Get from database
-        streak = 1; /// get from database
+        streak = 0; /// get from database
         editable = false;
     }
 
@@ -102,6 +103,8 @@ public class Habits {
         }
 
         user.coins += prize;
+        streak++;
+        if(highesStreak < streak) highesStreak = streak;
 
     }
     public void getData(HabitsAccess ma){
