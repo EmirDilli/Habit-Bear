@@ -1,6 +1,8 @@
 package com.oyku.habitbear.BackEnd;
 
 
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -8,6 +10,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import org.w3c.dom.Text;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -299,7 +303,7 @@ public class Account{
         }
 
     }
-    public void getDataFromDatabase(int id){
+    public void getDataFromDatabase(int id, TextView bearName, TextView coinCount, TextView currStreak, TextView highStreak){
         DatabaseReference dr = FirebaseDatabase.getInstance().getReference("User");
 
         dr.child(String.valueOf(id)).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
@@ -307,6 +311,11 @@ public class Account{
             public void onComplete(@NonNull Task<DataSnapshot> task) {
                 AccountAccess ac = task.getResult().getValue(AccountAccess.class);
                 getData(ac);
+                bearName.setText(name);
+                coinCount.setText(coins + "");
+                currStreak.setText(currentStreak + "");
+                highStreak.setText(maxStreak + "");
+
             }
         });
     }

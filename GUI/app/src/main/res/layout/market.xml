@@ -33,12 +33,12 @@
         app:srcCompat="@drawable/ayi3" />
 
     <ImageView
+        android:id="@+id/backMarket"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/ic_back"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
-        android:id="@+id/backMarket"/>
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_back" />
 
     <ImageView
         android:id="@+id/coin"

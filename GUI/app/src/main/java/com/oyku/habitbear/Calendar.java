@@ -21,21 +21,30 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Calendar extends AppCompatActivity{
-    TimePicker timepicker;
 
 
-
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.calendar);
+        back = findViewById(R.id.backCalendar);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Calendar.this, Homepage.class);
+                startActivity(intent);
+            }
+        });
+
         java.util.Calendar calendar = java.util.Calendar.getInstance();
         calendar.set(calendar.get(java.util.Calendar.YEAR),calendar.get(java.util.Calendar.MONTH),
-                calendar.get(java.util.Calendar.DAY_OF_MONTH),timepicker.getCurrentHour(),timepicker.getCurrentMinute(),0);
+                calendar.get(java.util.Calendar.DAY_OF_MONTH));
         setAlarm(calendar.getTimeInMillis());
 
-        setContentView(R.layout.calendar);
+
         User.ch1 = (CheckBox) findViewById(R.id.first);
         User.ch2 = (CheckBox) findViewById(R.id.second);
         User.ch3 = (CheckBox) findViewById(R.id.third);
@@ -109,6 +118,7 @@ public class Calendar extends AppCompatActivity{
         manager.setRepeating(AlarmManager.RTC, time, 60000,pintent);
 
     }
+
 
 
 

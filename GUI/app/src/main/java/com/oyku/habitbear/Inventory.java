@@ -14,14 +14,6 @@ public class Inventory extends AppCompatActivity implements View.OnClickListener
     private int type;
     private int whichClotheInType;
     private Account account;
-    private boolean redTshirt = false;
-    private boolean greenTshirt = false;
-    private boolean blueTshirt = false;
-    private boolean redPants = false;
-    private boolean greenPants = false;
-    private boolean bluePants = false;
-    private boolean moustache = false;
-    private boolean glasses = false;
     ImageView bear, back;
 
 
@@ -80,8 +72,304 @@ public class Inventory extends AppCompatActivity implements View.OnClickListener
                 }
             }
 
+
+            if (User.redTshirt && User.redPants && User.moustache) {
+                bear.setImageResource(R.mipmap.redredmus);
+            } else if (User.redTshirt && User.redPants && User.glasses) {
+                bear.setImageResource(R.mipmap.redredglass);
+
+            } else if (User.redTshirt && User.greenPants && User.glasses) {
+                bear.setImageResource(R.mipmap.redgreenglass);
+
+            } else if (User.redTshirt && User.greenPants && User.moustache) {
+                bear.setImageResource(R.mipmap.redgreenmus);
+
+            } else if (User.redTshirt && User.bluePants && User.glasses) {
+                bear.setImageResource(R.mipmap.redblueglass);
+
+            } else if (User.redTshirt && User.bluePants && User.moustache) {
+                bear.setImageResource(R.mipmap.redbluemus);
+
+            } else if (User.greenTshirt && User.redPants && User.moustache) {
+                bear.setImageResource(R.mipmap.greenredmus);
+
+            } else if (User.greenTshirt && User.redPants && User.glasses) {
+                bear.setImageResource(R.mipmap.greenredglass);
+
+            }  else if (User.greenTshirt && User.greenPants && User.moustache) {
+                bear.setImageResource(R.mipmap.greengreenmus);
+
+            } else if (User.greenTshirt && User.greenPants && User.glasses) {
+                bear.setImageResource(R.mipmap.greengreenglass);
+
+            } else if (User.greenTshirt && User.bluePants && User.moustache) {
+                bear.setImageResource(R.mipmap.greenbluemus);
+
+            } else if (User.greenTshirt && User.bluePants && User.glasses) {
+                bear.setImageResource(R.mipmap.greenblueglass);
+
+            }else if (User.blueTshirt && User.redPants && User.moustache) {
+                bear.setImageResource(R.mipmap.blueredmus);
+
+            } else if (User.blueTshirt && User.redPants && User.glasses) {
+                bear.setImageResource(R.mipmap.blueredglass);
+
+            } else if (User.blueTshirt && User.greenPants && User.moustache) {
+                bear.setImageResource(R.mipmap.bluegreenmus);
+
+            } else if (User.blueTshirt && User.greenPants && User.glasses) {
+                bear.setImageResource(R.mipmap.bluegreenglass);
+
+            }  else if (User.blueTshirt && User.bluePants && User.moustache) {
+                bear.setImageResource(R.mipmap.bluebluemus);
+
+            } else if (User.blueTshirt && User.bluePants && User.glasses) {
+                bear.setImageResource(R.mipmap.blueblueglass);
+
+            }else if (User.redTshirt && User.redPants) {
+                bear.setImageResource(R.mipmap.redred);
+
+            } else if (User.redTshirt && User.greenPants) {
+                bear.setImageResource(R.mipmap.redgreen);
+
+            }else if (User.redTshirt && User.bluePants) {
+                bear.setImageResource(R.mipmap.redblue);
+
+            }else if (User.greenTshirt && User.redPants) {
+                bear.setImageResource(R.mipmap.greenred);
+
+            }else if (User.greenTshirt && User.greenPants) {
+                bear.setImageResource(R.mipmap.greengreen);
+
+            } else if (User.greenTshirt && User.bluePants) {
+                bear.setImageResource(R.mipmap.greenblue);
+
+            } else if (User.blueTshirt && User.redPants) {
+                bear.setImageResource(R.mipmap.bluered);
+
+            } else if (User.blueTshirt && User.greenPants) {
+                bear.setImageResource(R.mipmap.bluegreen);
+
+            } else if (User.blueTshirt && User.bluePants) {
+                bear.setImageResource(R.mipmap.blueblue);
+            }
+            else if (User.redTshirt && User.moustache) {
+                bear.setImageResource(R.mipmap.redmus);
+
+            }else if (User.redTshirt && User.glasses) {
+                bear.setImageResource(R.mipmap.redglass);
+
+            }else if (User.greenTshirt && User.moustache) {
+                bear.setImageResource(R.mipmap.ayigreenmus);
+
+            }else if (User.greenTshirt && User.glasses) {
+                bear.setImageResource(R.mipmap.ayigreenglass);
+
+            } else if (User.blueTshirt && User.moustache) {
+                bear.setImageResource(R.mipmap.bluemus);
+
+            } else if (User.blueTshirt && User.glasses) {
+                bear.setImageResource(R.mipmap.blueglass);
+
+            }
+            else if(User.redPants && User.moustache)
+            {
+                bear.setImageResource((R.mipmap.ayiredpantsmus));
+
+            }
+            else if (User.redPants && User.glasses) {
+                bear.setImageResource(R.mipmap.ayiglassredpants);
+
+            } else if (User.greenPants && User.moustache) {
+                bear.setImageResource(R.mipmap.ayigreenpantsmus);
+
+            } else if (User.greenPants && User.glasses) {
+                bear.setImageResource(R.mipmap.ayigreenpantsglass);
+
+            }
+            else if (User.bluePants && User.moustache) {
+                bear.setImageResource(R.mipmap.ayi31);
+
+            } else if (User.bluePants && User.glasses) {
+                bear.setImageResource(R.mipmap.ayibluepantsglass);
+
+            }
+            else if(User.redTshirt)
+            {
+                bear.setImageResource(R.mipmap.red);
+
+            }
+            else if(User.greenTshirt)
+            { bear.setImageResource(R.mipmap.ayigreen);}
+
+            else if(User.blueTshirt)
+            { bear.setImageResource(R.mipmap.ayiblue);
+            }
+            else if(User.redPants)
+            { bear.setImageResource(R.mipmap.ayiredpants);
+            }
+            else if(User.greenPants)
+            { bear.setImageResource(R.mipmap.ayigreenpants);
+            }
+            else if(User.bluePants)
+            { bear.setImageResource(R.mipmap.ayibluepants);
+            }
+            else if(User.moustache)
+            { bear.setImageResource(R.mipmap.ayimus);
+            }
+            else if(User.glasses)
+            { bear.setImageResource(R.mipmap.ayiglass);
+            }
+
         }
 
+        if (User.redTshirt && User.redPants && User.moustache) {
+            bear.setImageResource(R.mipmap.redredmus);
+        } else if (User.redTshirt && User.redPants && User.glasses) {
+            bear.setImageResource(R.mipmap.redredglass);
+
+        } else if (User.redTshirt && User.greenPants && User.glasses) {
+            bear.setImageResource(R.mipmap.redgreenglass);
+
+        } else if (User.redTshirt && User.greenPants && User.moustache) {
+            bear.setImageResource(R.mipmap.redgreenmus);
+
+        } else if (User.redTshirt && User.bluePants && User.glasses) {
+            bear.setImageResource(R.mipmap.redblueglass);
+
+        } else if (User.redTshirt && User.bluePants && User.moustache) {
+            bear.setImageResource(R.mipmap.redbluemus);
+
+        } else if (User.greenTshirt && User.redPants && User.moustache) {
+            bear.setImageResource(R.mipmap.greenredmus);
+
+        } else if (User.greenTshirt && User.redPants && User.glasses) {
+            bear.setImageResource(R.mipmap.greenredglass);
+
+        }  else if (User.greenTshirt && User.greenPants && User.moustache) {
+            bear.setImageResource(R.mipmap.greengreenmus);
+
+        } else if (User.greenTshirt && User.greenPants && User.glasses) {
+            bear.setImageResource(R.mipmap.greengreenglass);
+
+        } else if (User.greenTshirt && User.bluePants && User.moustache) {
+            bear.setImageResource(R.mipmap.greenbluemus);
+
+        } else if (User.greenTshirt && User.bluePants && User.glasses) {
+            bear.setImageResource(R.mipmap.greenblueglass);
+
+        }else if (User.blueTshirt && User.redPants && User.moustache) {
+            bear.setImageResource(R.mipmap.blueredmus);
+
+        } else if (User.blueTshirt && User.redPants && User.glasses) {
+            bear.setImageResource(R.mipmap.blueredglass);
+
+        } else if (User.blueTshirt && User.greenPants && User.moustache) {
+            bear.setImageResource(R.mipmap.bluegreenmus);
+
+        } else if (User.blueTshirt && User.greenPants && User.glasses) {
+            bear.setImageResource(R.mipmap.bluegreenglass);
+
+        }  else if (User.blueTshirt && User.bluePants && User.moustache) {
+            bear.setImageResource(R.mipmap.bluebluemus);
+
+        } else if (User.blueTshirt && User.bluePants && User.glasses) {
+            bear.setImageResource(R.mipmap.blueblueglass);
+
+        }else if (User.redTshirt && User.redPants) {
+            bear.setImageResource(R.mipmap.redred);
+
+        } else if (User.redTshirt && User.greenPants) {
+            bear.setImageResource(R.mipmap.redgreen);
+
+        }else if (User.redTshirt && User.bluePants) {
+            bear.setImageResource(R.mipmap.redblue);
+
+        }else if (User.greenTshirt && User.redPants) {
+            bear.setImageResource(R.mipmap.greenred);
+
+        }else if (User.greenTshirt && User.greenPants) {
+            bear.setImageResource(R.mipmap.greengreen);
+
+        } else if (User.greenTshirt && User.bluePants) {
+            bear.setImageResource(R.mipmap.greenblue);
+
+        } else if (User.blueTshirt && User.redPants) {
+            bear.setImageResource(R.mipmap.bluered);
+
+        } else if (User.blueTshirt && User.greenPants) {
+            bear.setImageResource(R.mipmap.bluegreen);
+
+        } else if (User.blueTshirt && User.bluePants) {
+            bear.setImageResource(R.mipmap.blueblue);
+        }
+        else if (User.redTshirt && User.moustache) {
+            bear.setImageResource(R.mipmap.redmus);
+
+        }else if (User.redTshirt && User.glasses) {
+            bear.setImageResource(R.mipmap.redglass);
+
+        }else if (User.greenTshirt && User.moustache) {
+            bear.setImageResource(R.mipmap.ayigreenmus);
+
+        }else if (User.greenTshirt && User.glasses) {
+            bear.setImageResource(R.mipmap.ayigreenglass);
+
+        } else if (User.blueTshirt && User.moustache) {
+            bear.setImageResource(R.mipmap.bluemus);
+
+        } else if (User.blueTshirt && User.glasses) {
+            bear.setImageResource(R.mipmap.blueglass);
+
+        }
+        else if(User.redPants && User.moustache)
+        {
+            bear.setImageResource((R.mipmap.ayiredpantsmus));
+
+        }
+        else if (User.redPants && User.glasses) {
+            bear.setImageResource(R.mipmap.ayiglassredpants);
+
+        } else if (User.greenPants && User.moustache) {
+            bear.setImageResource(R.mipmap.ayigreenpantsmus);
+
+        } else if (User.greenPants && User.glasses) {
+            bear.setImageResource(R.mipmap.ayigreenpantsglass);
+
+        }
+        else if (User.bluePants && User.moustache) {
+            bear.setImageResource(R.mipmap.ayi31);
+
+        } else if (User.bluePants && User.glasses) {
+            bear.setImageResource(R.mipmap.ayibluepantsglass);
+
+        }
+        else if(User.redTshirt)
+        {
+            bear.setImageResource(R.mipmap.red);
+
+        }
+        else if(User.greenTshirt)
+        { bear.setImageResource(R.mipmap.ayigreen);}
+
+        else if(User.blueTshirt)
+        { bear.setImageResource(R.mipmap.ayiblue);
+        }
+        else if(User.redPants)
+        { bear.setImageResource(R.mipmap.ayiredpants);
+        }
+        else if(User.greenPants)
+        { bear.setImageResource(R.mipmap.ayigreenpants);
+        }
+        else if(User.bluePants)
+        { bear.setImageResource(R.mipmap.ayibluepants);
+        }
+        else if(User.moustache)
+        { bear.setImageResource(R.mipmap.ayimus);
+        }
+        else if(User.glasses)
+        { bear.setImageResource(R.mipmap.ayiglass);
+        }
 
     }
 
@@ -92,144 +380,190 @@ public class Inventory extends AppCompatActivity implements View.OnClickListener
         {
             Intent intent = new Intent(this, Homepage.class);
             startActivity(intent);
+            User.user.updateDataToDatabase();
         }
 
         if (view.getId() == User.p1.getId()) {
-            redTshirt = true;
-            greenTshirt = false;
-            blueTshirt = false;
+            User.redTshirt = true;
+            User.greenTshirt = false;
+            User.blueTshirt = false;
         } else if (view.getId() == User.p2.getId()) {
-            greenTshirt = true;
-            redTshirt = false;
-            blueTshirt = false;
+            User.greenTshirt = true;
+            User.redTshirt = false;
+            User.blueTshirt = false;
         } else if (view.getId() == User.p3.getId()) {
-            blueTshirt = true;
-            greenTshirt = false;
-            redTshirt = false;
+            User.blueTshirt = true;
+            User.greenTshirt = false;
+            User.redTshirt = false;
         }
         if (view.getId() == User.p4.getId()) {
-            redPants = true;
-            greenPants = false;
-            bluePants = false;
+            User.redPants = true;
+            User.greenPants = false;
+            User.bluePants = false;
         } else if (view.getId() == User.p5.getId()) {
-            greenPants = true;
-            redPants = false;
-            bluePants = false;
+            User.greenPants = true;
+            User.redPants = false;
+            User.bluePants = false;
         } else if (view.getId() == User.p6.getId()) {
-            bluePants = true;
-            greenPants = false;
-            redPants = false;
+            User.bluePants = true;
+            User.greenPants = false;
+            User.redPants = false;
         }
         if (view.getId() == User.p7.getId()) {
-            moustache = false;
-            glasses = true;
+            User.moustache = false;
+            User.glasses = true;
         } else if (view.getId() == User.p8.getId()) {
-            moustache = true;
-            glasses = false;
+            User.moustache = true;
+            User.glasses = false;
         }
-
-        if (redTshirt && redPants && moustache) {
+        if (User.redTshirt && User.redPants && User.moustache) {
             bear.setImageResource(R.mipmap.redredmus);
-        } else if (redTshirt && redPants && glasses) {
+        } else if (User.redTshirt && User.redPants && User.glasses) {
             bear.setImageResource(R.mipmap.redredglass);
-        } else if (redTshirt && greenPants && glasses) {
+
+        } else if (User.redTshirt && User.greenPants && User.glasses) {
             bear.setImageResource(R.mipmap.redgreenglass);
-        } else if (redTshirt && greenPants && moustache) {
+
+        } else if (User.redTshirt && User.greenPants && User.moustache) {
             bear.setImageResource(R.mipmap.redgreenmus);
-        } else if (redTshirt && bluePants && glasses) {
+
+        } else if (User.redTshirt && User.bluePants && User.glasses) {
             bear.setImageResource(R.mipmap.redblueglass);
-        } else if (redTshirt && bluePants && moustache) {
+
+        } else if (User.redTshirt && User.bluePants && User.moustache) {
             bear.setImageResource(R.mipmap.redbluemus);
-        } else if (greenTshirt && redPants && moustache) {
+
+        } else if (User.greenTshirt && User.redPants && User.moustache) {
             bear.setImageResource(R.mipmap.greenredmus);
-        } else if (greenTshirt && redPants && glasses) {
+
+        } else if (User.greenTshirt && User.redPants && User.glasses) {
             bear.setImageResource(R.mipmap.greenredglass);
-        }  else if (greenTshirt && greenPants && moustache) {
+
+        }  else if (User.greenTshirt && User.greenPants && User.moustache) {
             bear.setImageResource(R.mipmap.greengreenmus);
-        } else if (greenTshirt && greenPants && glasses) {
+
+        } else if (User.greenTshirt && User.greenPants && User.glasses) {
             bear.setImageResource(R.mipmap.greengreenglass);
-        } else if (greenTshirt && bluePants && moustache) {
+
+        } else if (User.greenTshirt && User.bluePants && User.moustache) {
             bear.setImageResource(R.mipmap.greenbluemus);
-        } else if (greenTshirt && bluePants && glasses) {
+
+        } else if (User.greenTshirt && User.bluePants && User.glasses) {
             bear.setImageResource(R.mipmap.greenblueglass);
-        }else if (blueTshirt && redPants && moustache) {
+
+        }else if (User.blueTshirt && User.redPants && User.moustache) {
             bear.setImageResource(R.mipmap.blueredmus);
-        } else if (blueTshirt && redPants && glasses) {
+
+        } else if (User.blueTshirt && User.redPants && User.glasses) {
             bear.setImageResource(R.mipmap.blueredglass);
-        } else if (blueTshirt && greenPants && moustache) {
+
+        } else if (User.blueTshirt && User.greenPants && User.moustache) {
             bear.setImageResource(R.mipmap.bluegreenmus);
-        } else if (blueTshirt && greenPants && glasses) {
+
+        } else if (User.blueTshirt && User.greenPants && User.glasses) {
             bear.setImageResource(R.mipmap.bluegreenglass);
-        }  else if (blueTshirt && bluePants && moustache) {
+
+        }  else if (User.blueTshirt && User.bluePants && User.moustache) {
             bear.setImageResource(R.mipmap.bluebluemus);
-        } else if (blueTshirt && bluePants && glasses) {
+
+        } else if (User.blueTshirt && User.bluePants && User.glasses) {
             bear.setImageResource(R.mipmap.blueblueglass);
-        }else if (redTshirt && redPants) {
+
+        }else if (User.redTshirt && User.redPants) {
             bear.setImageResource(R.mipmap.redred);
-        } else if (redTshirt && greenPants) {
+
+        } else if (User.redTshirt && User.greenPants) {
             bear.setImageResource(R.mipmap.redgreen);
-        }else if (redTshirt && bluePants) {
+
+        }else if (User.redTshirt && User.bluePants) {
             bear.setImageResource(R.mipmap.redblue);
-        }else if (greenTshirt && redPants) {
+
+        }else if (User.greenTshirt && User.redPants) {
             bear.setImageResource(R.mipmap.greenred);
-        }else if (greenTshirt && greenPants) {
+
+        }else if (User.greenTshirt && User.greenPants) {
             bear.setImageResource(R.mipmap.greengreen);
-        } else if (greenTshirt && bluePants) {
+
+        } else if (User.greenTshirt && User.bluePants) {
             bear.setImageResource(R.mipmap.greenblue);
-        } else if (blueTshirt && redPants) {
+
+        } else if (User.blueTshirt && User.redPants) {
             bear.setImageResource(R.mipmap.bluered);
-        } else if (blueTshirt && greenPants) {
+
+        } else if (User.blueTshirt && User.greenPants) {
             bear.setImageResource(R.mipmap.bluegreen);
-        } else if (blueTshirt && bluePants) {
+
+        } else if (User.blueTshirt && User.bluePants) {
             bear.setImageResource(R.mipmap.blueblue);
         }
-        else if (redTshirt && moustache) {
+        else if (User.redTshirt && User.moustache) {
             bear.setImageResource(R.mipmap.redmus);
-        }else if (redTshirt && glasses) {
+
+        }else if (User.redTshirt && User.glasses) {
             bear.setImageResource(R.mipmap.redglass);
-        }else if (greenTshirt && moustache) {
+
+        }else if (User.greenTshirt && User.moustache) {
             bear.setImageResource(R.mipmap.ayigreenmus);
-        }else if (greenTshirt && glasses) {
+
+        }else if (User.greenTshirt && User.glasses) {
             bear.setImageResource(R.mipmap.ayigreenglass);
-        } else if (blueTshirt && moustache) {
+
+        } else if (User.blueTshirt && User.moustache) {
             bear.setImageResource(R.mipmap.bluemus);
-        } else if (blueTshirt && glasses) {
+
+        } else if (User.blueTshirt && User.glasses) {
             bear.setImageResource(R.mipmap.blueglass);
+
         }
-        else if(redPants && moustache)
+        else if(User.redPants && User.moustache)
         {
             bear.setImageResource((R.mipmap.ayiredpantsmus));
+
         }
-        else if (redPants && glasses) {
+        else if (User.redPants && User.glasses) {
             bear.setImageResource(R.mipmap.ayiglassredpants);
-        } else if (greenPants && moustache) {
+
+        } else if (User.greenPants && User.moustache) {
             bear.setImageResource(R.mipmap.ayigreenpantsmus);
-        } else if (greenPants && glasses) {
+
+        } else if (User.greenPants && User.glasses) {
             bear.setImageResource(R.mipmap.ayigreenpantsglass);
+
         }
-        else if (bluePants && moustache) {
+        else if (User.bluePants && User.moustache) {
             bear.setImageResource(R.mipmap.ayi31);
-        } else if (bluePants && glasses) {
+
+        } else if (User.bluePants && User.glasses) {
             bear.setImageResource(R.mipmap.ayibluepantsglass);
+
         }
-        else if(redTshirt)
+        else if(User.redTshirt)
         {
             bear.setImageResource(R.mipmap.red);
+
         }
-        else if(greenTshirt)
-        { bear.setImageResource(R.mipmap.ayigreen); }
-        else if(blueTshirt)
-        { bear.setImageResource(R.mipmap.ayiblue); }
-        else if(redPants)
-        { bear.setImageResource(R.mipmap.ayiredpants); }
-        else if(greenPants)
-        { bear.setImageResource(R.mipmap.ayigreenpants); }
-        else if(bluePants)
-        { bear.setImageResource(R.mipmap.ayibluepants); }
-        else if(moustache)
-        { bear.setImageResource(R.mipmap.ayimus); }
-        else if(glasses)
-        { bear.setImageResource(R.mipmap.ayiglass); }
+        else if(User.greenTshirt)
+        { bear.setImageResource(R.mipmap.ayigreen);}
+
+        else if(User.blueTshirt)
+        { bear.setImageResource(R.mipmap.ayiblue);
+        }
+        else if(User.redPants)
+        { bear.setImageResource(R.mipmap.ayiredpants);
+        }
+        else if(User.greenPants)
+        { bear.setImageResource(R.mipmap.ayigreenpants);
+        }
+        else if(User.bluePants)
+        { bear.setImageResource(R.mipmap.ayibluepants);
+        }
+        else if(User.moustache)
+        { bear.setImageResource(R.mipmap.ayimus);
+        }
+        else if(User.glasses)
+        { bear.setImageResource(R.mipmap.ayiglass);
+        }
+
 
 
     }
