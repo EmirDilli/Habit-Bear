@@ -32,108 +32,108 @@ public class Calendar extends AppCompatActivity{
 
         super.onCreate(savedInstanceState);
 
-
+        CheckBox ch1,ch2,ch3,ch4,ch5,ch6;
+        ImageView h1,h2,h3,h4,h5,h6;
 
 
         setContentView(R.layout.calendar);
-        User.ch1 = (CheckBox) findViewById(R.id.first);
-        User.ch1.setOnClickListener(this::onClick);
-        User.ch2 = (CheckBox) findViewById(R.id.second);
-        User.ch2.setOnClickListener(this::onClick);
-        User.ch3 = (CheckBox) findViewById(R.id.third);
-        User.ch3.setOnClickListener(this::onClick);
-        User.ch4 = (CheckBox) findViewById(R.id.fourth);
-        User.ch4.setOnClickListener(this::onClick);
-        User.ch5 = (CheckBox) findViewById(R.id.fifth);
-        User.ch5.setOnClickListener(this::onClick);
-        User.ch6 = (CheckBox) findViewById(R.id.sixth);
-        User.ch6.setOnClickListener(this::onClick);
+        ch1 = (CheckBox) findViewById(R.id.first);
 
-        User.h1 = (ImageView) findViewById(R.id.eat);
-        User.h2 = (ImageView) findViewById(R.id.water);
-        User.h3 = (ImageView) findViewById(R.id.exercise);
-        User.h4 = (ImageView) findViewById(R.id.clock);
-        User.h5 = (ImageView) findViewById(R.id.study);
-        User.h6 = (ImageView) findViewById(R.id.self);
+        ch2 = (CheckBox) findViewById(R.id.second);
+
+        ch3 = (CheckBox) findViewById(R.id.third);
+
+        ch4 = (CheckBox) findViewById(R.id.fourth);
+
+        ch5 = (CheckBox) findViewById(R.id.fifth);
+
+        ch6 = (CheckBox) findViewById(R.id.sixth);
 
 
+        h1 = (ImageView) findViewById(R.id.eat);
+        h2 = (ImageView) findViewById(R.id.water);
+        h3 = (ImageView) findViewById(R.id.exercise);
+        h4 = (ImageView) findViewById(R.id.clock);
+        h5 = (ImageView) findViewById(R.id.study);
+        h6 = (ImageView) findViewById(R.id.self);
+
+        if(ch1.isChecked()){
+            User.user.getHabitsArray()[0].updateToday();
+            ch1.setChecked(false);
+        }
+        if(ch2.isChecked()){
+            User.user.getHabitsArray()[0].updateToday();
+            ch1.setEnabled(false);
+        }
+        if(ch3.isChecked()){
+            User.user.getHabitsArray()[0].updateToday();
+            ch1.setEnabled(false);
+        }
+        if(ch4.isChecked()){
+            User.user.getHabitsArray()[0].updateToday();
+            ch1.setEnabled(false);
+        }
+        if(ch5.isChecked()){
+            User.user.getHabitsArray()[0].updateToday();
+            ch1.setEnabled(false);
+        }
+        if(ch6.isChecked()){
+            User.user.getHabitsArray()[0].updateToday();
+            ch1.setEnabled(false);
+        }
+
+        h1.setVisibility(View.VISIBLE);
         if(User.user.getHabitsArray()[0].isEnabled()){
-            User.h1.setVisibility(View.VISIBLE);
-            User.ch1.setVisibility(View.VISIBLE);
+            h1.setVisibility(View.VISIBLE);
+            ch1.setVisibility(View.VISIBLE);
         }
         else{
-            User.h1.setVisibility(View.INVISIBLE);
-            User.ch1.setVisibility(View.INVISIBLE);
+
         }
         if(User.user.getHabitsArray()[1].isEnabled()){
-            User.h2.setVisibility(View.VISIBLE);
-            User.ch2.setVisibility(View.VISIBLE);
+            h2.setVisibility(View.VISIBLE);
+            ch2.setVisibility(View.VISIBLE);
         }
         else{
-            User.h2.setVisibility(View.INVISIBLE);
-            User.ch2.setVisibility(View.INVISIBLE);
+            h2.setVisibility(View.INVISIBLE);
+            ch2.setVisibility(View.INVISIBLE);
         }
         if(User.user.getHabitsArray()[2].isEnabled()){
-            User.h3.setVisibility(View.VISIBLE);
-            User.ch3.setVisibility(View.VISIBLE);
+            h3.setVisibility(View.VISIBLE);
+            ch3.setVisibility(View.VISIBLE);
         }
         else{
-            User.h3.setVisibility(View.INVISIBLE);
-            User.ch3.setVisibility(View.INVISIBLE);
+            h3.setVisibility(View.INVISIBLE);
+            ch3.setVisibility(View.INVISIBLE);
         }
         if(User.user.getHabitsArray()[3].isEnabled()){
-            User.h4.setVisibility(View.VISIBLE);
-            User.ch4.setVisibility(View.VISIBLE);
+            h4.setVisibility(View.VISIBLE);
+            ch4.setVisibility(View.VISIBLE);
         }
         else{
-            User.h4.setVisibility(View.INVISIBLE);
-            User.ch4.setVisibility(View.INVISIBLE);
+            h4.setVisibility(View.INVISIBLE);
+            ch4.setVisibility(View.INVISIBLE);
         }
         if(User.user.getHabitsArray()[4].isEnabled()){
-            User.h5.setVisibility(View.VISIBLE);
-            User.ch5.setVisibility(View.VISIBLE);
+            h5.setVisibility(View.VISIBLE);
+            ch5.setVisibility(View.VISIBLE);
         }
         else{
-            User.h5.setVisibility(View.INVISIBLE);
-            User.ch5.setVisibility(View.INVISIBLE);
+            h5.setVisibility(View.INVISIBLE);
+            ch5.setVisibility(View.INVISIBLE);
         }
         if(User.user.getHabitsArray()[5].isEnabled()){
-            User.h6.setVisibility(View.VISIBLE);
-            User.ch6.setVisibility(View.VISIBLE);
+            h6.setVisibility(View.VISIBLE);
+            ch6.setVisibility(View.VISIBLE);
         }
         else{
-            User.h6.setVisibility(View.INVISIBLE);
-            User.ch6.setVisibility(View.INVISIBLE);
+            h6.setVisibility(View.INVISIBLE);
+            ch6.setVisibility(View.INVISIBLE);
         }
 
     }
 
-    public void onClick(View view) {
-        if(view.getId() == User.ch1.getId()){
-            User.user.getHabitsArray()[0].updateToday();
-            User.ch1.setEnabled(false);
-        }
-        if(view.getId() == User.ch2.getId()){
-            User.user.getHabitsArray()[1].updateToday();
-            User.ch2.setEnabled(false);
-        }
-        if(view.getId() == User.ch3.getId()){
-            User.user.getHabitsArray()[2].updateToday();
-            User.ch3.setEnabled(false);
-        }
-        if(view.getId() == User.ch4.getId()){
-            User.user.getHabitsArray()[3].updateToday();
-            User.ch4.setEnabled(false);
-        }
-        if(view.getId() == User.ch5.getId()){
-            User.user.getHabitsArray()[4].updateToday();
-            User.ch5.setEnabled(false);
-        }
-        if(view.getId() == User.ch6.getId()){
-            User.user.getHabitsArray()[5].updateToday();
-            User.ch6.setEnabled(false);
-        }
-    }
+
 
 
 
