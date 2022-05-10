@@ -117,19 +117,20 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener 
         });
 
 
-        h1.setVisibility(View.VISIBLE);
-        h2.setVisibility(View.VISIBLE);
+
         if (User.user.getHabitsArray()[0].isEnabled()) {
             h1.setVisibility(View.VISIBLE);
             ch1.setVisibility(View.VISIBLE);
         } else {
-
+            h1.setVisibility(View.INVISIBLE);
+            ch1.setVisibility(View.INVISIBLE);
         }
         if (User.user.getHabitsArray()[1].isEnabled()) {
             h2.setVisibility(View.VISIBLE);
             ch2.setVisibility(View.VISIBLE);
         } else {
-
+            h2.setVisibility(View.INVISIBLE);
+            ch2.setVisibility(View.INVISIBLE);
         }
         if (User.user.getHabitsArray()[2].isEnabled()) {
             h3.setVisibility(View.VISIBLE);

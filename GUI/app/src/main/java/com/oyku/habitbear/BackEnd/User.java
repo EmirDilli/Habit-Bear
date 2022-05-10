@@ -10,6 +10,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.oyku.habitbear.HabitsPage;
 import com.oyku.habitbear.R;
 
 import java.util.HashMap;
@@ -17,6 +18,7 @@ import java.util.Map;
 
 public class User {
     public static Account user = new Account();
+
     public static ImageView c1 = null;
     public static ImageView c2= null;
     public static ImageView c3 = null;

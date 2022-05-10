@@ -8,11 +8,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 
 public class HabitsPage extends AppCompatActivity implements View.OnClickListener{
 
     ImageView readBooks, eatHealthy, medicine, workout, smoke, custom;
+    CheckBox c1,c2,c3,c4,c5,c6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -30,6 +32,74 @@ public class HabitsPage extends AppCompatActivity implements View.OnClickListene
         smoke.setOnClickListener(this::onClick);
         custom = findViewById(R.id.health);
         custom.setOnClickListener(this::onClick);
+
+
+        c1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(c1.isChecked()){
+                    User.user.getHabitsArray()[0].setEnabled(true);
+                }
+                else{
+                    User.user.getHabitsArray()[0].setEnabled(false);
+                }
+            }
+        });
+        c2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(c1.isChecked()){
+                    User.user.getHabitsArray()[1].setEnabled(true);
+                }
+                else{
+                    User.user.getHabitsArray()[1].setEnabled(false);
+                }
+            }
+        });
+        c3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(c1.isChecked()){
+                    User.user.getHabitsArray()[2].setEnabled(true);
+                }
+                else{
+                    User.user.getHabitsArray()[2].setEnabled(false);
+                }
+            }
+        });
+        c4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(c1.isChecked()){
+                    User.user.getHabitsArray()[3].setEnabled(true);
+                }
+                else{
+                    User.user.getHabitsArray()[3].setEnabled(false);
+                }
+            }
+        });
+        c5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(c1.isChecked()){
+                    User.user.getHabitsArray()[4].setEnabled(true);
+                }
+                else{
+                    User.user.getHabitsArray()[4].setEnabled(false);
+                }
+            }
+        });
+        c6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(c1.isChecked()){
+                    User.user.getHabitsArray()[5].setEnabled(true);
+                }
+                else{
+                    User.user.getHabitsArray()[5].setEnabled(false);
+                }
+            }
+        });
 
     }
 
