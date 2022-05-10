@@ -11,6 +11,15 @@ public class AccountAccess {
     public int currentStreak = 0;
     public int maxStreak = 0;
 
+    public  boolean redTshirt;
+    public  boolean greenTshirt;
+    public  boolean blueTshirt;
+    public  boolean redPants;
+    public  boolean greenPants;
+    public  boolean bluePants;
+    public  boolean moustache;
+    public  boolean glasses;
+
     public List<HabitsAccess> habits;
     public List<List<ClothesAccess>> myClothes;
 
@@ -25,6 +34,15 @@ public class AccountAccess {
         this.name = user.getName();
         this.currentStreak = user.getCurrentStreak();
         this.maxStreak = user.getMaxStreak();
+
+        redTshirt = User.redTshirt;
+        greenTshirt = User.greenTshirt;
+        blueTshirt = User.blueTshirt;
+        redPants = User.redPants;
+        greenPants = User.greenPants;
+        bluePants = User.bluePants;
+        moustache = User.moustache;
+        glasses = User.glasses;
 
         this.coins = user.getCoins();
         this.habits = new ArrayList<HabitsAccess>();

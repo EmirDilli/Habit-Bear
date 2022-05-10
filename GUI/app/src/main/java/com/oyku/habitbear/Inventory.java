@@ -387,34 +387,42 @@ public class Inventory extends AppCompatActivity implements View.OnClickListener
             User.redTshirt = true;
             User.greenTshirt = false;
             User.blueTshirt = false;
+            User.user.updateDataToDatabase();
         } else if (view.getId() == User.p2.getId()) {
             User.greenTshirt = true;
             User.redTshirt = false;
             User.blueTshirt = false;
+            User.user.updateDataToDatabase();
         } else if (view.getId() == User.p3.getId()) {
             User.blueTshirt = true;
             User.greenTshirt = false;
             User.redTshirt = false;
+            User.user.updateDataToDatabase();
         }
         if (view.getId() == User.p4.getId()) {
             User.redPants = true;
             User.greenPants = false;
             User.bluePants = false;
+            User.user.updateDataToDatabase();
         } else if (view.getId() == User.p5.getId()) {
             User.greenPants = true;
             User.redPants = false;
             User.bluePants = false;
+            User.user.updateDataToDatabase();
         } else if (view.getId() == User.p6.getId()) {
             User.bluePants = true;
             User.greenPants = false;
             User.redPants = false;
+            User.user.updateDataToDatabase();
         }
         if (view.getId() == User.p7.getId()) {
             User.moustache = false;
             User.glasses = true;
+            User.user.updateDataToDatabase();
         } else if (view.getId() == User.p8.getId()) {
             User.moustache = true;
             User.glasses = false;
+            User.user.updateDataToDatabase();
         }
         if (User.redTshirt && User.redPants && User.moustache) {
             bear.setImageResource(R.mipmap.redredmus);

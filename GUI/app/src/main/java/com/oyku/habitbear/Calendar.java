@@ -16,110 +16,155 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TimePicker;
-
+import android.widget.Toast;
+import android.widget.Toast;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Calendar extends AppCompatActivity{
+public class Calendar extends AppCompatActivity implements View.OnClickListener {
 
 
     ImageView back;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calendar);
+        CheckBox ch1, ch2, ch3, ch4, ch5, ch6;
+        ImageView h1, h2, h3, h4, h5, h6;
         back = findViewById(R.id.backCalendar);
-        back.setOnClickListener(new View.OnClickListener() {
+        back.setOnClickListener(this::onClick);
+
+        ch1 = (CheckBox) findViewById(R.id.first);
+        ch1.setEnabled(!User.user.getHabitsArray()[0].isDone());
+        ch1.setChecked(User.user.getHabitsArray()[0].isDone());
+
+        ch2 = (CheckBox) findViewById(R.id.second);
+
+        ch3 = (CheckBox) findViewById(R.id.third);
+
+        ch4 = (CheckBox) findViewById(R.id.fourth);
+
+        ch5 = (CheckBox) findViewById(R.id.fifth);
+
+        ch6 = (CheckBox) findViewById(R.id.sixth);
+
+
+        h1 = (ImageView) findViewById(R.id.eat);
+        h2 = (ImageView) findViewById(R.id.water);
+        h3 = (ImageView) findViewById(R.id.exercise);
+        h4 = (ImageView) findViewById(R.id.clock);
+        h5 = (ImageView) findViewById(R.id.study);
+        h6 = (ImageView) findViewById(R.id.self);
+
+        ch1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Calendar.this, Homepage.class);
-                startActivity(intent);
+            public void onClick(View view) {
+                if (ch1.isChecked()) {
+                    User.user.getHabitsArray()[0].updateToday();
+                    User.user.getHabitsArray()[0].setDone(true);
+                    ch1.setEnabled(false);
+                }
+            }
+        });
+        ch6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (ch6.isChecked()) {
+                    User.user.getHabitsArray()[5].updateToday();
+                    ch6.setEnabled(false);
+                }
+            }
+        });
+        ch2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (ch2.isChecked()) {
+                    User.user.getHabitsArray()[2].updateToday();
+                    ch2.setEnabled(false);
+                }
+            }
+        });
+        ch3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (ch3.isChecked()) {
+                    User.user.getHabitsArray()[3].updateToday();
+                    ch3.setEnabled(false);
+                }
+            }
+        });
+        ch4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (ch4.isChecked()) {
+                    User.user.getHabitsArray()[3].updateToday();
+                    ch4.setEnabled(false);
+                }
+            }
+        });
+        ch5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (ch5.isChecked()) {
+                    User.user.getHabitsArray()[4].updateToday();
+                    ch5.setEnabled(false);
+                }
             }
         });
 
-        java.util.Calendar calendar = java.util.Calendar.getInstance();
-        calendar.set(calendar.get(java.util.Calendar.YEAR),calendar.get(java.util.Calendar.MONTH),
-                calendar.get(java.util.Calendar.DAY_OF_MONTH));
-        setAlarm(calendar.getTimeInMillis());
 
+        h1.setVisibility(View.VISIBLE);
+        if (User.user.getHabitsArray()[0].isEnabled()) {
+            h1.setVisibility(View.VISIBLE);
+            ch1.setVisibility(View.VISIBLE);
+        } else {
 
-        User.ch1 = (CheckBox) findViewById(R.id.first);
-        User.ch2 = (CheckBox) findViewById(R.id.second);
-        User.ch3 = (CheckBox) findViewById(R.id.third);
-        User.ch4 = (CheckBox) findViewById(R.id.fourth);
-        User.ch5 = (CheckBox) findViewById(R.id.fifth);
-        User.ch6 = (CheckBox) findViewById(R.id.sixth);
-
-        User.h1 = (ImageView) findViewById(R.id.eat);
-        User.h2 = (ImageView) findViewById(R.id.water);
-        User.h3 = (ImageView) findViewById(R.id.exercise);
-        User.h4 = (ImageView) findViewById(R.id.clock);
-        User.h5 = (ImageView) findViewById(R.id.study);
-        User.h6 = (ImageView) findViewById(R.id.self);
-
-
-        if(User.user.getHabits().get(0).isEnabled()){
-            User.h1.setVisibility(View.VISIBLE);
-            User.ch1.setVisibility(View.VISIBLE);
         }
-        else{
-            User.h1.setVisibility(View.INVISIBLE);
-            User.ch1.setVisibility(View.INVISIBLE);
+        if (User.user.getHabitsArray()[1].isEnabled()) {
+            h2.setVisibility(View.VISIBLE);
+            ch2.setVisibility(View.VISIBLE);
+        } else {
+            h2.setVisibility(View.INVISIBLE);
+            ch2.setVisibility(View.INVISIBLE);
         }
-        if(User.user.getHabits().get(1).isEnabled()){
-            User.h2.setVisibility(View.VISIBLE);
-            User.ch2.setVisibility(View.VISIBLE);
+        if (User.user.getHabitsArray()[2].isEnabled()) {
+            h3.setVisibility(View.VISIBLE);
+            ch3.setVisibility(View.VISIBLE);
+        } else {
+            h3.setVisibility(View.INVISIBLE);
+            ch3.setVisibility(View.INVISIBLE);
         }
-        else{
-            User.h2.setVisibility(View.INVISIBLE);
-            User.ch2.setVisibility(View.INVISIBLE);
+        if (User.user.getHabitsArray()[3].isEnabled()) {
+            h4.setVisibility(View.VISIBLE);
+            ch4.setVisibility(View.VISIBLE);
+        } else {
+            h4.setVisibility(View.INVISIBLE);
+            ch4.setVisibility(View.INVISIBLE);
         }
-        if(User.user.getHabits().get(2).isEnabled()){
-            User.h3.setVisibility(View.VISIBLE);
-            User.ch3.setVisibility(View.VISIBLE);
+        if (User.user.getHabitsArray()[4].isEnabled()) {
+            h5.setVisibility(View.VISIBLE);
+            ch5.setVisibility(View.VISIBLE);
+        } else {
+            h5.setVisibility(View.INVISIBLE);
+            ch5.setVisibility(View.INVISIBLE);
         }
-        else{
-            User.h3.setVisibility(View.INVISIBLE);
-            User.ch3.setVisibility(View.INVISIBLE);
+        if (User.user.getHabitsArray()[5].isEnabled()) {
+            h6.setVisibility(View.VISIBLE);
+            ch6.setVisibility(View.VISIBLE);
+        } else {
+            h6.setVisibility(View.INVISIBLE);
+            ch6.setVisibility(View.INVISIBLE);
         }
-        if(User.user.getHabits().get(3).isEnabled()){
-            User.h4.setVisibility(View.VISIBLE);
-            User.ch4.setVisibility(View.VISIBLE);
-        }
-        else{
-            User.h4.setVisibility(View.INVISIBLE);
-            User.ch4.setVisibility(View.INVISIBLE);
-        }
-        if(User.user.getHabits().get(4).isEnabled()){
-            User.h5.setVisibility(View.VISIBLE);
-            User.ch5.setVisibility(View.VISIBLE);
-        }
-        else{
-            User.h5.setVisibility(View.INVISIBLE);
-            User.ch5.setVisibility(View.INVISIBLE);
-        }
-        if(User.user.getHabits().get(5).isEnabled()){
-            User.h6.setVisibility(View.VISIBLE);
-            User.ch6.setVisibility(View.VISIBLE);
-        }
-        else{
-            User.h6.setVisibility(View.INVISIBLE);
-            User.ch6.setVisibility(View.INVISIBLE);
-        }
-
-    }
-    private void setAlarm(long time)
-    {
-        AlarmManager manager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        Intent intent = new Intent(this, MyAlarm.class);
-        PendingIntent pintent = PendingIntent.getBroadcast(this,0,intent,0);
-        manager.setRepeating(AlarmManager.RTC, time, 60000,pintent);
 
     }
 
 
-
-
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(this, Homepage.class);
+        startActivity(intent);
+    }
 }

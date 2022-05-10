@@ -1,6 +1,7 @@
 package com.oyku.habitbear.BackEnd;
 
 
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -275,6 +276,15 @@ public class Account{
     }
     public void getData(AccountAccess ma){
 
+        User.redTshirt = ma.redTshirt;
+        User.greenTshirt = ma.greenTshirt;
+        User.blueTshirt = ma.blueTshirt;
+        User.redPants = ma.redPants;
+        User.greenPants = ma.greenPants;
+        User.bluePants = ma.bluePants;
+        User.moustache = ma.moustache;
+        User.glasses = ma.glasses;
+
         this.id = ma.id;
         this.name = ma.name;
         this.currentStreak = ma.currentStreak;
@@ -303,7 +313,7 @@ public class Account{
         }
 
     }
-    public void getDataFromDatabase(int id, TextView bearName, TextView coinCount, TextView currStreak, TextView highStreak){
+    public void getDataFromDatabase(int id, TextView bearName, TextView coinCount, TextView currStreak, TextView highStreak, ImageView bearImage){
         DatabaseReference dr = FirebaseDatabase.getInstance().getReference("User");
 
         dr.child(String.valueOf(id)).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
@@ -315,6 +325,7 @@ public class Account{
                 coinCount.setText(coins + "");
                 currStreak.setText(currentStreak + "");
                 highStreak.setText(maxStreak + "");
+                User.getDressed(bearImage);
 
             }
         });
@@ -330,6 +341,9 @@ public class Account{
                 dr.child(String.valueOf(id)).setValue(ma);
             }
         });
+    }
+    public Habits[] getHabitsArray(){
+        return (this.myHabits);
     }
 
     }

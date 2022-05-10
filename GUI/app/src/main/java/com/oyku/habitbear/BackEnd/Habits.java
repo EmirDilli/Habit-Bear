@@ -10,7 +10,6 @@ public class Habits {
     private Mountain mountain;
     private int currentMount;
     private int streak;
-    private Account user;
     private boolean editable;
     
     public Habits(String str){
@@ -101,7 +100,7 @@ public class Habits {
             mountain.stepNo++;
         }
 
-        user.coins += prize;
+        User.user.coins += prize;
 
     }
     public void getData(HabitsAccess ma){
