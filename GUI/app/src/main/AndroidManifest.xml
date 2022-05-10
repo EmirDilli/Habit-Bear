@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HabitBear">
         <activity
+            android:name=".Step3"
+            android:exported="false" />
+        <activity
             android:name=".QuitSmokingMountain"
             android:exported="false" />
         <activity

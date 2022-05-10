@@ -12,7 +12,7 @@ import android.widget.ImageView;
 
 public class HabitsPage extends AppCompatActivity implements View.OnClickListener{
 
-    ImageView readBooks, eatHealthy, medicine, workout, smoke, custom;
+    ImageView readBooks, eatHealthy, medicine, workout, smoke, custom, back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -30,41 +30,59 @@ public class HabitsPage extends AppCompatActivity implements View.OnClickListene
         smoke.setOnClickListener(this::onClick);
         custom = findViewById(R.id.health);
         custom.setOnClickListener(this::onClick);
+        back = findViewById(R.id.backHabits);
+        back.setOnClickListener(this::onClick);
 
     }
+
 
     @Override
     public void onClick(View view) {
 
+        if(view.getId() == back.getId())
+        {
+            Intent intent = new Intent(this, Homepage.class);
+
+            startActivity(intent);
+            User.user.updateDataToDatabase();
+        }
+
         if(view.getId() == readBooks.getId())
         {
-            Intent intent = new Intent(this, StudyMountain.class);
+            Intent intent = new Intent(this, Step3.class);
+            Step3.habitNo = 3;
             startActivity(intent);
         }
         if(view.getId() == eatHealthy.getId())
         {
-            Intent intent = new Intent(this, EatHealthyMountain.class);
+            Intent intent = new Intent(this, Step3.class);
+            Step3.habitNo = 1;
             startActivity(intent);
         }
         if(view.getId() == medicine.getId())
         {
-            Intent intent = new Intent(this, Homepage.class);
+            Intent intent = new Intent(this, Step3.class);
+            Step3.habitNo = 4;
             startActivity(intent);
         }
         if(view.getId() == workout.getId())
         {
-            Intent intent = new Intent(this, WorkoutMountain.class);
+            Intent intent = new Intent(this, Step3.class);
+            Step3.habitNo = 0;
             startActivity(intent);
         }
         if(view.getId() == smoke.getId())
         {
-            Intent intent = new Intent(this, QuitSmokingMountain.class);
+            Intent intent = new Intent(this, Step3.class);
+            Step3.habitNo = 2;
             startActivity(intent);
         }
         if(view.getId() == custom.getId())
         {
-            Intent intent = new Intent(this, Homepage.class);
+            Intent intent = new Intent(this, Step3.class);
+            Step3.habitNo = 5;
             startActivity(intent);
         }
+
     }
 }
