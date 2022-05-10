@@ -28,8 +28,6 @@ public class Account{
     private String name;
     private int currentStreak = 0;
     private int maxStreak = 0;
-    private String highStreakHabit;
-    private String currStreakHabit;
     private Calendar date;// will be updated shortly
     private Habits[] myHabits;
     protected int coins;
@@ -220,7 +218,6 @@ public class Account{
         for(int i = 0; i < myHabits.length; i++) {
             if (myHabits[i].getHighStreak() >= maxStreak) {
                 maxStreak = myHabits[i].getHighStreak();
-                highStreakHabit = myHabits[i].getName();
             }
         }
     }
@@ -230,7 +227,6 @@ public class Account{
         for(int i = 0; i < myHabits.length; i++) {
             if (myHabits[i].getStreak() >= currentStreak) {
                 currentStreak = myHabits[i].getStreak();
-                currStreakHabit = myHabits[i].getName();
             }
         }
     }
@@ -242,9 +238,6 @@ public class Account{
         }
         return result;
     }
-
-    public String getCurrStreakHabit(){return currStreakHabit;}
-    public String getHighStreakHabit(){return highStreakHabit;}
 
 
 
@@ -259,11 +252,22 @@ public class Account{
         return currentStreak;
     }
 
+
+    public void updateCurrentStreak() {
+        this.currentStreak++;
+    }
+
+
     public int getMaxStreak() {
         return maxStreak;
     }
 
 
+    public void updateMaxStreak() {
+        if (maxStreak < currentStreak) {
+            this.maxStreak = currentStreak;
+        }
+    }
 
     // com.oyku.habitbear.Mountain
 
@@ -271,8 +275,7 @@ public class Account{
        // currentStep++;
     }
 
-    public void addNewDataToDatabase(LocalStore st){
-
+    public void addNewDataToDatabase(){
         AccountAccess ma = new AccountAccess(this);
 
         DatabaseReference dr = FirebaseDatabase.getInstance().getReference("User");
@@ -286,7 +289,6 @@ public class Account{
                 key.child("User").setValue(String.valueOf(count+1));
                 ma.id = count + 1;
                 dr.child(String.valueOf(ma.id)).setValue(ma);
-                st.storeData(ma.id);
             }
         });
     }
@@ -306,9 +308,6 @@ public class Account{
         this.currentStreak = ma.currentStreak;
         this.maxStreak = ma.maxStreak;
         this.coins = ma.coins;
-        this.currStreakHabit = ma.currentStrHabit;
-        this.highStreakHabit = ma.highStrHabit;
-
 
         myHabits = new Habits[ma.habits.size()];
 
@@ -342,10 +341,9 @@ public class Account{
                 getData(ac);
                 bearName.setText(name);
                 coinCount.setText(coins + "");
-                currStreak.setText(currentStreak + "-" + currStreakHabit);
-                highStreak.setText(maxStreak + "-" + highStreakHabit);
+                currStreak.setText(currentStreak + "");
+                highStreak.setText(maxStreak + "");
                 User.getDressed(bearImage);
-
 
             }
         });
