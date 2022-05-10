@@ -28,6 +28,8 @@ public class Account{
     private String name;
     private int currentStreak = 0;
     private int maxStreak = 0;
+    private String currStr;
+    private String maxStr;
     private Calendar date;// will be updated shortly
     private Habits[] myHabits;
     protected int coins;
@@ -190,6 +192,9 @@ public class Account{
 
 
     // GETTERS & SETTERS
+
+    public String getCurrStr() {return currStr;}
+    public String getHighStr() {return maxStr;}
     public Clothes[][] getMyClothes(){
         return myClothes;
     }
@@ -218,6 +223,7 @@ public class Account{
         for(int i = 0; i < myHabits.length; i++) {
             if (myHabits[i].getHighStreak() >= maxStreak) {
                 maxStreak = myHabits[i].getHighStreak();
+                maxStr = myHabits[i].getName();
             }
         }
     }
@@ -227,6 +233,7 @@ public class Account{
         for(int i = 0; i < myHabits.length; i++) {
             if (myHabits[i].getStreak() >= currentStreak) {
                 currentStreak = myHabits[i].getStreak();
+                currStr = myHabits[i].getName();
             }
         }
     }
@@ -238,10 +245,6 @@ public class Account{
         }
         return result;
     }
-
-
-
-
 
 
 
@@ -308,6 +311,8 @@ public class Account{
         this.currentStreak = ma.currentStreak;
         this.maxStreak = ma.maxStreak;
         this.coins = ma.coins;
+        this.currStr = ma.currStr;
+        this.maxStr = ma.maxStr;
 
         myHabits = new Habits[ma.habits.size()];
 
@@ -341,8 +346,8 @@ public class Account{
                 getData(ac);
                 bearName.setText(name);
                 coinCount.setText(coins + "");
-                currStreak.setText(currentStreak + "");
-                highStreak.setText(maxStreak + "");
+                currStreak.setText(currentStreak + "-"+ currStr);
+                highStreak.setText(maxStreak + "-" + maxStr);
                 User.getDressed(bearImage);
 
             }

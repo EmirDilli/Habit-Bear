@@ -68,9 +68,13 @@ public class User {
         }
         return result+1;
     }
-    public void getCurrentNumbers(int mountainNo, int habitNo){
+    public static void getCurrentNumbers(int mountainNo, int habitNo){
 
         User.list = new Integer[2*mountainNo + 1];
+        for(int i = 0; i < User.list.length; i++)
+        {
+            User.list[i] = 0;
+        }
         DatabaseReference dr = FirebaseDatabase.getInstance().getReference("User");
 
         dr.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
@@ -85,7 +89,7 @@ public class User {
                         long streak = (long)ds.child("habits").child(String.valueOf(habitNo)).child("streak").getValue();
                         int stepNo = User.mountainProgress((int)streak,(int)mountNo);
 
-                        User.list[stepNo]++;
+                        User.list[stepNo - 1]++;
                     }
 
                 }
@@ -204,5 +208,7 @@ public class User {
         {
             bearImage.setImageResource(R.mipmap.ayiglass);}
     }
+
+
 
 }

@@ -20,6 +20,9 @@ public class AccountAccess {
     public  boolean moustache;
     public  boolean glasses;
 
+    public String currStr;
+    public String maxStr;
+
     public List<HabitsAccess> habits;
     public List<List<ClothesAccess>> myClothes;
 
@@ -47,6 +50,8 @@ public class AccountAccess {
         this.coins = user.getCoins();
         this.habits = new ArrayList<HabitsAccess>();
         this.myClothes = new ArrayList<List<ClothesAccess>>();
+        this.currStr = user.getCurrStr();
+        this.maxStr = user.getHighStr();
 
         List<Habits> allHabits = user.getHabits();
         List<List<Clothes>> clothes = user.getClothes();

@@ -42,11 +42,17 @@ public class HabitsPage extends AppCompatActivity implements View.OnClickListene
 
         //User.getDressed(bear);
         c1 = findViewById(R.id.first);
+        c1.setChecked(User.user.getHabitsArray()[0].isEnabled());
         c2 = findViewById(R.id.second);
+        c2.setChecked(User.user.getHabitsArray()[1].isEnabled());
         c3 = findViewById(R.id.third);
+        c3.setChecked(User.user.getHabitsArray()[2].isEnabled());
         c4 = findViewById(R.id.fourth);
+        c4.setChecked(User.user.getHabitsArray()[3].isEnabled());
         c5 = findViewById(R.id.fifth);
+        c5.setChecked(User.user.getHabitsArray()[4].isEnabled());
         c6 = findViewById(R.id.sixth);
+        c6.setChecked(User.user.getHabitsArray()[5].isEnabled());
 
         c1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,63 +63,70 @@ public class HabitsPage extends AppCompatActivity implements View.OnClickListene
                 else{
                     User.user.getHabitsArray()[0].setEnabled(false);
                 }
+                User.user.updateDataToDatabase();
             }
         });
         c2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(c1.isChecked()){
+                if(c2.isChecked()){
                     User.user.getHabitsArray()[1].setEnabled(true);
                 }
                 else{
                     User.user.getHabitsArray()[1].setEnabled(false);
                 }
+                User.user.updateDataToDatabase();
             }
         });
         c3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(c1.isChecked()){
+                if(c3.isChecked()){
                     User.user.getHabitsArray()[2].setEnabled(true);
                 }
                 else{
                     User.user.getHabitsArray()[2].setEnabled(false);
                 }
+                User.user.updateDataToDatabase();
             }
         });
         c4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(c1.isChecked()){
+                if(c4.isChecked()){
                     User.user.getHabitsArray()[3].setEnabled(true);
                 }
                 else{
                     User.user.getHabitsArray()[3].setEnabled(false);
                 }
+                User.user.updateDataToDatabase();
             }
         });
         c5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(c1.isChecked()){
+                if(c5.isChecked()){
                     User.user.getHabitsArray()[4].setEnabled(true);
                 }
                 else{
                     User.user.getHabitsArray()[4].setEnabled(false);
                 }
+                User.user.updateDataToDatabase();
             }
         });
         c6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(c1.isChecked()){
+                if(c6.isChecked()){
                     User.user.getHabitsArray()[5].setEnabled(true);
                 }
                 else{
                     User.user.getHabitsArray()[5].setEnabled(false);
                 }
+                User.user.updateDataToDatabase();
             }
         });
+
 
     }
 
@@ -150,6 +163,7 @@ public class HabitsPage extends AppCompatActivity implements View.OnClickListene
         {
             Intent intent = new Intent(this, Step3.class);
             Step3.habitNo = 0;
+            User.getCurrentNumbers(User.user.getHabitsArray()[0].getMountain().getMountainNo(), 0);
             startActivity(intent);
         }
         if(view.getId() == smoke.getId())
