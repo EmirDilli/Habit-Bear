@@ -24,6 +24,8 @@
         android:textColor="#FFFFFF"
         android:textSize="40sp" />
 
+
+
     <ImageView
         android:id="@+id/backMountain"
         android:layout_width="60dp"
@@ -52,8 +54,8 @@
         android:id="@+id/eat"
         android:layout_width="109dp"
         android:layout_height="109dp"
-        android:layout_marginTop="420dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="420dp"
         android:layout_toRightOf="@+id/workout"
         android:foreground="@drawable/eat" />
 
@@ -70,61 +72,86 @@
         android:id="@+id/study"
         android:layout_width="109dp"
         android:layout_height="109dp"
-        android:layout_marginTop="420dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="420dp"
         android:foreground="@drawable/study" />
+    <ImageView
+        android:id="@+id/sports"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/first"
+        android:layout_marginTop="79dp"
+        android:src="@drawable/exercise" />
 
     <ImageButton
         android:id="@+id/medicine"
-        android:layout_width="109dp"
-        android:layout_height="109dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="26dp"
-        android:layout_marginBottom="23dp"
-        android:layout_toEndOf="@+id/study"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/second"
+        android:layout_marginLeft="84dp"
+        android:layout_marginTop="64dp"
+        android:layout_toEndOf="@+id/exercise"
+        android:layout_toRightOf="@id/sports"
         android:foreground="@drawable/drugs" />
 
     <ImageButton
         android:id="@+id/health"
         android:layout_width="109dp"
         android:layout_height="109dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="23dp"
+
+
         android:foreground="@drawable/custom" />
 
     <CheckBox
         android:id="@+id/first"
         android:layout_width="129dp"
         android:layout_height="18dp"
-        android:layout_marginTop="10dp"
+        android:layout_below="@id/workout"
         android:layout_marginLeft="55dp"
-        android:layout_below="@id/workout"/>
+        android:layout_marginTop="10dp" />
 
     <CheckBox
         android:id="@+id/second"
         android:layout_width="129dp"
-        android:layout_height="50dp"/>
+        android:layout_height="18dp"
+        android:layout_below="@id/workout"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/first" />
 
     <CheckBox
         android:id="@+id/third"
-        android:layout_width="50dp"
-        android:layout_height="50dp"/>
+        android:layout_width="129dp"
+        android:layout_height="18dp"
+        android:layout_below="@id/workout"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/second"/>
 
     <CheckBox
         android:id="@+id/fourth"
-        android:layout_width="50dp"
-        android:layout_height="50dp"/>
+        android:layout_width="129dp"
+        android:layout_height="18dp"
+        android:layout_below="@id/sports"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="8dp" />
 
     <CheckBox
         android:id="@+id/fifth"
-        android:layout_width="50dp"
-        android:layout_height="50dp"/>
+        android:layout_width="129dp"
+        android:layout_height="18dp"
+        android:layout_below="@id/medicine"
+
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/fourth" />
 
     <CheckBox
         android:id="@+id/sixth"
-        android:layout_width="50dp"
-        android:layout_height="50dp"/>
+        android:layout_width="129dp"
+        android:layout_height="18dp"
+        android:layout_below="@id/health"
+
+        android:layout_marginStart="-22dp"
+        android:layout_marginTop="590dp"
+        android:layout_toEndOf="@+id/fifth" />
 
 </RelativeLayout>
