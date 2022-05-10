@@ -60,8 +60,6 @@ public class User {
 
     public static Integer[] list;
 
-    public static LocalStore st;
-
     public static int mountainProgress(int streak, int mountainNo){
 
         int result = streak;
