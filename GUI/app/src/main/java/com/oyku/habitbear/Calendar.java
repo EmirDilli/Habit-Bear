@@ -38,8 +38,6 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener 
         back.setOnClickListener(this::onClick);
 
         ch1 = (CheckBox) findViewById(R.id.first);
-        ch1.setEnabled(!User.user.getHabitsArray()[0].isDone());
-        ch1.setChecked(User.user.getHabitsArray()[0].isDone());
 
         ch2 = (CheckBox) findViewById(R.id.second);
 
@@ -65,6 +63,7 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener 
                 if (ch1.isChecked()) {
                     User.user.getHabitsArray()[0].updateToday();
                     User.user.getHabitsArray()[0].setDone(true);
+                    User.user.updateDataToDatabase();
                     ch1.setEnabled(false);
                 }
             }
@@ -82,7 +81,9 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener 
             @Override
             public void onClick(View view) {
                 if (ch2.isChecked()) {
-                    User.user.getHabitsArray()[2].updateToday();
+                    User.user.getHabitsArray()[1].updateToday();
+                    User.user.getHabitsArray()[1].setDone(true);
+                    User.user.updateDataToDatabase();
                     ch2.setEnabled(false);
                 }
             }
@@ -91,7 +92,7 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener 
             @Override
             public void onClick(View view) {
                 if (ch3.isChecked()) {
-                    User.user.getHabitsArray()[3].updateToday();
+                    User.user.getHabitsArray()[2].updateToday();
                     ch3.setEnabled(false);
                 }
             }
@@ -117,6 +118,7 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener 
 
 
         h1.setVisibility(View.VISIBLE);
+        h2.setVisibility(View.VISIBLE);
         if (User.user.getHabitsArray()[0].isEnabled()) {
             h1.setVisibility(View.VISIBLE);
             ch1.setVisibility(View.VISIBLE);
@@ -127,8 +129,7 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener 
             h2.setVisibility(View.VISIBLE);
             ch2.setVisibility(View.VISIBLE);
         } else {
-            h2.setVisibility(View.INVISIBLE);
-            ch2.setVisibility(View.INVISIBLE);
+
         }
         if (User.user.getHabitsArray()[2].isEnabled()) {
             h3.setVisibility(View.VISIBLE);

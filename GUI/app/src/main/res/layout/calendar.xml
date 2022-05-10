@@ -24,6 +24,11 @@
             android:layout_height="18dp"></CheckBox>
 
         <CheckBox
+            android:id="@+id/second"
+            android:layout_width="50dp"
+            android:layout_height="50dp"></CheckBox>
+
+        <CheckBox
             android:id="@+id/third"
             android:layout_width="50dp"
             android:layout_height="50dp"></CheckBox>
@@ -40,11 +45,6 @@
 
         <CheckBox
             android:id="@+id/sixth"
-            android:layout_width="50dp"
-            android:layout_height="50dp"></CheckBox>
-
-        <CheckBox
-            android:id="@+id/second"
             android:layout_width="50dp"
             android:layout_height="50dp"></CheckBox>
 
