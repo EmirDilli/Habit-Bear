@@ -48,6 +48,8 @@ public class HabitsPage extends AppCompatActivity implements View.OnClickListene
         c5 = findViewById(R.id.fifth);
         c6 = findViewById(R.id.sixth);
 
+        User.user.updateDataToDatabase();
+
         c1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

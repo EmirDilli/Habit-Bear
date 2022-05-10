@@ -65,6 +65,7 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener 
                     User.user.getHabitsArray()[0].setDone(true);
                     User.user.updateDataToDatabase();
                     ch1.setEnabled(false);
+
                 }
             }
         });
@@ -74,6 +75,7 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener 
                 if (ch6.isChecked()) {
                     User.user.getHabitsArray()[5].updateToday();
                     ch6.setEnabled(false);
+                    User.user.updateDataToDatabase();
                 }
             }
         });
@@ -85,6 +87,7 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener 
                     User.user.getHabitsArray()[1].setDone(true);
                     User.user.updateDataToDatabase();
                     ch2.setEnabled(false);
+                    User.user.updateDataToDatabase();
                 }
             }
         });
@@ -94,6 +97,7 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener 
                 if (ch3.isChecked()) {
                     User.user.getHabitsArray()[2].updateToday();
                     ch3.setEnabled(false);
+                    User.user.updateDataToDatabase();
                 }
             }
         });
@@ -103,6 +107,7 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener 
                 if (ch4.isChecked()) {
                     User.user.getHabitsArray()[3].updateToday();
                     ch4.setEnabled(false);
+                    User.user.updateDataToDatabase();
                 }
             }
         });
@@ -112,6 +117,8 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener 
                 if (ch5.isChecked()) {
                     User.user.getHabitsArray()[4].updateToday();
                     ch5.setEnabled(false);
+                    User.user.updateDataToDatabase();
+
                 }
             }
         });
