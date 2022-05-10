@@ -7,6 +7,20 @@
     android:background="@drawable/habitsbg"
     tools:context=".HabitsPage">
 
+    <ImageView
+        android:id="@+id/habitBearIcon"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_above="@+id/study"
+        android:layout_below="@id/habitsHeader"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="263dp"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/ic_bear_plain" />
 
     <TextView
         android:id="@+id/habitsHeader"
@@ -31,8 +45,13 @@
         android:id="@+id/workout"
         android:layout_width="109dp"
         android:layout_height="109dp"
+        android:layout_above="@+id/medicine"
+        android:layout_below="@+id/backHabits"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="25dp"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginBottom="47dp"
         android:background="@drawable/sport"
         android:foreground="@drawable/sport" />
 
@@ -40,17 +59,24 @@
         android:id="@+id/eat"
         android:layout_width="109dp"
         android:layout_height="109dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="420dp"
+        android:layout_above="@+id/study"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginBottom="46dp"
+        android:layout_toEndOf="@+id/workout"
         android:layout_toRightOf="@+id/workout"
         android:foreground="@drawable/eat" />
+
 
     <ImageView
         android:id="@+id/quitSmoke"
         android:layout_width="109dp"
         android:layout_height="109dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="420dp"
+        android:layout_above="@+id/health"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="1dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="47dp"
         android:layout_toRightOf="@+id/eat"
         android:foreground="@drawable/smoke" />
 
@@ -58,30 +84,37 @@
         android:id="@+id/medicine"
         android:layout_width="109dp"
         android:layout_height="109dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/first"
+        android:layout_marginBottom="46dp"
         android:foreground="@drawable/drugs" />
 
-
     <ImageView
-        android:id="@+id/water"
+        android:id="@+id/study"
         android:layout_width="109dp"
         android:layout_height="109dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="49dp"
+        android:layout_toEndOf="@+id/medicine"
         android:layout_toRightOf="@+id/medicine"
-        android:layout_below="@id/second"
         android:src="@drawable/water" />
 
     <ImageButton
         android:id="@+id/health"
         android:layout_width="109dp"
         android:layout_height="109dp"
-        android:layout_below="@+id/third"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
-        android:layout_toRightOf="@+id/water"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="49dp"
+        android:layout_toEndOf="@+id/study"
+        android:layout_toRightOf="@+id/study"
         android:foreground="@drawable/custom" />
 
 
@@ -90,6 +123,8 @@
         android:layout_width="129dp"
         android:layout_height="18dp"
         android:layout_below="@id/workout"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="55dp"
         android:layout_marginLeft="55dp"
         android:layout_marginTop="10dp" />
 
@@ -106,24 +141,30 @@
         android:layout_width="129dp"
         android:layout_height="18dp"
         android:layout_below="@id/workout"
+        android:layout_alignBottom="@+id/second"
         android:layout_marginTop="10dp"
-        android:layout_toEndOf="@+id/second"/>
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/second" />
 
     <CheckBox
         android:id="@+id/fourth"
         android:layout_width="129dp"
         android:layout_height="18dp"
         android:layout_below="@id/medicine"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="55dp"
         android:layout_marginLeft="55dp"
-        android:layout_marginTop="10dp" />
+        android:layout_marginBottom="19dp" />
 
     <CheckBox
         android:id="@+id/fifth"
         android:layout_width="129dp"
         android:layout_height="18dp"
         android:layout_below="@id/medicine"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="17dp"
         android:layout_toEndOf="@+id/fourth" />
 
     <CheckBox
@@ -131,8 +172,8 @@
         android:layout_width="129dp"
         android:layout_height="18dp"
         android:layout_below="@id/health"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
         android:layout_toEndOf="@+id/fifth" />
 
 </RelativeLayout>

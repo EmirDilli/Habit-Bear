@@ -13,7 +13,7 @@ import android.widget.ImageView;
 
 public class HabitsPage extends AppCompatActivity implements View.OnClickListener{
 
-    ImageView readBooks, eatHealthy, medicine, workout, smoke, custom;
+    ImageView readBooks, eatHealthy, medicine, workout, smoke, custom, bear;
     CheckBox c1,c2,c3,c4,c5,c6;
 
     @Override
@@ -32,7 +32,15 @@ public class HabitsPage extends AppCompatActivity implements View.OnClickListene
         smoke.setOnClickListener(this::onClick);
         custom = findViewById(R.id.health);
         custom.setOnClickListener(this::onClick);
+        bear = findViewById(R.id.bear);
 
+        //User.getDressed(bear);
+        c1 = findViewById(R.id.first);
+        c2 = findViewById(R.id.second);
+        c3 = findViewById(R.id.third);
+        c4 = findViewById(R.id.fourth);
+        c5 = findViewById(R.id.fifth);
+        c6 = findViewById(R.id.sixth);
 
         c1.setOnClickListener(new View.OnClickListener() {
             @Override
