@@ -10,6 +10,8 @@ public class AccountAccess {
     public String name;
     public int currentStreak = 0;
     public int maxStreak = 0;
+    public String currentStrHabit;
+    public String highStrHabit;
 
     public  boolean redTshirt;
     public  boolean greenTshirt;
@@ -47,6 +49,8 @@ public class AccountAccess {
         this.coins = user.getCoins();
         this.habits = new ArrayList<HabitsAccess>();
         this.myClothes = new ArrayList<List<ClothesAccess>>();
+        this.currentStrHabit = user.getCurrStreakHabit();
+        this.highStrHabit = user.getHighStreakHabit();
 
         List<Habits> allHabits = user.getHabits();
         List<List<Clothes>> clothes = user.getClothes();

@@ -27,12 +27,13 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage);
+        int id = User.st.getData();
         bearNameText = (TextView) findViewById(R.id.bearName);
         currentStreakCount = (TextView) findViewById(R.id.currentStreakCount);
         highestStreakCount = (TextView) findViewById(R.id.highestStreakCount);
         coins = (TextView) findViewById(R.id.coinCount);
         bearImage = findViewById(R.id.habitBearIcon);
-        User.user.getDataFromDatabase(5, bearNameText, coins, currentStreakCount, highestStreakCount, bearImage);
+        User.user.getDataFromDatabase(id, bearNameText, coins, currentStreakCount, highestStreakCount, bearImage);
         habitsButton = findViewById(R.id.habits);
         habitsButton.setOnClickListener(this::onClick);
         marketButton = findViewById(R.id.market);
