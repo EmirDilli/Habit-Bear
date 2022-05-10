@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ayi_bg_3"
+    android:background="@drawable/habitsbg"
     tools:context=".HabitsPage">
 
 
@@ -31,8 +31,8 @@
         android:id="@+id/workout"
         android:layout_width="109dp"
         android:layout_height="109dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="420dp"
-        android:layout_marginLeft="20dp"
         android:background="@drawable/sport"
         android:foreground="@drawable/sport" />
 
@@ -40,7 +40,7 @@
         android:id="@+id/eat"
         android:layout_width="109dp"
         android:layout_height="109dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="420dp"
         android:layout_toRightOf="@+id/workout"
         android:foreground="@drawable/eat" />
@@ -49,7 +49,7 @@
         android:id="@+id/quitSmoke"
         android:layout_width="109dp"
         android:layout_height="109dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="420dp"
         android:layout_toRightOf="@+id/eat"
         android:foreground="@drawable/smoke" />
@@ -58,7 +58,7 @@
         android:id="@+id/medicine"
         android:layout_width="109dp"
         android:layout_height="109dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/first"
         android:foreground="@drawable/drugs" />
@@ -69,7 +69,7 @@
         android:layout_width="109dp"
         android:layout_height="109dp"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="15dp"
         android:layout_toRightOf="@+id/medicine"
         android:layout_below="@id/second"
         android:src="@drawable/water" />
@@ -79,9 +79,9 @@
         android:layout_width="109dp"
         android:layout_height="109dp"
         android:layout_below="@+id/third"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="20dp"
         android:layout_toRightOf="@+id/water"
-        android:layout_marginLeft="20dp"
         android:foreground="@drawable/custom" />
 
 
