@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HabitBear">
         <activity
+            android:name=".QuitSmokingMountain"
+            android:exported="false" />
+        <activity
+            android:name=".EatHealthyMountain"
+            android:exported="false" />
+        <activity
+            android:name=".StudyMountain"
+            android:exported="false" />
+        <activity
+            android:name=".WorkoutMountain"
+            android:exported="false" />
+        <activity
             android:name=".Inventory"
             android:exported="false" />
         <activity
@@ -26,7 +38,7 @@
             android:exported="false" />
         <activity
             android:name=".Homepage"
-           android:exported="false" />
+            android:exported="false" />
         <activity
             android:name=".Register"
             android:exported="true">
