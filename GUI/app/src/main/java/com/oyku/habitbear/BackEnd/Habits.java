@@ -9,6 +9,7 @@ public class Habits {
     private boolean isDone;
     private Mountain mountain;
     private int currentMount;
+    private int highStreak;
     private int streak;
     private boolean editable;
     
@@ -84,6 +85,9 @@ public class Habits {
         return false;
     }
 
+    public int getHighStreak() {return highStreak;}
+
+
     // Sets is done + step
     public void updateToday() {
 
@@ -99,8 +103,12 @@ public class Habits {
         else{
             mountain.stepNo++;
         }
-
+        streak++;
+        if(highStreak < streak) highStreak = streak;
+        User.user.setMaxStreak();
+        User.user.setCurrStreak();
         User.user.coins += prize;
+        User.user.updateDataToDatabase();
 
     }
     public void getData(HabitsAccess ma){

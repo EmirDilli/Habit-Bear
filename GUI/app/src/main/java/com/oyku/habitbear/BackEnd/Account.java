@@ -26,8 +26,8 @@ public class Account{
     // Properties
     private int id;
     private String name;
-    private int currentStreak;
-    private int maxStreak;
+    private int currentStreak = 0;
+    private int maxStreak = 0;
     private Calendar date;// will be updated shortly
     private Habits[] myHabits;
     protected int coins;
@@ -211,6 +211,24 @@ public class Account{
 
     public List<Habits> getHabits(){
         return Arrays.asList(this.myHabits);
+    }
+
+    public void setMaxStreak()
+    {
+        for(int i = 0; i < myHabits.length; i++) {
+            if (myHabits[i].getHighStreak() >= maxStreak) {
+                maxStreak = myHabits[i].getHighStreak();
+            }
+        }
+    }
+
+    public void setCurrStreak()
+    {
+        for(int i = 0; i < myHabits.length; i++) {
+            if (myHabits[i].getStreak() >= currentStreak) {
+                currentStreak = myHabits[i].getStreak();
+            }
+        }
     }
 
     public List<List<Clothes>> getClothes(){
