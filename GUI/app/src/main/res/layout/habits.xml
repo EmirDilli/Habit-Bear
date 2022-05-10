@@ -5,40 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ayi_bg_3"
-    tools:context=".Homepage">
-
+    tools:context=".HabitsPage">
 
 
     <TextView
-        android:id="@+id/habitHeader"
-        android:layout_width="-50dp"
-        android:layout_height="-50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
+        android:id="@+id/habitsHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:text="HABITS"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:background="@android:color/holo_red_dark"
-        android:backgroundTint="#D31F1F"
-        android:fontFamily="sans-serif"
-        android:text="Habits"
-        android:textColor="#FFFFFF"
-        android:textSize="40sp" />
-
-
+        android:fontFamily="@font/changa_one"
+        android:textColor="#020a99" />
 
     <ImageView
-        android:id="@+id/backMountain"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="10dp"
+        android:id="@+id/backHabits"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:background="@android:color/holo_red_dark"
-        android:backgroundTint="#D31F1F"
-        android:foreground="?attr/actionModeCloseDrawable"
-        android:foregroundTint="@color/white"
         android:src="@drawable/ic_back" />
 
     <ImageView
@@ -50,7 +36,7 @@
         android:background="@drawable/sport"
         android:foreground="@drawable/sport" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/eat"
         android:layout_width="109dp"
         android:layout_height="109dp"
@@ -59,48 +45,45 @@
         android:layout_toRightOf="@+id/workout"
         android:foreground="@drawable/eat" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/quitSmoke"
         android:layout_width="109dp"
         android:layout_height="109dp"
-        android:layout_marginTop="420dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="420dp"
         android:layout_toRightOf="@+id/eat"
         android:foreground="@drawable/smoke" />
 
-    <ImageButton
-        android:id="@+id/study"
+    <ImageView
+        android:id="@+id/medicine"
         android:layout_width="109dp"
         android:layout_height="109dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="420dp"
-        android:foreground="@drawable/study" />
-    <ImageView
-        android:id="@+id/sports"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/first"
-        android:layout_marginTop="79dp"
-        android:src="@drawable/exercise" />
-
-    <ImageButton
-        android:id="@+id/medicine"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_below="@+id/second"
-        android:layout_marginLeft="84dp"
-        android:layout_marginTop="64dp"
-        android:layout_toEndOf="@+id/exercise"
-        android:layout_toRightOf="@id/sports"
         android:foreground="@drawable/drugs" />
+
+
+    <ImageView
+        android:id="@+id/water"
+        android:layout_width="109dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/medicine"
+        android:layout_below="@id/second"
+        android:src="@drawable/water" />
 
     <ImageButton
         android:id="@+id/health"
         android:layout_width="109dp"
         android:layout_height="109dp"
-
-
+        android:layout_below="@+id/third"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/water"
+        android:layout_marginLeft="20dp"
         android:foreground="@drawable/custom" />
+
 
     <CheckBox
         android:id="@+id/first"
@@ -130,18 +113,17 @@
         android:id="@+id/fourth"
         android:layout_width="129dp"
         android:layout_height="18dp"
-        android:layout_below="@id/sports"
+        android:layout_below="@id/medicine"
         android:layout_marginLeft="55dp"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="10dp" />
 
     <CheckBox
         android:id="@+id/fifth"
         android:layout_width="129dp"
         android:layout_height="18dp"
         android:layout_below="@id/medicine"
-
         android:layout_marginStart="12dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/fourth" />
 
     <CheckBox
@@ -149,9 +131,8 @@
         android:layout_width="129dp"
         android:layout_height="18dp"
         android:layout_below="@id/health"
-
-        android:layout_marginStart="-22dp"
-        android:layout_marginTop="590dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/fifth" />
 
 </RelativeLayout>
