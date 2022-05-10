@@ -21,22 +21,26 @@ import android.widget.Toast;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Calendar extends AppCompatActivity{
+public class Calendar extends AppCompatActivity implements View.OnClickListener{
 
 
 
+
+
+    ImageView back;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.calendar);
         CheckBox ch1,ch2,ch3,ch4,ch5,ch6;
         ImageView h1,h2,h3,h4,h5,h6;
+        back = findViewById(R.id.backCalendar);
+        back.setOnClickListener(this::onClick);
 
 
-        setContentView(R.layout.calendar);
         ch1 = (CheckBox) findViewById(R.id.first);
 
         ch2 = (CheckBox) findViewById(R.id.second);
@@ -57,30 +61,61 @@ public class Calendar extends AppCompatActivity{
         h5 = (ImageView) findViewById(R.id.study);
         h6 = (ImageView) findViewById(R.id.self);
 
-        if(ch1.isChecked()){
-            User.user.getHabitsArray()[0].updateToday();
-            ch1.setChecked(false);
-        }
-        if(ch2.isChecked()){
-            User.user.getHabitsArray()[0].updateToday();
-            ch1.setEnabled(false);
-        }
-        if(ch3.isChecked()){
-            User.user.getHabitsArray()[0].updateToday();
-            ch1.setEnabled(false);
-        }
-        if(ch4.isChecked()){
-            User.user.getHabitsArray()[0].updateToday();
-            ch1.setEnabled(false);
-        }
-        if(ch5.isChecked()){
-            User.user.getHabitsArray()[0].updateToday();
-            ch1.setEnabled(false);
-        }
-        if(ch6.isChecked()){
-            User.user.getHabitsArray()[0].updateToday();
-            ch1.setEnabled(false);
-        }
+        ch1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(ch1.isChecked()){
+                    User.user.getHabitsArray()[0].updateToday();
+                    ch1.setEnabled(false);
+                }
+            }
+        });
+        ch6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(ch6.isChecked()){
+                    User.user.getHabitsArray()[5].updateToday();
+                    ch6.setEnabled(false);
+                }
+            }
+        });
+        ch2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(ch2.isChecked()){
+                    User.user.getHabitsArray()[2].updateToday();
+                    ch2.setEnabled(false);
+                }
+            }
+        });
+        ch3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(ch3.isChecked()){
+                    User.user.getHabitsArray()[3].updateToday();
+                    ch3.setEnabled(false);
+                }
+            }
+        });
+        ch4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(ch4.isChecked()){
+                    User.user.getHabitsArray()[3].updateToday();
+                    ch4.setEnabled(false);
+                }
+            }
+        });
+        ch5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(ch5.isChecked()){
+                    User.user.getHabitsArray()[4].updateToday();
+                    ch5.setEnabled(false);
+                }
+            }
+        });
+
 
         h1.setVisibility(View.VISIBLE);
         if(User.user.getHabitsArray()[0].isEnabled()){
@@ -131,6 +166,13 @@ public class Calendar extends AppCompatActivity{
             ch6.setVisibility(View.INVISIBLE);
         }
 
+    }
+
+
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(this, Homepage.class);
+        startActivity(intent);
     }
 
 
