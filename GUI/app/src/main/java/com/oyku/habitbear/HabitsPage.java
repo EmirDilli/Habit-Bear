@@ -14,7 +14,7 @@ import android.widget.ImageView;
 public class HabitsPage extends AppCompatActivity implements View.OnClickListener{
 
 
-    ImageView readBooks, eatHealthy, medicine, workout, smoke, custom, bear;
+    ImageView readBooks, eatHealthy, medicine, workout, smoke, custom, bear, back;
     CheckBox c1,c2,c3,c4,c5,c6;
 
 
@@ -131,39 +131,120 @@ public class HabitsPage extends AppCompatActivity implements View.OnClickListene
 
         if(view.getId() == readBooks.getId())
         {
-            Intent intent = new Intent(this, Step3.class);
-            Step3.habitNo = 3;
-            startActivity(intent);
+
+            int mountainNo = User.user.getHabitsArray()[3].getMountain().getMountainNo();
+            if (mountainNo == 1){
+                Intent intent = new Intent(this, Step3.class);
+                Step3.habitNo = 3;
+                startActivity(intent);
+            }
+            else if(mountainNo == 2){
+                Intent intent = new Intent(this, Step5.class);
+                Step5.habitNo = 3;
+                startActivity(intent);
+            }
+            else{
+                Intent intent = new Intent(this, Step7.class);
+                Step7.habitNo = 3;
+                startActivity(intent);
+            }
+
         }
         if(view.getId() == eatHealthy.getId())
         {
-            Intent intent = new Intent(this, Step3.class);
-            Step3.habitNo = 1;
-            startActivity(intent);
+            int mountainNo = User.user.getHabitsArray()[1].getMountain().getMountainNo();
+            if (mountainNo == 1){
+                Intent intent = new Intent(this, Step3.class);
+                Step3.habitNo = 1;
+                startActivity(intent);
+            }
+            else if(mountainNo == 2){
+                Intent intent = new Intent(this, Step5.class);
+                Step5.habitNo = 1;
+                startActivity(intent);
+            }
+            else{
+                Intent intent = new Intent(this, Step7.class);
+                Step7.habitNo = 1;
+                startActivity(intent);
+            }
         }
         if(view.getId() == medicine.getId())
         {
-            Intent intent = new Intent(this, Step3.class);
-            Step3.habitNo = 4;
-            startActivity(intent);
+            int mountainNo = User.user.getHabits().get(4).getMountain().getMountainNo();
+            if (mountainNo == 1){
+                Intent intent = new Intent(this, Step3.class);
+                Step3.habitNo = 4;
+                startActivity(intent);
+            }
+            else if(mountainNo == 2){
+                Intent intent = new Intent(this, Step5.class);
+                Step5.habitNo = 4;
+                startActivity(intent);
+            }
+            else{
+                Intent intent = new Intent(this, Step7.class);
+                Step7.habitNo = 4;
+                startActivity(intent);
+            }
         }
         if(view.getId() == workout.getId())
         {
-            Intent intent = new Intent(this, Step3.class);
-            Step3.habitNo = 0;
-            startActivity(intent);
+            int mountainNo = User.user.getHabitsArray()[0].getMountain().getMountainNo();
+            System.out.println(mountainNo);
+            if (mountainNo == 1){
+                Intent intent = new Intent(this, Step3.class);
+                Step3.habitNo = 0;
+                startActivity(intent);
+            }
+            else if(mountainNo == 2){
+                Intent intent = new Intent(this, Step5.class);
+                Step5.habitNo = 0;
+                startActivity(intent);
+            }
+            else{
+                Intent intent = new Intent(this, Step7.class);
+                Step7.habitNo = 0;
+                startActivity(intent);
+            }
         }
         if(view.getId() == smoke.getId())
         {
-            Intent intent = new Intent(this, Step3.class);
-            Step3.habitNo = 2;
-            startActivity(intent);
+            int mountainNo = User.user.getHabits().get(2).getMountain().getMountainNo();
+            if (mountainNo == 1){
+                Intent intent = new Intent(this, Step3.class);
+                Step3.habitNo = 2;
+                startActivity(intent);
+            }
+            else if(mountainNo == 2){
+                Intent intent = new Intent(this, Step5.class);
+                Step5.habitNo = 2;
+                startActivity(intent);
+            }
+            else{
+                Intent intent = new Intent(this, Step7.class);
+                Step7.habitNo = 2;
+                startActivity(intent);
+            }
         }
         if(view.getId() == custom.getId())
         {
-            Intent intent = new Intent(this, Step3.class);
-            Step3.habitNo = 5;
-            startActivity(intent);
+            int mountainNo = User.user.getHabits().get(5).getMountain().getMountainNo();
+            if (mountainNo == 1){
+                Intent intent = new Intent(this, Step3.class);
+                Step3.habitNo = 5;
+                startActivity(intent);
+            }
+            else if(mountainNo == 2){
+                Intent intent = new Intent(this, Step5.class);
+                Step5.habitNo = 5;
+                startActivity(intent);
+            }
+            else{
+                Intent intent = new Intent(this, Step7.class);
+                Step7.habitNo = 5;
+                startActivity(intent);
+            }
         }
 
     }
