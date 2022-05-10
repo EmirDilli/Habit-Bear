@@ -19,7 +19,7 @@ public class Habits {
         name = str;
         mountain = new Mountain(1);
         currentMount = 0; // Get from database
-        streak = 1; /// get from database
+        streak = 0; /// get from database
         editable = false;
     }
 
