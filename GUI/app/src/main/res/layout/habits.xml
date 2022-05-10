@@ -38,7 +38,7 @@
         android:src="@drawable/ic_back" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/workout"
         android:layout_width="109dp"
         android:layout_height="109dp"
         android:layout_alignParentStart="true"
@@ -47,62 +47,56 @@
         android:layout_marginBottom="201dp"
         android:adjustViewBounds="false"
         android:background="@drawable/sport"
-        android:foreground="@drawable/sport"
-        app:srcCompat="@drawable/smoke" />
+        android:foreground="@drawable/sport" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/eat"
         android:layout_width="109dp"
         android:layout_height="109dp"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="26dp"
         android:layout_marginBottom="201dp"
-        android:layout_toEndOf="@+id/imageButton4"
-        android:foreground="@drawable/eat"
-        app:srcCompat="@drawable/study" />
+        android:layout_toEndOf="@+id/workout"
+        android:foreground="@drawable/eat" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/quitSmoke"
         android:layout_width="109dp"
         android:layout_height="109dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="27dp"
         android:layout_marginBottom="201dp"
-        android:foreground="@drawable/smoke"
-        app:srcCompat="@drawable/custom" />
+        android:foreground="@drawable/smoke" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/study"
         android:layout_width="109dp"
         android:layout_height="109dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="17dp"
         android:layout_marginBottom="23dp"
-        android:foreground="@drawable/study"
-        app:srcCompat="@drawable/custom" />
+        android:foreground="@drawable/study" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/medicine"
         android:layout_width="109dp"
         android:layout_height="109dp"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="26dp"
         android:layout_marginBottom="23dp"
-        android:layout_toEndOf="@+id/imageButton7"
-        android:foreground="@drawable/drugs"
-        app:srcCompat="@drawable/custom" />
+        android:layout_toEndOf="@+id/study"
+        android:foreground="@drawable/drugs" />
 
     <ImageButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/health"
         android:layout_width="109dp"
         android:layout_height="109dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="27dp"
         android:layout_marginBottom="23dp"
-        android:foreground="@drawable/custom"
-        app:srcCompat="@drawable/custom" />
+        android:foreground="@drawable/custom" />
 
 </RelativeLayout>
