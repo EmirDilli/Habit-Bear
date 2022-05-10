@@ -14,7 +14,7 @@ import android.widget.ImageView;
 public class HabitsPage extends AppCompatActivity implements View.OnClickListener{
 
 
-    ImageView readBooks, eatHealthy, medicine, workout, smoke, custom, bear;
+    ImageView readBooks, eatHealthy, medicine, workout, smoke, custom, bear, back;
     CheckBox c1,c2,c3,c4,c5,c6;
 
 
@@ -124,7 +124,6 @@ public class HabitsPage extends AppCompatActivity implements View.OnClickListene
         if(view.getId() == back.getId())
         {
             Intent intent = new Intent(this, Homepage.class);
-
             startActivity(intent);
             User.user.updateDataToDatabase();
         }

@@ -13,18 +13,6 @@
             android:name=".Step3"
             android:exported="false" />
         <activity
-            android:name=".QuitSmokingMountain"
-            android:exported="false" />
-        <activity
-            android:name=".EatHealthyMountain"
-            android:exported="false" />
-        <activity
-            android:name=".StudyMountain"
-            android:exported="false" />
-        <activity
-            android:name=".WorkoutMountain"
-            android:exported="false" />
-        <activity
             android:name=".Inventory"
             android:exported="false" />
         <activity
