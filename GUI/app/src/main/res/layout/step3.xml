@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ayi_mountain_2"
-    tools:context=".Homepage">
+    tools:context=".Step3">
 
     <TextView
         android:id="@+id/mountainHeader"
@@ -21,6 +21,81 @@
         android:text="Mountain"
         android:textColor="#FFFFFF"
         android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/firstText"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="325dp"
+
+        android:backgroundTint="#D31F1F"
+        android:fontFamily="sans-serif"
+        android:text="Mountain"
+        android:textColor="#000000"
+        android:textSize="40sp" />
+    <TextView
+        android:id="@+id/secondText"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="210dp"
+
+        android:backgroundTint="#D31F1F"
+        android:fontFamily="sans-serif"
+        android:text="Mountain"
+        android:textColor="@color/material_dynamic_neutral0"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/ThirdText"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="120dp"
+        android:backgroundTint="#D31F1F"
+        android:fontFamily="sans-serif"
+        android:text="Mountain"
+        android:textColor="#000000"
+        android:textSize="40sp" />
+
+    <ImageView
+        android:id="@+id/firstHead"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@+id/pos1"
+        android:layout_marginTop="402dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="163dp"
+        android:layout_toStartOf="@+id/pos2"
+        android:src="@drawable/ayicrop" />
+    <ImageView
+        android:id="@+id/secondHead"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@+id/pos2"
+        android:layout_marginTop="402dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="163dp"
+        android:layout_toStartOf="@+id/pos3"
+        android:src="@drawable/ayicrop" />
+
+    <ImageView
+        android:id="@+id/thirdHead"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@+id/pos3"
+        android:layout_marginTop="402dp"
+        android:layout_marginEnd="-50dp"
+        android:layout_marginBottom="92dp"
+        android:layout_toStartOf="@+id/pos3"
+        android:src="@drawable/ayicrop" />
 
     <ImageView
         android:id="@+id/backMountain"
@@ -42,7 +117,7 @@
         android:layout_width="134dp"
         android:layout_height="223dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="402dp"
+        android:layout_marginTop="403dp"
         android:adjustViewBounds="true"
         android:src="@mipmap/ic_bear_plain" />
 
@@ -50,10 +125,10 @@
         android:id="@+id/pos2"
         android:layout_width="134dp"
         android:layout_height="223dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="259dp"
-        android:layout_marginEnd="175dp"
+        android:layout_alignBottom="@+id/pos1"
+        android:layout_marginStart="-32dp"
+        android:layout_marginBottom="143dp"
+        android:layout_toEndOf="@+id/pos1"
         android:adjustViewBounds="true"
         android:src="@mipmap/ic_bear_plain" />
 
@@ -61,11 +136,11 @@
         android:id="@+id/pos3"
         android:layout_width="134dp"
         android:layout_height="223dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/pos2"
 
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="19dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="1dp"
+        android:layout_toEndOf="@+id/pos2"
         android:adjustViewBounds="true"
         android:src="@mipmap/ic_bear_plain" />
 

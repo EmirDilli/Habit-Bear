@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HabitBear">
         <activity
+            android:name=".Step7"
+            android:exported="false" />
+        <activity
+            android:name=".Step5"
+            android:exported="false" />
+        <activity
             android:name=".Step3"
             android:exported="false" />
         <activity

@@ -82,10 +82,10 @@ public class HabitsPage extends AppCompatActivity implements View.OnClickListene
             @Override
             public void onClick(View v) {
                 if(c3.isChecked()){
-                    User.user.getHabitsArray()[2].setEnabled(true);
+                    User.user.getHabitsArray()[4].setEnabled(true);
                 }
                 else{
-                    User.user.getHabitsArray()[2].setEnabled(false);
+                    User.user.getHabitsArray()[4].setEnabled(false);
                 }
                 User.user.updateDataToDatabase();
             }
@@ -163,7 +163,7 @@ public class HabitsPage extends AppCompatActivity implements View.OnClickListene
         {
             Intent intent = new Intent(this, Step3.class);
             Step3.habitNo = 0;
-            User.getCurrentNumbers(User.user.getHabitsArray()[0].getMountain().getMountainNo(), 0);
+
             startActivity(intent);
         }
         if(view.getId() == smoke.getId())

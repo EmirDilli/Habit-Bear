@@ -2,6 +2,7 @@ package com.oyku.habitbear.BackEnd;
 
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
@@ -13,6 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.oyku.habitbear.HabitsPage;
 import com.oyku.habitbear.R;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -68,7 +70,7 @@ public class User {
         }
         return result+1;
     }
-    public static void getCurrentNumbers(int mountainNo, int habitNo){
+    public static void getCurrentNumbers(int mountainNo, int habitNo, ArrayList<TextView> textviews){
 
         User.list = new Integer[2*mountainNo + 1];
         for(int i = 0; i < User.list.length; i++)
@@ -89,9 +91,12 @@ public class User {
                         long streak = (long)ds.child("habits").child(String.valueOf(habitNo)).child("streak").getValue();
                         int stepNo = User.mountainProgress((int)streak,(int)mountNo);
 
-                        User.list[stepNo - 1]++;
+                        User.list[stepNo-1]++;
                     }
 
+                }
+                for (int i = 0; i < textviews.size() ; i++) {
+                    textviews.get(i).setText( ""+User.list[i]);
                 }
             }
         });

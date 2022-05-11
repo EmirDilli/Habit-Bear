@@ -6,14 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.oyku.habitbear.BackEnd.User;
+
+import java.util.ArrayList;
 
 public class Step3 extends AppCompatActivity implements View.OnClickListener{
 
     protected static int habitNo;
-    ImageView h1, h2, h3;
-
+    ImageView h1, h2, h3, c1, c2, c3;
+    ArrayList<TextView> textViews = new ArrayList<TextView>();
+    TextView t1,t2,t3;
     ImageView back;
 
     @Override
@@ -29,44 +33,61 @@ public class Step3 extends AppCompatActivity implements View.OnClickListener{
         Integer[] list = User.list;
 
 
-
+        t1 = (TextView) findViewById(R.id.firstText);
+        t2 = (TextView) findViewById(R.id.secondText);
+        t3 = (TextView) findViewById(R.id.ThirdText);
         h1 = (ImageView) findViewById(R.id.pos1);
         h2 = (ImageView) findViewById(R.id.pos2);
         h3 = (ImageView) findViewById(R.id.pos3);
-
-
+        c1 = (ImageView) findViewById(R.id.firstHead);
+        c2 = (ImageView) findViewById(R.id.secondHead);
+        c3 = (ImageView) findViewById(R.id.thirdHead);
+        textViews.add(t1); textViews.add(t2); textViews.add(t3);
+        User.getCurrentNumbers(mountainNo, habitNo, textViews);
         h1.setVisibility(View.INVISIBLE);
         h2.setVisibility(View.INVISIBLE);
         h3.setVisibility(View.INVISIBLE);
 
         if (stepNo == 1){
             h1.setVisibility(View.VISIBLE);
+            h2.setVisibility(View.INVISIBLE);
+            h3.setVisibility(View.INVISIBLE);
+            c1.setVisibility(View.VISIBLE);
+            c2.setVisibility(View.VISIBLE);
+            c3.setVisibility(View.INVISIBLE);
+            t1.setVisibility(View.VISIBLE);
+            t2.setVisibility(View.VISIBLE);
+            t3.setVisibility(View.INVISIBLE);
         }
         else if (stepNo == 2){
+            h1.setVisibility(View.INVISIBLE);
             h2.setVisibility(View.VISIBLE);
+            h3.setVisibility(View.INVISIBLE);
+            c1.setVisibility(View.VISIBLE);
+            c2.setVisibility(View.VISIBLE);
+            c3.setVisibility(View.VISIBLE);
+            t1.setVisibility(View.VISIBLE);
+            t2.setVisibility(View.VISIBLE);
+            t3.setVisibility(View.VISIBLE);
         }
         else{
-            h3.setVisibility(View.VISIBLE);
+            h1.setVisibility(View.VISIBLE);
+            h2.setVisibility(View.INVISIBLE);
+            h3.setVisibility(View.INVISIBLE);
+            c1.setVisibility(View.INVISIBLE);
+            c2.setVisibility(View.VISIBLE);
+            c3.setVisibility(View.VISIBLE);
+            t1.setVisibility(View.INVISIBLE);
+            t2.setVisibility(View.VISIBLE);
+            t3.setVisibility(View.VISIBLE);
         }
 
-        for (int i = 1; i <= 2*mountainNo + 1; i++) {
-            // ayi kafasi koy
-            // string = list[ i + streak - stepNo];
-        }
 
         back = findViewById(R.id.backMountain);
         back.setOnClickListener(this::onClick);
 
     }
 
-
-    protected void viewer() {
-
-
-
-
-
-    }
 
     @Override
     public void onClick(View view) {

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ayi_bg_5"
+    tools:context=".Step5">
+
+    <TextView
+        android:id="@+id/mountainHeader"
+        android:layout_width="-50dp"
+        android:layout_height="-50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@android:color/holo_red_dark"
+        android:backgroundTint="#D31F1F"
+        android:fontFamily="sans-serif"
+        android:text="Mountain"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp" />
+
+    <ImageView
+        android:id="@+id/backMountain"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_red_dark"
+        android:backgroundTint="#D31F1F"
+        android:foreground="?attr/actionModeCloseDrawable"
+        android:foregroundTint="@color/white"
+        android:src="@drawable/ic_back" />
+
+    <ImageView
+        android:id="@+id/pos1"
+        android:layout_width="88dp"
+        android:layout_height="99dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="458dp"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/ic_bear_plain" />
+
+    <ImageView
+        android:id="@+id/pos2"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_alignBottom="@+id/pos1"
+        android:layout_marginStart="-51dp"
+        android:layout_marginBottom="32dp"
+        android:layout_toEndOf="@+id/pos1"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/ic_bear_plain" />
+
+    <ImageView
+        android:id="@+id/pos3"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_above="@+id/pos2"
+
+        android:layout_marginStart="-25dp"
+        android:layout_marginBottom="-46dp"
+        android:layout_toEndOf="@+id/pos2"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/ic_bear_plain" />
+
+    <ImageView
+        android:id="@+id/pos4"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_above="@+id/pos2"
+
+        android:layout_marginStart="42dp"
+        android:layout_marginBottom="36dp"
+        android:layout_toEndOf="@+id/pos2"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/ic_bear_plain" />
+
+    <ImageView
+        android:id="@+id/pos5"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_above="@+id/pos2"
+
+        android:layout_marginStart="169dp"
+        android:layout_marginBottom="179dp"
+        android:layout_toEndOf="@+id/pos2"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/ic_bear_plain" />
+
+</RelativeLayout>
