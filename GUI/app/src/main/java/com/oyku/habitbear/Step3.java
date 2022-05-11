@@ -12,7 +12,7 @@ import com.oyku.habitbear.BackEnd.User;
 public class Step3 extends AppCompatActivity implements View.OnClickListener{
 
     protected static int habitNo;
-    ImageView h1, h2, h3;
+    ImageView h1, h2, h3, c1, c2, c3;
 
     ImageView back;
 
@@ -33,7 +33,7 @@ public class Step3 extends AppCompatActivity implements View.OnClickListener{
         h1 = (ImageView) findViewById(R.id.pos1);
         h2 = (ImageView) findViewById(R.id.pos2);
         h3 = (ImageView) findViewById(R.id.pos3);
-
+        c1 = (ImageView) findViewById(R.id.)
 
         h1.setVisibility(View.INVISIBLE);
         h2.setVisibility(View.INVISIBLE);

@@ -22,6 +22,80 @@
         android:textColor="#FFFFFF"
         android:textSize="40sp" />
 
+    <TextView
+        android:id="@+id/firstText"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="325dp"
+
+        android:backgroundTint="#D31F1F"
+        android:fontFamily="sans-serif"
+        android:text="Mountain"
+        android:textColor="#000000"
+        android:textSize="40sp" />
+    <TextView
+        android:id="@+id/secondText"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="210dp"
+
+        android:backgroundTint="#D31F1F"
+        android:fontFamily="sans-serif"
+        android:text="Mountain"
+        android:textColor="@color/material_dynamic_neutral0"
+        android:textSize="40sp" />
+    <TextView
+        android:id="@+id/ThirdText"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="120dp"
+        android:backgroundTint="#D31F1F"
+        android:fontFamily="sans-serif"
+        android:text="Mountain"
+        android:textColor="#000000"
+        android:textSize="40sp" />
+
+    <ImageView
+        android:id="@+id/firstHead"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@+id/pos1"
+        android:layout_marginTop="402dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="163dp"
+        android:layout_toStartOf="@+id/pos2"
+        android:src="@drawable/ayicrop" />
+    <ImageView
+        android:id="@+id/secondHead"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@+id/pos2"
+        android:layout_marginTop="402dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="163dp"
+        android:layout_toStartOf="@+id/pos3"
+        android:src="@drawable/ayicrop" />
+
+    <ImageView
+        android:id="@+id/thirdHead"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@+id/pos3"
+        android:layout_marginTop="402dp"
+        android:layout_marginEnd="-50dp"
+        android:layout_marginBottom="92dp"
+        android:layout_toStartOf="@+id/pos3"
+        android:src="@drawable/ayicrop" />
+
     <ImageView
         android:id="@+id/backMountain"
         android:layout_width="60dp"
