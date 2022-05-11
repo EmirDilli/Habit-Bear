@@ -13,28 +13,19 @@
         android:layout_height="-50dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:background="@android:color/holo_red_dark"
-        android:backgroundTint="#D31F1F"
-        android:fontFamily="sans-serif"
-        android:text="Mountain"
-        android:textColor="#FFFFFF"
-        android:textSize="40sp" />
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/changa_one"
+        android:text="MOUNTAIN"
+        android:textColor="#020a99"
+        android:textSize="40dp" />
 
     <ImageView
         android:id="@+id/backMountain"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="10dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:background="@android:color/holo_red_dark"
-        android:backgroundTint="#D31F1F"
-        android:foreground="?attr/actionModeCloseDrawable"
-        android:foregroundTint="@color/white"
         android:src="@drawable/ic_back" />
 
     <ImageView

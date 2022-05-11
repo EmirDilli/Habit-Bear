@@ -40,21 +40,12 @@
         android:layout_marginTop="10dp"
         android:src="@drawable/ic_back" />
 
-    <ImageView
-        android:id="@+id/coin"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_below="@id/marketHeader"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:src="@mipmap/ic_coin"
-        android:adjustViewBounds="true"/>
 
     <ImageView
         android:id="@+id/c1"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="1dp"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="300dp"
         android:layout_below="@+id/bearsTshirt"
         android:src="@mipmap/c1" />
@@ -83,6 +74,7 @@
         android:id="@+id/c4"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="400dp"
         android:src="@mipmap/c4" />
     <ImageView
@@ -106,6 +98,7 @@
         android:id="@+id/c7"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="500dp"
         android:src="@mipmap/c7" />
 
