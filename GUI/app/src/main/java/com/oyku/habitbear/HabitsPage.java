@@ -82,10 +82,10 @@ public class HabitsPage extends AppCompatActivity implements View.OnClickListene
             @Override
             public void onClick(View v) {
                 if(c3.isChecked()){
-                    User.user.getHabitsArray()[2].setEnabled(true);
+                    User.user.getHabitsArray()[4].setEnabled(true);
                 }
                 else{
-                    User.user.getHabitsArray()[2].setEnabled(false);
+                    User.user.getHabitsArray()[4].setEnabled(false);
                 }
                 User.user.updateDataToDatabase();
             }
