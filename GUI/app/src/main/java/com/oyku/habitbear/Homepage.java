@@ -32,7 +32,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener{
         highestStreakCount = (TextView) findViewById(R.id.highestStreakCount);
         coins = (TextView) findViewById(R.id.coinCount);
         bearImage = findViewById(R.id.habitBearIcon);
-        User.user.getDataFromDatabase(9, bearNameText, coins, currentStreakCount, highestStreakCount, bearImage);
+        User.user.getDataFromDatabase(13, bearNameText, coins, currentStreakCount, highestStreakCount, bearImage);
         habitsButton = findViewById(R.id.habits);
         habitsButton.setOnClickListener(this::onClick);
         marketButton = findViewById(R.id.market);
