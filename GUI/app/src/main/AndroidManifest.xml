@@ -19,9 +19,6 @@
             android:name=".Step3"
             android:exported="false" />
         <activity
-            android:name=".QuitSmokingMountain"
-            android:exported="false" />
-        <activity
             android:name=".EatHealthyMountain"
             android:exported="false" />
         <activity
