@@ -50,6 +50,8 @@ public class Step3 extends AppCompatActivity implements View.OnClickListener{
 
         if (stepNo == 1){
             h1.setVisibility(View.VISIBLE);
+            h2.setVisibility(View.INVISIBLE);
+            h3.setVisibility(View.INVISIBLE);
             c1.setVisibility(View.VISIBLE);
             c2.setVisibility(View.VISIBLE);
             c3.setVisibility(View.INVISIBLE);
@@ -58,8 +60,10 @@ public class Step3 extends AppCompatActivity implements View.OnClickListener{
             t1.setVisibility(View.INVISIBLE);
         }
         else if (stepNo == 2){
+            h1.setVisibility(View.INVISIBLE);
             h2.setVisibility(View.VISIBLE);
-            c1.setVisibility(View.INVISIBLE);
+            h3.setVisibility(View.INVISIBLE);
+            c1.setVisibility(View.VISIBLE);
             c2.setVisibility(View.VISIBLE);
             c3.setVisibility(View.VISIBLE);
             t1.setVisibility(View.VISIBLE);
@@ -68,6 +72,8 @@ public class Step3 extends AppCompatActivity implements View.OnClickListener{
         }
         else{
             h3.setVisibility(View.VISIBLE);
+            h3.setVisibility(View.INVISIBLE);
+            h3.setVisibility(View.INVISIBLE);
             c1.setVisibility(View.INVISIBLE);
             c2.setVisibility(View.VISIBLE);
             c3.setVisibility(View.VISIBLE);
