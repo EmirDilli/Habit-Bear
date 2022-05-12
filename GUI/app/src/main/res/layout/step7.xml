@@ -54,7 +54,7 @@
         android:layout_height="74dp"
         android:layout_above="@+id/pos2"
 
-        android:layout_marginStart="-30dp"
+        android:layout_marginStart="-32dp"
         android:layout_marginBottom="-32dp"
         android:layout_toEndOf="@+id/pos2"
         android:adjustViewBounds="true"
@@ -102,10 +102,185 @@
         android:layout_height="74dp"
         android:layout_above="@+id/pos2"
 
-        android:layout_marginStart="233dp"
-        android:layout_marginBottom="388dp"
+        android:layout_marginStart="231dp"
+        android:layout_marginBottom="354dp"
         android:layout_toEndOf="@+id/pos2"
         android:adjustViewBounds="true"
         android:src="@mipmap/ic_bear_plain" />
+
+    <ImageView
+        android:id="@+id/head1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/pos1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="402dp"
+        android:layout_marginBottom="54dp"
+        android:src="@drawable/ayicrop" />
+
+    <ImageView
+        android:id="@+id/head2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignStart="@+id/pos2"
+        android:layout_alignBottom="@+id/pos2"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="402dp"
+        android:layout_marginBottom="57dp"
+        android:src="@drawable/ayicrop" />
+
+    <ImageView
+        android:id="@+id/head6"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignStart="@+id/pos2"
+        android:layout_alignBottom="@+id/pos2"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="402dp"
+        android:layout_marginBottom="325dp"
+        android:src="@drawable/ayicrop" />
+
+    <ImageView
+        android:id="@+id/head7"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignStart="@+id/pos2"
+        android:layout_alignBottom="@+id/pos2"
+        android:layout_marginStart="332dp"
+        android:layout_marginTop="402dp"
+        android:layout_marginBottom="487dp"
+        android:src="@drawable/ayicrop" />
+
+    <ImageView
+        android:id="@+id/head3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignStart="@+id/pos3"
+        android:layout_alignBottom="@+id/pos3"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="402dp"
+        android:layout_marginBottom="52dp"
+        android:src="@drawable/ayicrop" />
+
+    <ImageView
+        android:id="@+id/head4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignStart="@+id/pos4"
+        android:layout_alignBottom="@+id/pos4"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="402dp"
+        android:layout_marginBottom="55dp"
+        android:src="@drawable/ayicrop" />
+
+    <ImageView
+        android:id="@+id/head5"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignStart="@+id/pos5"
+        android:layout_alignBottom="@+id/pos5"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="402dp"
+        android:layout_marginBottom="68dp"
+        android:src="@drawable/ayicrop" />
+
+    <TextView
+        android:id="@+id/bearNo1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/head1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="-23dp"
+        android:backgroundTint="#D31F1F"
+        android:fontFamily="@font/changa_one"
+        android:text="M"
+        android:textColor="#020a99"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/bearNo6"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/head1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="263dp"
+        android:layout_marginTop="-310dp"
+        android:backgroundTint="#D31F1F"
+        android:fontFamily="@font/changa_one"
+        android:text="M"
+        android:textColor="#020a99"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/bearNo2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/head1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="-42dp"
+        android:backgroundTint="#D31F1F"
+        android:fontFamily="@font/changa_one"
+        android:text="M"
+        android:textColor="#020a99"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/bearNo7"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/head1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="366dp"
+        android:layout_marginTop="-473dp"
+        android:backgroundTint="#D31F1F"
+        android:fontFamily="@font/changa_one"
+        android:text="M"
+        android:textColor="#020a99"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/bearNo3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/head1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="-80dp"
+        android:backgroundTint="#D31F1F"
+        android:fontFamily="@font/changa_one"
+        android:text="M"
+        android:textColor="#020a99"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/bearNo4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/head1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="146dp"
+        android:layout_marginTop="-156dp"
+        android:backgroundTint="#D31F1F"
+        android:fontFamily="@font/changa_one"
+        android:text="M"
+        android:textColor="#020a99"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/bearNo5"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/head1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="-227dp"
+        android:backgroundTint="#D31F1F"
+        android:fontFamily="@font/changa_one"
+        android:text="M"
+        android:textColor="#020a99"
+        android:textSize="20sp" />
 
 </RelativeLayout>

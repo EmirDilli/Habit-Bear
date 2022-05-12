@@ -32,13 +32,14 @@ public class Step3 extends AppCompatActivity implements View.OnClickListener{
         int stepNo = User.user.getHabits().get(habitNo).getMountain().mountainProgress(streak);
         Integer[] list = User.list;
 
+        // Connects xml file to java
         t1 = (TextView) findViewById(R.id.firstText);
         t2 = (TextView) findViewById(R.id.secondText);
         t3 = (TextView) findViewById(R.id.ThirdText);
+
         h1 = (ImageView) findViewById(R.id.pos1);
         h2 = (ImageView) findViewById(R.id.pos2);
         h3 = (ImageView) findViewById(R.id.pos3);
-
         User.user.getDataFromDatabase(User.user.getId(), h1);
         User.getDressed(h1);
         User.user.getDataFromDatabase(User.user.getId(), h2);
@@ -49,44 +50,37 @@ public class Step3 extends AppCompatActivity implements View.OnClickListener{
         c1 = (ImageView) findViewById(R.id.firstHead);
         c2 = (ImageView) findViewById(R.id.secondHead);
         c3 = (ImageView) findViewById(R.id.thirdHead);
-        textViews.add(t1); textViews.add(t2); textViews.add(t3);
+
+        // for db
+        textViews.add(t1);
+        textViews.add(t2);
+        textViews.add(t3);
         User.getCurrentNumbers(mountainNo, habitNo, textViews);
+
+
         h1.setVisibility(View.INVISIBLE);
         h2.setVisibility(View.INVISIBLE);
         h3.setVisibility(View.INVISIBLE);
 
+
+        c1.setVisibility(View.VISIBLE);
+        c2.setVisibility(View.VISIBLE);
+        c3.setVisibility(View.VISIBLE);
+        t1.setVisibility(View.VISIBLE);
+        t2.setVisibility(View.VISIBLE);
+        t3.setVisibility(View.VISIBLE);
+
         if (stepNo == 1){
             h1.setVisibility(View.VISIBLE);
-            h2.setVisibility(View.INVISIBLE);
-            h3.setVisibility(View.INVISIBLE);
-            c1.setVisibility(View.VISIBLE);
-            c2.setVisibility(View.VISIBLE);
-            c3.setVisibility(View.INVISIBLE);
-            t1.setVisibility(View.VISIBLE);
-            t2.setVisibility(View.VISIBLE);
-            t3.setVisibility(View.INVISIBLE);
+
         }
         else if (stepNo == 2){
-            h1.setVisibility(View.INVISIBLE);
             h2.setVisibility(View.VISIBLE);
-            h3.setVisibility(View.INVISIBLE);
-            c1.setVisibility(View.VISIBLE);
-            c2.setVisibility(View.VISIBLE);
-            c3.setVisibility(View.VISIBLE);
-            t1.setVisibility(View.VISIBLE);
-            t2.setVisibility(View.VISIBLE);
-            t3.setVisibility(View.VISIBLE);
+
         }
         else{
-            h1.setVisibility(View.VISIBLE);
-            h2.setVisibility(View.INVISIBLE);
-            h3.setVisibility(View.INVISIBLE);
-            c1.setVisibility(View.INVISIBLE);
-            c2.setVisibility(View.VISIBLE);
-            c3.setVisibility(View.VISIBLE);
-            t1.setVisibility(View.INVISIBLE);
-            t2.setVisibility(View.VISIBLE);
-            t3.setVisibility(View.VISIBLE);
+            h3.setVisibility(View.VISIBLE);
+
         }
 
 

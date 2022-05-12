@@ -19,7 +19,7 @@ public class MountainAccess {
     MountainAccess(Mountain mountain){
 
         this.mountainNo = mountain.getMountainNo();
-        this.stepNo = 2*mountainNo + 1;
+        this.stepNo = mountain.currStepNo;
 
     }
 

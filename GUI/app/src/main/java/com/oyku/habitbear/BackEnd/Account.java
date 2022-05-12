@@ -354,8 +354,8 @@ public class Account{
                 getData(ac);
                 bearName.setText(name);
                 coinCount.setText(coins + "");
-                currStreak.setText(currentStreak + "-"+ currStr);
-                highStreak.setText(maxStreak + "-" + maxStr);
+                currStreak.setText(currentStreak-1 + "-"+ currStr);
+                highStreak.setText(maxStreak-1 + "-" + maxStr);
                 User.getDressed(bearImage);
 
             }

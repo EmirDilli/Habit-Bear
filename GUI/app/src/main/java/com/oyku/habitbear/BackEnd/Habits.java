@@ -79,7 +79,7 @@ public class Habits {
 
     ///hasNextStep()->onLastStep()
     public  boolean onLastStep(){
-        if (mountain.stepNo == mountain.mountainProgress(streak)) {
+        if (mountain.currStepNo == mountain.mountainProgress(streak)) {
             return true;
         }
         return false;
@@ -96,12 +96,14 @@ public class Habits {
         int extra = 2;
 
         if ( onLastStep() ) {
-            currentMount++; // Database
-            mountain.stepNo = 1;
+            mountain.increaseMountNo();// Database
+            mountain.currStepNo = 1;
             prize += extra;
+            User.user.updateDataToDatabase();
         }
         else{
-            mountain.stepNo++;
+            mountain.currStepNo++;
+            User.user.updateDataToDatabase();
         }
         streak++;
         if(highStreak < streak) highStreak = streak;

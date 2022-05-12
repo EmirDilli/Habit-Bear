@@ -2,12 +2,15 @@ package com.oyku.habitbear.BackEnd;
 
 public class Mountain {
     private int mountainNo; // k 
-    protected int stepNo; //2k+1 
+    protected int stepNo;//2k+1
+    protected int currStepNo;
     
 
     public Mountain(int no){
         mountainNo = no;
         stepNo = 2*mountainNo+1;
+        currStepNo = 1;
+
     }
 
     public Mountain(){}
@@ -26,7 +29,12 @@ public class Mountain {
     public void getData(MountainAccess ma){
 
         this.mountainNo = ma.mountainNo;
-        this.stepNo = ma.stepNo;
+        this.currStepNo = ma.stepNo;
 
+    }
+    public void increaseMountNo()
+    {
+        if(mountainNo<3)
+        mountainNo++;
     }
 }
