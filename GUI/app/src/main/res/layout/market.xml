@@ -45,10 +45,10 @@
         android:id="@+id/c1"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_below="@+id/bearsTshirt"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="300dp"
-        android:layout_below="@+id/bearsTshirt"
-        android:src="@mipmap/c1" />
+        android:src="@mipmap/shirt_red" />
 
 
     <ImageView
@@ -59,7 +59,7 @@
         android:layout_marginLeft="1dp"
         android:layout_marginTop="300dp"
         android:layout_toRightOf="@+id/c1"
-        android:src="@mipmap/c2" />
+        android:src="@mipmap/shirt_green" />
 
     <ImageView
         android:id="@+id/c3"
@@ -69,14 +69,14 @@
         android:layout_marginLeft="1dp"
         android:layout_marginTop="300dp"
         android:layout_toRightOf="@+id/c2"
-        android:src="@mipmap/c3" />
+        android:src="@mipmap/shirt_blue" />
     <ImageView
         android:id="@+id/c4"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="400dp"
-        android:src="@mipmap/c4" />
+        android:src="@mipmap/pants_red" />
     <ImageView
         android:id="@+id/c5"
         android:layout_width="100dp"
@@ -84,7 +84,7 @@
         android:layout_marginLeft="1dp"
         android:layout_marginTop="400dp"
         android:layout_toRightOf="@+id/c4"
-        android:src="@mipmap/c5" />
+        android:src="@mipmap/pants_green" />
     <ImageView
         android:id="@+id/c6"
         android:layout_width="100dp"
@@ -92,7 +92,7 @@
         android:layout_marginLeft="1dp"
         android:layout_marginTop="400dp"
         android:layout_toRightOf="@+id/c5"
-        android:src="@mipmap/c6" />
+        android:src="@mipmap/pants_blue" />
 
     <ImageView
         android:id="@+id/c7"
@@ -100,7 +100,7 @@
         android:layout_height="100dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="500dp"
-        android:src="@mipmap/c7" />
+        android:src="@mipmap/glass_yellow" />
 
     <ImageView
         android:id="@+id/c8"
@@ -109,7 +109,7 @@
         android:layout_marginLeft="1dp"
         android:layout_marginTop="500dp"
         android:layout_toRightOf="@+id/c7"
-        android:src="@mipmap/c8" />
+        android:src="@mipmap/brown_moustache" />
 
 
 
