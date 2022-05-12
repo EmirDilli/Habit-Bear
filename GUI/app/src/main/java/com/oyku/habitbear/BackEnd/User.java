@@ -60,6 +60,8 @@ public class User {
     public static boolean moustache = false;
     public static boolean glasses = false;
 
+    public static boolean isFirst = false;
+
     public static Integer[] list;
 
     public static int mountainProgress(int streak, int mountainNo){

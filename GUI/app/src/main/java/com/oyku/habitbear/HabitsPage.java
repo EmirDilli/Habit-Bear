@@ -38,7 +38,9 @@ public class HabitsPage extends AppCompatActivity implements View.OnClickListene
         back = findViewById(R.id.backHabits);
         back.setOnClickListener(this::onClick);
 
-        bear = findViewById(R.id.bear);
+        bear = findViewById(R.id.habitBearIcon);
+        User.user.getDataFromDatabase(User.user.getId(), bear);
+        User.getDressed(bear);
 
         //User.getDressed(bear);
         c1 = findViewById(R.id.first);
@@ -82,10 +84,10 @@ public class HabitsPage extends AppCompatActivity implements View.OnClickListene
             @Override
             public void onClick(View v) {
                 if(c3.isChecked()){
-                    User.user.getHabitsArray()[4].setEnabled(true);
+                    User.user.getHabitsArray()[2].setEnabled(true);
                 }
                 else{
-                    User.user.getHabitsArray()[4].setEnabled(false);
+                    User.user.getHabitsArray()[2].setEnabled(false);
                 }
                 User.user.updateDataToDatabase();
             }
@@ -94,10 +96,10 @@ public class HabitsPage extends AppCompatActivity implements View.OnClickListene
             @Override
             public void onClick(View v) {
                 if(c4.isChecked()){
-                    User.user.getHabitsArray()[3].setEnabled(true);
+                    User.user.getHabitsArray()[4].setEnabled(true);
                 }
                 else{
-                    User.user.getHabitsArray()[3].setEnabled(false);
+                    User.user.getHabitsArray()[4].setEnabled(false);
                 }
                 User.user.updateDataToDatabase();
             }
@@ -106,10 +108,10 @@ public class HabitsPage extends AppCompatActivity implements View.OnClickListene
             @Override
             public void onClick(View v) {
                 if(c5.isChecked()){
-                    User.user.getHabitsArray()[4].setEnabled(true);
+                    User.user.getHabitsArray()[3].setEnabled(true);
                 }
                 else{
-                    User.user.getHabitsArray()[4].setEnabled(false);
+                    User.user.getHabitsArray()[3].setEnabled(false);
                 }
                 User.user.updateDataToDatabase();
             }

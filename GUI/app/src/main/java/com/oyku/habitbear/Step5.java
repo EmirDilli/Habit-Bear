@@ -36,6 +36,17 @@ public class Step5 extends AppCompatActivity implements View.OnClickListener{
         h4 = (ImageView) findViewById(R.id.pos4);
         h5 = (ImageView) findViewById(R.id.pos5);
 
+        User.user.getDataFromDatabase(User.user.getId(), h1);
+        User.getDressed(h1);
+        User.user.getDataFromDatabase(User.user.getId(), h2);
+        User.getDressed(h2);
+        User.user.getDataFromDatabase(User.user.getId(), h3);
+        User.getDressed(h3);
+        User.user.getDataFromDatabase(User.user.getId(), h4);
+        User.getDressed(h4);
+        User.user.getDataFromDatabase(User.user.getId(), h5);
+        User.getDressed(h5);
+
 
         h1.setVisibility(View.INVISIBLE);
         h2.setVisibility(View.INVISIBLE);

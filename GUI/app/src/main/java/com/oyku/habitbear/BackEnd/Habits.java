@@ -18,8 +18,8 @@ public class Habits {
         isEnabled = false;
         name = str;
         mountain = new Mountain(1);
-        currentMount = 0; // Get from database
-        streak = 1; /// get from database
+        currentMount = 0;
+        streak = 1;
         editable = false;
     }
 

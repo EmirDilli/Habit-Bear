@@ -104,7 +104,7 @@
             android:id="@+id/study"
             android:layout_width="109dp"
             android:layout_height="109dp"
-            android:src="@drawable/water" />
+            android:src="@drawable/study" />
 
         <ImageView
             android:id="@+id/health"

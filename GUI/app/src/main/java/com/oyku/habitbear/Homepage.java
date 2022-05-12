@@ -15,6 +15,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 public class Homepage extends AppCompatActivity implements View.OnClickListener{
 
@@ -22,6 +25,8 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener{
     ImageView settings, bearImage;
     TextView bearNameText, highestStreakCount, currentStreakCount, coins;
     String bearsName;
+    String date, compareDate = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +37,29 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener{
         highestStreakCount = (TextView) findViewById(R.id.highestStreakCount);
         coins = (TextView) findViewById(R.id.coinCount);
         bearImage = findViewById(R.id.habitBearIcon);
-        User.user.getDataFromDatabase(16, bearNameText, coins, currentStreakCount, highestStreakCount, bearImage);
+
+        if(User.isFirst)
+        {
+            User.user.getDataFromDatabase(User.user.getId(), bearNameText, coins, currentStreakCount, highestStreakCount, bearImage);
+        }
+        else
+        {
+            LocalStore ls = new LocalStore(this);
+            int id = ls.getData();
+            User.user.getDataFromDatabase(id, bearNameText, coins, currentStreakCount, highestStreakCount, bearImage);
+        }
+
+        /*date = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
+        compareDate = User.user.getCompareDate();
+        if(!date.equals(compareDate)){
+            compareDate = date;
+            for (int i = 0; i < User.user.getHabitsArray().length ; i++) {
+                User.user.getHabitsArray()[i].setDone(false);
+            }
+            User.user.setCompareDate(compareDate);
+            User.user.updateDataToDatabase();
+        }*/
+
         habitsButton = findViewById(R.id.habits);
         habitsButton.setOnClickListener(this::onClick);
         marketButton = findViewById(R.id.market);
@@ -64,6 +91,16 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener{
         else if(view.getId() == calendarButton.getId())
         {
             Intent intent = new Intent(this, Calendar.class);
+            date = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
+            compareDate = User.user.getCompareDate();
+            if(!date.equals(compareDate)){
+                compareDate = date;
+                for (int i = 0; i < User.user.getHabitsArray().length ; i++) {
+                    User.user.getHabitsArray()[i].setDone(false);
+                }
+                User.user.setCompareDate(compareDate);
+                User.user.updateDataToDatabase();
+            }
             startActivity(intent);
         }
         else if(view.getId() == inventoryButton.getId())

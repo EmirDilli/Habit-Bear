@@ -14,7 +14,7 @@ public class Market extends AppCompatActivity implements View.OnClickListener {
     Clothes[][] clothes = User.user.allClothes;
     int clotheType;
     ImageView back;
-    public ImageView bearsTshirt, bea;
+    public ImageView bear;
 
 
 
@@ -24,6 +24,10 @@ public class Market extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.market);
         back = findViewById(R.id.backMarket);
         back.setOnClickListener(this::onClick);
+        bear = findViewById(R.id.bear);
+
+        User.user.getDataFromDatabase(User.user.getId(), bear);
+        User.getDressed(bear);
 
         //connecting images
         User.c1 = findViewById(R.id.c1);
@@ -68,14 +72,14 @@ public class Market extends AppCompatActivity implements View.OnClickListener {
                 User.user.getMyClothes()[clothes.getType()][clothes.getColor()].setPurchased(true);
                 User.user.loseCoins();
                 User.user.updateDataToDatabase();
-                Toast.makeText(this, "Purchase successful", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Purchase successful!", Toast.LENGTH_LONG).show();
             }
          else {
-            Toast.makeText(this, "You don't have enough coins", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "You don't have enough coins.", Toast.LENGTH_LONG).show();
         }
     }
         else {
-            Toast.makeText(this, "You already have that clothing", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "You already have that clothing.", Toast.LENGTH_LONG).show();
         }
     }
 

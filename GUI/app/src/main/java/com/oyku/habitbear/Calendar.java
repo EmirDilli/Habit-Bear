@@ -18,6 +18,9 @@ import android.widget.ImageView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 import android.widget.Toast;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -25,7 +28,7 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener 
 
 
     ImageView back;
-
+    ImageView bear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,10 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener 
         ImageView h1, h2, h3, h4, h5, h6;
         back = findViewById(R.id.backCalendar);
         back.setOnClickListener(this::onClick);
+        bear = findViewById(R.id.bear);
+
+        User.user.getDataFromDatabase(User.user.getId(), bear);
+        User.getDressed(bear);
 
         ch1 = (CheckBox) findViewById(R.id.first);
         ch1.setChecked((User.user.getHabitsArray()[1].isDone()));

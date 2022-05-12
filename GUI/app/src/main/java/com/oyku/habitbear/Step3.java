@@ -32,13 +32,20 @@ public class Step3 extends AppCompatActivity implements View.OnClickListener{
         int stepNo = User.user.getHabits().get(habitNo).getMountain().mountainProgress(streak);
         Integer[] list = User.list;
 
-
         t1 = (TextView) findViewById(R.id.firstText);
         t2 = (TextView) findViewById(R.id.secondText);
         t3 = (TextView) findViewById(R.id.ThirdText);
         h1 = (ImageView) findViewById(R.id.pos1);
         h2 = (ImageView) findViewById(R.id.pos2);
         h3 = (ImageView) findViewById(R.id.pos3);
+
+        User.user.getDataFromDatabase(User.user.getId(), h1);
+        User.getDressed(h1);
+        User.user.getDataFromDatabase(User.user.getId(), h2);
+        User.getDressed(h2);
+        User.user.getDataFromDatabase(User.user.getId(), h3);
+        User.getDressed(h3);
+
         c1 = (ImageView) findViewById(R.id.firstHead);
         c2 = (ImageView) findViewById(R.id.secondHead);
         c3 = (ImageView) findViewById(R.id.thirdHead);

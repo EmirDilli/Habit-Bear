@@ -26,7 +26,6 @@ public class Register extends AppCompatActivity{ //implements View.OnClickListen
         super.onResume();
         SharedPreferences sharedpreferences = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE);
         if (!sharedpreferences.getBoolean(prevStarted, false)) {
-            //User.user.setId(tevfikten kullanıcı sayısı + 1);
             SharedPreferences.Editor editor = sharedpreferences.edit();
             editor.putBoolean(prevStarted, Boolean.TRUE);
             editor.apply();
@@ -41,6 +40,7 @@ public class Register extends AppCompatActivity{ //implements View.OnClickListen
         setContentView(R.layout.register);
         editText = (EditText) findViewById(R.id.enterBearName);
         User.user = registerAccount;
+        LocalStore ls = new LocalStore(this);
 
         button = findViewById(R.id.startButton);
         button.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +49,7 @@ public class Register extends AppCompatActivity{ //implements View.OnClickListen
                 initial = new Intent(Register.this, Homepage.class);
                 bearName = editText.getText().toString();
                 User.user.setName(bearName);
-                User.user.addNewDataToDatabase();
+                User.user.addNewDataToDatabase(ls);
                 startActivity(initial);
             }
         });

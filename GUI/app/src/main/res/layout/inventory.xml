@@ -130,7 +130,7 @@
         android:layout_marginTop="300dp"
         android:layout_toRightOf="@+id/c1"
         android:src="@mipmap/c2"
-        android:visibility="invisible"/>
+        android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/c3"
@@ -141,7 +141,7 @@
         android:layout_marginTop="300dp"
         android:layout_toRightOf="@+id/c2"
         android:src="@mipmap/c3"
-        android:visibility="invisible"/>
+        android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/c4"
@@ -149,7 +149,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="400dp"
         android:src="@mipmap/c4"
-        android:visibility="invisible"/>
+        android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/c5"
@@ -159,7 +159,7 @@
         android:layout_marginTop="400dp"
         android:layout_toRightOf="@+id/c4"
         android:src="@mipmap/c5"
-        android:visibility="invisible"/>
+        android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/c6"

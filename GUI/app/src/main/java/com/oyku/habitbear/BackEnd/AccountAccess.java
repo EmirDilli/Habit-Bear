@@ -22,6 +22,7 @@ public class AccountAccess {
 
     public String currStr;
     public String maxStr;
+    public String compareDt;
 
     public List<HabitsAccess> habits;
     public List<List<ClothesAccess>> myClothes;
@@ -52,6 +53,7 @@ public class AccountAccess {
         this.myClothes = new ArrayList<List<ClothesAccess>>();
         this.currStr = user.getCurrStr();
         this.maxStr = user.getHighStr();
+        this.compareDt = user.getCompareDate();
 
         List<Habits> allHabits = user.getHabits();
         List<List<Clothes>> clothes = user.getClothes();

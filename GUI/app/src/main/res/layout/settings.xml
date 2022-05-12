@@ -52,6 +52,20 @@
         android:fontFamily="@font/changa_one"
         android:textColor="#020a99"/>
 
+    <Button
+        android:id="@+id/done"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/changeName"
+        android:layout_marginLeft="265dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#de0925"
+        android:text="DONE!"
+        android:adjustViewBounds="true"
+        android:fontFamily="@font/changa_one"
+        android:textSize="15dp"/>
+
     <TextView
         android:id="@+id/changeName"
         android:layout_width="wrap_content"

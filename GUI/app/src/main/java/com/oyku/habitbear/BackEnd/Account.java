@@ -26,8 +26,8 @@ public class Account{
     // Properties
     private int id;
     private String name;
-    private int currentStreak = 0;
-    private int maxStreak = 0;
+    private int currentStreak = 1;
+    private int maxStreak = 1;
     private String currStr;
     private String maxStr;
     private Calendar date;// will be updated shortly
@@ -35,6 +35,7 @@ public class Account{
     protected int coins;
     private Clothes[][] myClothes;
     public Clothes[][] allClothes;
+    private String compareDate = "";
 
 
     public Account(){
@@ -218,6 +219,10 @@ public class Account{
         return Arrays.asList(this.myHabits);
     }
 
+    public String getCompareDate() { return compareDate;}
+
+    public void setCompareDate(String cDate) {this.compareDate = cDate; }
+
     public void setMaxStreak()
     {
         for(int i = 0; i < myHabits.length; i++) {
@@ -278,7 +283,7 @@ public class Account{
        // currentStep++;
     }
 
-    public void addNewDataToDatabase(){
+    public void addNewDataToDatabase(LocalStore ls){
         AccountAccess ma = new AccountAccess(this);
 
         DatabaseReference dr = FirebaseDatabase.getInstance().getReference("User");
@@ -292,6 +297,7 @@ public class Account{
                 key.child("User").setValue(String.valueOf(count+1));
                 ma.id = count + 1;
                 dr.child(String.valueOf(ma.id)).setValue(ma);
+                ls.storeData(ma.id);
             }
         });
     }
@@ -313,6 +319,8 @@ public class Account{
         this.coins = ma.coins;
         this.currStr = ma.currStr;
         this.maxStr = ma.maxStr;
+
+        this.compareDate = ma.compareDt;
 
         myHabits = new Habits[ma.habits.size()];
 
@@ -353,6 +361,21 @@ public class Account{
             }
         });
     }
+
+    public void getDataFromDatabase(int id, ImageView bearImage){
+        DatabaseReference dr = FirebaseDatabase.getInstance().getReference("User");
+
+        dr.child(String.valueOf(id)).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                AccountAccess ac = task.getResult().getValue(AccountAccess.class);
+                getData(ac);
+                User.getDressed(bearImage);
+
+            }
+        });
+    }
+
     public void updateDataToDatabase(){
         AccountAccess ma = new AccountAccess(this);
 
