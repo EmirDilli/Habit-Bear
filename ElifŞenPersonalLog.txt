@@ -1,0 +1,14 @@
+31.01.2022 - 06.02.2022 - We got together to decide on how will application will be implemented. We got our GUI.png files from our friend. 
+07.02.2022 - 13.02.2022 - Emir opened a repository in GitHub and Tevfik opened a discord channel which we all joined. 
+14.02.2022 - 20.02.2022 - We gathered for task sharing. Öykü and I chose UI, Emir chose frontend, Gökalp chose backend, and Tevfik chose database. 
+21.02.2022 - 27.02.2022 - We prepared our requirements report and the presentation related to that report. 
+28.02.2022 - 06.03.2022 - We met with our TA and made little changes according to recommendations that our  TA gave. 
+07.03.2022 - 13.03.2022 - Me and Tevfik prepared our GUI presentation. 
+14.03.2022 - 20.03.2022 - Me and Gökalp wrote the GUI report 21.03.2022 - 27.03.2022 - I used some online resources to learn about android studio.
+28.03.2022 - 03.04.2022 - We received feedback on our GUI report and changed it. 
+04.04.2022 - 10.04.2022 - I continued to study android studio via online sources
+11.04.2022 - 17.04.2022 - I continued to study android studio via online sources and made some simple pages to learn
+18.04.2022 - 24.04.2022 - I designed the calendar page
+25.04.2022 - 01.05.2022 - I edited the clothes and accessories we took from a friend and contributed market and inventory pages.
+02.05.2022 - 08.05.2022 - I made .xml files for our page visualization. Tevfik arranged a database methods for us to integrate it.
+ 09.05.2022 - 15.05.2022 -We fixed bugs and finished our program
