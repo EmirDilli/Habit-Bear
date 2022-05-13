@@ -1,0 +1,55 @@
+
+Week 1:
+I have recruited teammates and created our whatsapp group. I gathered them for our first group meeting (Elif did not come). Everyone was supposed find some ideas for our project.
+I and Oyku proposed some ideas. I proposed a game idea and Oyku proposed the Habit Bear. We chose Oyku's idea. 
+
+Week 2:
+We shared assignments. Elif was supposed to open a repository with Emir but Emir ended up doing it all by himself.
+
+Week 3:
+We shared jobs. I designed our project's first design on the paper. And i talked with my friend about our project's face. I convinced him to draw a bear for our project which became our icon.
+He shared his drawing with my team.
+
+Week 4:  
+Elif's job was to write our requirements report. She did not write it. We ended up doing her part too. I finished our project's design.
+
+Week 5:
+I opened our project drive. We prepared our Requirements presentation.  We met with TA. We updated our report (Elif was absent).
+
+Week 6:
+We prepared our UI presentation. I wrote some classes and methods according to my guesses of implementations.
+
+Week 7:
+I wrote the UI Report (Only Elif helped me). 
+
+Week 8:
+I wrote the methods that Emir asked me to do. We also designed our app's implementations.
+
+Week 9:
+I had to wait for our GUI because we did not know what we need to implement before.
+
+Week 10:
+I asked for a meeting because our GUI branch was not working properly and at that time we did not have a Database.
+
+Week 11:
+I asked for another meeting because our GUI branch was not working properly and at that time we did not have a Database.
+
+Week 12:
+I did the UML diagram. Emir and Tevfik did the detailed design report.
+
+Week 13:
+I got the images that our GUI department wanted from my friend. We were still behind the schedule for database and integration parts so i couldn't do much at that time.
+
+Week 14:
+I called every one and tried to gather everyone to focus on our project. I had difficulties on gathering everyone. At that point I started to call them regularly in order to get them back to our schedule.
+I tried to help our integrators codes(I could not help them much at this point because i lacked the Android Studio. To be honest i thought it was only our integrators' job to do it and if i tried to work on their code, i thought i would damage more than i could help).
+
+Week 15:
+This was the most stresfull week of the project. I saw that our integrators wont be able to finish the integration on time and saw that Elif was nowhere close doing her job as doing GUI pages. Thus, i quickly worked on our Habits page and Mountain Pages (there were 3 mountains: 3, 5, 7).
+First, i did the GUI of these pages (I had no idea how to do them at this time. My first time encountering xml files).
+After, i did the integration parts of these pages (Again i had to learn Android Studio). I wrote a algorithm which connects Habits page and Mountain pages this algorithm shortened the time that we spent on integration.
+Someone proposed to create 18 mountain classes however i did the same with only 3 classes. We (except Elif) had worked for hours(sometimes till 3.00 am) to finish our app in time.
+
+My comment:
+For this project i decided take a leader role even before the start of this term. Thus, i tried to organize this team. I have faced some problems because some of us did not do their parts correctly (I have written about this on my Peer Grades). 
+Eventhough we faced many problems, i believe that we succesfully overcame them. I did my role (Backend) earlier then my teammates so i had helped them with their roles in the end. 
