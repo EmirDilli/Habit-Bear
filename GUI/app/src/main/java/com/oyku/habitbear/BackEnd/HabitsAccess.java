@@ -10,8 +10,10 @@ public class HabitsAccess {
     public boolean editable;
 
     HabitsAccess(){
-
+        // formed to get data from the database
     }
+
+    // sets the instance variables of this class according to given user
 
     HabitsAccess(Habits habit){
 

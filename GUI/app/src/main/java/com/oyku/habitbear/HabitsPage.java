@@ -17,6 +17,8 @@ public class HabitsPage extends AppCompatActivity implements View.OnClickListene
     ImageView readBooks, eatHealthy, medicine, workout, smoke, custom, bear, back;
     CheckBox c1,c2,c3,c4,c5,c6;
 
+    // connects this class with the xml file
+    // enables a habit if that habit's checkbox is checked
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -132,6 +134,8 @@ public class HabitsPage extends AppCompatActivity implements View.OnClickListene
 
     }
 
+    // when a habit button is clicked, it takes the user to that habit's specific Mountain according to that habit's current mountain no
+    //when back button is clicked, it takes the user to Homepage
 
     @Override
     public void onClick(View view) {

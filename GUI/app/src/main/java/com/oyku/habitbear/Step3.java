@@ -20,6 +20,8 @@ public class Step3 extends AppCompatActivity implements View.OnClickListener{
     TextView t1,t2,t3;
     ImageView back;
 
+    // connects this class with the xml file
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +53,8 @@ public class Step3 extends AppCompatActivity implements View.OnClickListener{
         c2 = (ImageView) findViewById(R.id.secondHead);
         c3 = (ImageView) findViewById(R.id.thirdHead);
 
-        // for db
+        // gets no of users in mountain steps from database
+
         textViews.add(t1);
         textViews.add(t2);
         textViews.add(t3);
@@ -70,6 +73,7 @@ public class Step3 extends AppCompatActivity implements View.OnClickListener{
         t2.setVisibility(View.VISIBLE);
         t3.setVisibility(View.VISIBLE);
 
+        // sets ImageView of the bear visible according to step no
         if (stepNo == 1){
             h1.setVisibility(View.VISIBLE);
 

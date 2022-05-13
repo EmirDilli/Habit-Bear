@@ -64,6 +64,7 @@ public class User {
 
     public static Integer[] list;
 
+    // Returns the user's step on the mountain
     public static int mountainProgress(int streak, int mountainNo){
 
         int result = streak;
@@ -72,6 +73,9 @@ public class User {
         }
         return result+1;
     }
+
+    // gets no of users in mountain's steps from database
+
     public static void getCurrentNumbers(int mountainNo, int habitNo, ArrayList<TextView> textviews){
 
         User.list = new Integer[2*mountainNo + 1];
@@ -109,6 +113,7 @@ public class User {
             }
         });
     }
+    //dresses up the bear according to selected outfit
     public static void getDressed(ImageView bearImage)
     {
         if (User.redTshirt && User.redPants && User.moustache) {

@@ -27,8 +27,12 @@ import java.util.TimerTask;
 public class Calendar extends AppCompatActivity implements View.OnClickListener {
 
 
-    ImageView back;
-    ImageView bear;
+    ImageView back; // back button
+    ImageView bear; // custom bear
+
+    // connects this class with the xml file
+    // checks checkboxes that we have already clicked that day
+    // if a check box is checked, it calls for that habit's updateToday() method
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

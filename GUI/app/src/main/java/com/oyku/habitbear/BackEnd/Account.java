@@ -68,6 +68,11 @@ public class Account{
     }
 
     // METHODS 1
+
+    // returns 1 if  user have done all the habits
+    // returns 2 if  user have done some the habits
+    // returns 3 if  user have done none the habits
+
     public int isHabitDone(){
         int doneNo = 0;
         int habitNo = 0;
@@ -90,10 +95,14 @@ public class Account{
         }
     }
 
+    // returns user's coins
+
     public int getCoins()
     {
         return coins;
     }
+
+
 
     public void addHabit(String str){
         if (!myHabits[5].isEnabled()) {
@@ -105,10 +114,14 @@ public class Account{
         }
     }
 
+
+
     public void removeHabit(){
         myHabits[5].setName("Custom");
         myHabits[5].setEnabled(false);
     }
+
+
 
     public void enableHabit(String str){
 
@@ -128,6 +141,8 @@ public class Account{
         }
     }
 
+
+    //
 
     public void loseCoins(){   ////////////// WHY DO WE LOSE COINS THO?
         coins = coins - 10;
@@ -161,15 +176,15 @@ public class Account{
     public void setClothingImage(int type, int color) {
         //the clothing piece that's going to be set
         if (type == 0) {
-            if (color == 0) {//red imagela ilişkilendirilecek
+            if (color == 0) {
                 User.c1.setTag(allClothes[0][0]);
             } else if (color == 1) {//green
                 User.c2.setTag(allClothes[0][1]);
-            } else if (color == 2) {//blue
+            } else if (color == 2) {
                 User.c3.setTag(allClothes[0][2]);
             }
         } else if (type == 1) {
-            if (color == 0) {//red imagela ilişkilendirilecek
+            if (color == 0) {
                 User.c4.setTag(allClothes[1][0]);
             } else if (color == 1) {//green
                 User.c5.setTag(allClothes[1][1]);
@@ -177,7 +192,7 @@ public class Account{
                 User.c6.setTag(allClothes[1][2]);
             }
         } else if (type == 2) {
-            if (color == 0) {//red imagela ilişkilendirilecek
+            if (color == 0) {
                 User.c7.setTag(allClothes[2][0]);
             } else if (color == 1) {//green
                 User.c8.setTag(allClothes[2][1]);

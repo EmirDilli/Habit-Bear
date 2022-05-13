@@ -20,6 +20,8 @@ public class Step7 extends AppCompatActivity implements  View.OnClickListener {
     TextView t1,t2,t3,t4,t5,t6,t7;
     ImageView back;
 
+    // connects this class with the xml file
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +68,7 @@ public class Step7 extends AppCompatActivity implements  View.OnClickListener {
         h7.setVisibility(View.INVISIBLE);
 
 
-        // Connects xml file to java
+
         t1 = (TextView) findViewById(R.id.bearNo1);
         t2 = (TextView) findViewById(R.id.bearNo2);
         t3 = (TextView) findViewById(R.id.bearNo3);
@@ -84,7 +86,7 @@ public class Step7 extends AppCompatActivity implements  View.OnClickListener {
         c6 = (ImageView) findViewById(R.id.head6);
         c7 = (ImageView) findViewById(R.id.head7);
 
-        // for db
+        // gets no of users in mountain steps from database
         textViews.add(t1);
         textViews.add(t2);
         textViews.add(t3);
@@ -118,6 +120,8 @@ public class Step7 extends AppCompatActivity implements  View.OnClickListener {
         t5.setVisibility(View.VISIBLE);
         t6.setVisibility(View.VISIBLE);
         t7.setVisibility(View.VISIBLE);
+
+        // sets ImageView of the bear visible according to step no
 
         if (stepNo == 1){
             h1.setVisibility(View.VISIBLE);

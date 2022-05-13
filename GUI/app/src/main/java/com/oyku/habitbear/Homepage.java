@@ -27,6 +27,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener{
     String bearsName;
     String date, compareDate = "";
 
+    // sets gui according to that user's database content
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +77,8 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener{
 
     }
 
+    // every button transfers the user to clicked button's page
+
     @Override
     public void onClick(View view) {
         if(view.getId() == habitsButton.getId())
@@ -90,6 +93,9 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener{
         }
         else if(view.getId() == calendarButton.getId())
         {
+            // sets compareDt  according to today's dates
+            // sets habits' isDone variable on db to false if this is our first time opening Calendar page
+
             Intent intent = new Intent(this, Calendar.class);
             date = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
             compareDate = User.user.getCompareDate();

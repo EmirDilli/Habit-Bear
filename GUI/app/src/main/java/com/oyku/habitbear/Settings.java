@@ -18,6 +18,8 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
     String newName;
     Button done;
 
+    // connects this class with the xml file
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -27,6 +29,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
         changeName = findViewById(R.id.enterNewName);
         done = findViewById(R.id.done);
         done.setOnClickListener(new View.OnClickListener() {
+            // changes user's name when clicked
             @Override
             public void onClick(View view) {
                 newName = changeName.getText().toString();

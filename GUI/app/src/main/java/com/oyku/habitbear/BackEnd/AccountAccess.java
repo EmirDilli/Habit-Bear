@@ -30,8 +30,10 @@ public class AccountAccess {
     public int coins;
 
     AccountAccess(){
-
+        // formed to get data from the database
     }
+
+    // sets the instance variables of this class according to given user
 
     AccountAccess(Account user){
         this.id = user.getId();

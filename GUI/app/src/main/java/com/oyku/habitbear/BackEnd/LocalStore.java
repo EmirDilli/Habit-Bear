@@ -12,6 +12,8 @@ public class LocalStore {
         sp = context.getSharedPreferences("user_id",0);
     }
 
+    // Stores user's id to local storage
+
     public void storeData(int id){
 
         SharedPreferences.Editor editor = sp.edit();
@@ -22,6 +24,7 @@ public class LocalStore {
 
     }
 
+    // Gets user's id from local storage
     public int getData(){
         int id = sp.getInt("id",-1);
         return id;

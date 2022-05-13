@@ -16,6 +16,8 @@ public class MountainAccess {
     public int stepNo;
 
 
+    // sets the instance variables of this class according to given user
+
     MountainAccess(Mountain mountain){
 
         this.mountainNo = mountain.getMountainNo();
@@ -26,7 +28,7 @@ public class MountainAccess {
 
 
     MountainAccess(){
-
+        // formed to get data from the database
     }
 
 

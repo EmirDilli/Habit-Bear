@@ -21,6 +21,7 @@ public class Register extends AppCompatActivity{ //implements View.OnClickListen
     String bearName;
     Intent initial;
 
+    // checks if user have already registered,if not user goes to Homepage
    @Override
     protected void onResume() {
         super.onResume();
@@ -33,6 +34,8 @@ public class Register extends AppCompatActivity{ //implements View.OnClickListen
             moveToHomepage();
         }
     }
+
+    // connects this class with the xml file
 
     @Override
     protected void onCreate(Bundle savedInstanceState){

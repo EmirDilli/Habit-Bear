@@ -373,6 +373,8 @@ public class Inventory extends AppCompatActivity implements View.OnClickListener
 
     }
 
+    // chooses a bear  image according to booleans
+
     @Override
     public void onClick(View view) {
 

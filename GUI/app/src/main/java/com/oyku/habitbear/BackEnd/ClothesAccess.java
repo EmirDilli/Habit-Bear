@@ -8,9 +8,10 @@ public class ClothesAccess {
     public boolean purchased;
 
     ClothesAccess(){
-
+        // formed to get data from the database
     }
 
+    // sets the instance variables of this class according to given user
     ClothesAccess(Clothes cloth){
 
         this.price = cloth.getPrice();

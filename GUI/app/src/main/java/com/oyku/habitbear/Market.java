@@ -16,7 +16,7 @@ public class Market extends AppCompatActivity implements View.OnClickListener {
     ImageView back;
     public ImageView bear;
 
-
+    // connects this class with the xml file
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
