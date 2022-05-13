@@ -79,7 +79,7 @@ public class Habits {
 
     ///hasNextStep()->onLastStep()
     public  boolean onLastStep(){
-        if (mountain.currStepNo == mountain.mountainProgress(streak)) {
+        if ((2*mountain.getMountainNo()+1) == mountain.mountainProgress(streak)) {
             return true;
         }
         return false;

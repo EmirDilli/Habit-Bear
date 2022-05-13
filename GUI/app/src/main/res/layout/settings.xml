@@ -30,14 +30,15 @@
         android:id="@+id/notifications"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="240dp"
-        android:layout_marginTop="35dp"
-        android:textSize="25dp"
-        android:text="Notifications"
         android:layout_below="@id/settingsHeader"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="240dp"
         android:fontFamily="@font/changa_one"
-        android:textColor="#020a99"/>
+        android:text="Notifications"
+        android:textColor="#020a99"
+        android:textSize="25dp"
+        android:visibility="invisible"/>
 
     <TextView
         android:id="@+id/incognitoMode"
@@ -50,7 +51,8 @@
         android:text="Incognito Mode"
         android:layout_below="@id/notifications"
         android:fontFamily="@font/changa_one"
-        android:textColor="#020a99"/>
+        android:textColor="#020a99"
+        android:visibility="invisible"/>
 
     <Button
         android:id="@+id/done"
@@ -96,14 +98,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="350dp"
-        android:layout_alignBaseline="@id/notifications"/>
+        android:layout_alignBaseline="@id/notifications"
+        android:visibility="invisible"/>
 
     <CheckBox
         android:id="@+id/incognitoCheckbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="350dp"
-        android:layout_alignBaseline="@id/incognitoMode"/>
+        android:layout_alignBaseline="@id/incognitoMode"
+        android:visibility="invisible"/>
 
 
 

@@ -93,7 +93,13 @@ public class User {
                         long streak = (long)ds.child("habits").child(String.valueOf(habitNo)).child("streak").getValue();
                         int stepNo = User.mountainProgress((int)streak,(int)mountNo);
 
-                        User.list[stepNo-1]++;
+                        try{
+                            User.list[stepNo-1]++;
+                        }
+                        catch(Exception ex){
+
+                        }
+
                     }
 
                 }
