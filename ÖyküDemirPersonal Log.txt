@@ -1,0 +1,18 @@
+31.01.2022 - 06.02.2022 - I did some research about what we can do and came up with the habit tracker idea. On our project meeting, 
+I proposed that idea for my teammates and we decided to make a habit tracker app for our project.
+07.02.2022 - 13.02.2022 - Emir opened a repository on GitHub for our project and we started to learn deeper about GitHub.
+14.02.2022 - 20.02.2022 - We started to decide on the pages and the main attributes of our application.
+21.02.2022 - 27.02.2022 - We started creating the applicaton's interface design. Gökalp drew a sketch for the design and we created our main icon for the application.
+28.02.2022 - 06.03.2022 - I digitally drew all the design pages that Gökalp created on paper. We met with the TA and received feedback.
+07.03.2022 - 13.03.2022 - We worked on our project's design details and its main aim. We tried to build a consistent and sensible project.
+14.03.2022 - 20.03.2022 - We decided on who is going to work on which part of the project. I was responsible for connecting the activities and the user interface.
+21.03.2022 - 27.03.2022 - I started to learn about Android Studio. I created all the images and prepared the GUI presentation.  
+28.03.2022 - 03.04.2022 - We received feedback on our GUI report and changed it.
+04.04.2022 - 10.04.2022 - I kept learning about Android Studio. I also got informed about the methods Emir wrote for Gökalp to implement. 
+11.04.2022 - 17.04.2022 - We started on creating our project on Android Studio. 
+18.04.2022 - 24.04.2022 - I and Elif got in touch and decided on who is going to be responsible for which activity on Android Studio. I did all the parts I was responsible for.
+25.04.2022 - 01.05.2022 - Emir and I met almost every day and we started to implement all the methods Gökalp wrote. We learned more about activities and we started using all the classes 
+in different activities.
+02.05.2022 - 08.05.2022 - Tevfik gave us the database methods. Emir and I put them on our main project files in Android Studio. Elif created a calendar and put it on our calendar page.
+I completely finished the user interface design.
+09.05.2022 - 15.05.2022 - We finished our code.
